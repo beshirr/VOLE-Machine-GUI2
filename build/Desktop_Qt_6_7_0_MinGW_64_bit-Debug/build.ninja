@@ -69,9 +69,9 @@ build CMakeFiles/Vole-Machine-GUI.dir/main.cpp.obj: CXX_COMPILER__Vole-Machine-G
   TARGET_COMPILE_PDB = CMakeFiles\Vole-Machine-GUI.dir\
   TARGET_PDB = Vole-Machine-GUI.pdb
 
-build CMakeFiles/Vole-Machine-GUI.dir/volemachine.cpp.obj: CXX_COMPILER__Vole-Machine-GUI_unscanned_Debug D$:/FCAI/Level$ 2/First$ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/volemachine.cpp || cmake_object_order_depends_target_Vole-Machine-GUI
+build CMakeFiles/Vole-Machine-GUI.dir/mainwindow.cpp.obj: CXX_COMPILER__Vole-Machine-GUI_unscanned_Debug D$:/FCAI/Level$ 2/First$ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/mainwindow.cpp || cmake_object_order_depends_target_Vole-Machine-GUI
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
-  DEP_FILE = CMakeFiles\Vole-Machine-GUI.dir\volemachine.cpp.obj.d
+  DEP_FILE = CMakeFiles\Vole-Machine-GUI.dir\mainwindow.cpp.obj.d
   FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -I"D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/include" -isystem C:/Qt/6.7.0/mingw_64/include/QtCore -isystem C:/Qt/6.7.0/mingw_64/include -isystem C:/Qt/6.7.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.7.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.7.0/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\Vole-Machine-GUI.dir
@@ -87,7 +87,7 @@ build CMakeFiles/Vole-Machine-GUI.dir/volemachine.cpp.obj: CXX_COMPILER__Vole-Ma
 #############################################
 # Link the executable Vole-Machine-GUI.exe
 
-build Vole-Machine-GUI.exe: CXX_EXECUTABLE_LINKER__Vole-Machine-GUI_Debug CMakeFiles/Vole-Machine-GUI.dir/Vole-Machine-GUI_autogen/mocs_compilation.cpp.obj CMakeFiles/Vole-Machine-GUI.dir/main.cpp.obj CMakeFiles/Vole-Machine-GUI.dir/volemachine.cpp.obj | C$:/Qt/6.7.0/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.7.0/mingw_64/lib/libQt6Gui.a C$:/Qt/6.7.0/mingw_64/lib/libQt6Core.a C$:/Qt/6.7.0/mingw_64/lib/libQt6EntryPoint.a || Vole-Machine-GUI_autogen Vole-Machine-GUI_autogen_timestamp_deps
+build Vole-Machine-GUI.exe: CXX_EXECUTABLE_LINKER__Vole-Machine-GUI_Debug CMakeFiles/Vole-Machine-GUI.dir/Vole-Machine-GUI_autogen/mocs_compilation.cpp.obj CMakeFiles/Vole-Machine-GUI.dir/main.cpp.obj CMakeFiles/Vole-Machine-GUI.dir/mainwindow.cpp.obj | C$:/Qt/6.7.0/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.7.0/mingw_64/lib/libQt6Gui.a C$:/Qt/6.7.0/mingw_64/lib/libQt6Core.a C$:/Qt/6.7.0/mingw_64/lib/libQt6EntryPoint.a || Vole-Machine-GUI_autogen Vole-Machine-GUI_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -g
   LINK_FLAGS = -mwindows
   LINK_LIBRARIES = C:/Qt/6.7.0/mingw_64/lib/libQt6Widgets.a  C:/Qt/6.7.0/mingw_64/lib/libQt6Gui.a  C:/Qt/6.7.0/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lmingw32  C:/Qt/6.7.0/mingw_64/lib/libQt6EntryPoint.a  -lshell32  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
@@ -175,7 +175,7 @@ build Vole-Machine-GUI_autogen_timestamp_deps: phony CMakeFiles/Vole-Machine-GUI
 #############################################
 # Utility command for Vole-Machine-GUI_autogen
 
-build Vole-Machine-GUI_autogen: phony CMakeFiles/Vole-Machine-GUI_autogen Vole-Machine-GUI_autogen/include/ui_volemachine.h Vole-Machine-GUI_autogen/timestamp Vole-Machine-GUI_autogen/mocs_compilation.cpp Vole-Machine-GUI_autogen_timestamp_deps
+build Vole-Machine-GUI_autogen: phony CMakeFiles/Vole-Machine-GUI_autogen Vole-Machine-GUI_autogen/include/ui_mainwindow.h Vole-Machine-GUI_autogen/timestamp Vole-Machine-GUI_autogen/mocs_compilation.cpp Vole-Machine-GUI_autogen_timestamp_deps
 
 
 #############################################
@@ -191,13 +191,13 @@ build Vole-Machine-GUI_autogen/timestamp Vole-Machine-GUI_autogen/mocs_compilati
 #############################################
 # Phony custom command for CMakeFiles\Vole-Machine-GUI_autogen_timestamp_deps
 
-build CMakeFiles/Vole-Machine-GUI_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/Vole-Machine-GUI_autogen_timestamp_deps: phony C$:/Qt/6.7.0/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.7.0/mingw_64/lib/libQt6Core.a C$:/Qt/6.7.0/mingw_64/./bin/uic.exe C$:/Qt/6.7.0/mingw_64/./bin/moc.exe
+build CMakeFiles/Vole-Machine-GUI_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/Vole-Machine-GUI_autogen_timestamp_deps: phony C$:/Qt/6.7.0/mingw_64/lib/libQt6Core.a C$:/Qt/6.7.0/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.7.0/mingw_64/./bin/moc.exe C$:/Qt/6.7.0/mingw_64/./bin/uic.exe
 
 
 #############################################
 # Phony custom command for CMakeFiles\Vole-Machine-GUI_autogen
 
-build CMakeFiles/Vole-Machine-GUI_autogen Vole-Machine-GUI_autogen/include/ui_volemachine.h | ${cmake_ninja_workdir}CMakeFiles/Vole-Machine-GUI_autogen ${cmake_ninja_workdir}Vole-Machine-GUI_autogen/include/ui_volemachine.h: phony Vole-Machine-GUI_autogen/timestamp || Vole-Machine-GUI_autogen_timestamp_deps
+build CMakeFiles/Vole-Machine-GUI_autogen Vole-Machine-GUI_autogen/include/ui_mainwindow.h | ${cmake_ninja_workdir}CMakeFiles/Vole-Machine-GUI_autogen ${cmake_ninja_workdir}Vole-Machine-GUI_autogen/include/ui_mainwindow.h: phony Vole-Machine-GUI_autogen/timestamp || Vole-Machine-GUI_autogen_timestamp_deps
 
 # =============================================================================
 # Target aliases.
