@@ -2,6 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <vector>
+
+using namespace std;
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -16,6 +20,8 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
+    vector<QString> fileContent;
 
 private slots:
     void on_openInstructionFile_clicked();

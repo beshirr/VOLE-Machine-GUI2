@@ -1,5 +1,5 @@
 /**
- * @brief This file is the implementation for the mainwindow.h wich manages the flow of the program
+ * @brief This file is the implementation for the mainwindow.h wich manages the flow of the machine
 */
 
 
@@ -31,12 +31,16 @@ MainWindow::~MainWindow()
 }
 
 
-vector<QString> fileContent; // String to hold the content of the file
+// Vector to hold the content of the file (Each instruction)
 
 
+/**
+ * @brief What action to take when clicking add insturction button
+ * @details Creating a vector of QStrings to store each instruction
+*/
 void MainWindow::on_openInstructionFile_clicked()
 {
-    // Storing the Instructions file name
+    // Getting the Instructions file name
     QString fileName = QFileDialog::getOpenFileName(this, "Open File", "", "All Files (*.*);;Text Files (*.txt);;Images (*.png *.jpg)");
 
     if (!fileName.isEmpty()) {
@@ -45,19 +49,19 @@ void MainWindow::on_openInstructionFile_clicked()
         QFile instructionsFile(fileName);
 
         if (instructionsFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
-            QTextStream in(&instructionsFile); // Create a QTextStream to read from the file
-
+            // Create a QTextStream to read from the file
+            QTextStream in(&instructionsFile);
+            // Reading the instructions with a delimiter of whitespaces and newlines
             while (!in.atEnd()) {
                 QString instruction;
                 in >> instruction;
                 fileContent.push_back(instruction);
             }
 
-            instructionsFile.close(); // Close the file after reading
+            instructionsFile.close();
         }
 
         else {
-            // If the file could not be opened, show an error message
             QMessageBox::warning(this, "Error", "Could not open the file for reading.");
         }
     }
