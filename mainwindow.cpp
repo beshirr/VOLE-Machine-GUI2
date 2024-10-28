@@ -4,6 +4,10 @@
 #include <QMessageBox>
 #include <QFile>
 
+/**
+ * @brief This file is the implementation for the mainwindow.h wich manages the flow of the program
+*/
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -14,10 +18,12 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->openInstructionButton, &QPushButton::clicked, this, &MainWindow::on_openInstructionFile_clicked);
 }
 
+
 MainWindow::~MainWindow()
 {
     delete ui;
 }
+
 
 void MainWindow::on_openInstructionFile_clicked()
 {
@@ -29,5 +35,11 @@ void MainWindow::on_openInstructionFile_clicked()
         // Loading the Instructions file
         QFile instructions(fileName);
     }
+}
+
+
+void MainWindow::on_excuteButton_clicked()
+{
+
 }
 

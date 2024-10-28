@@ -255,6 +255,12 @@
 	"HEADERS" : 
 	[
 		[
+			"D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cpu.h",
+			"MU",
+			"EWIEGA46WW/moc_cpu.cpp",
+			null
+		],
+		[
 			"D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
@@ -332,6 +338,11 @@
 	"SETTINGS_FILE" : "D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/Vole-Machine-GUI_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[
+			"D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cpu.cpp",
+			"MU",
+			null
+		],
 		[
 			"D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/main.cpp",
 			"MU",

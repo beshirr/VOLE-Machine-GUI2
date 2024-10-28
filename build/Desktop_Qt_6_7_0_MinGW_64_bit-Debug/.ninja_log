@@ -1,15 +1,9 @@
 # ninja log v5
-13	187	7517608044594722	Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
-13	187	7517608044594722	Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
-13	187	7517608044594722	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
-209	2620	7517608068961147	CMakeFiles/Vole-Machine-GUI.dir/mainwindow.cpp.obj	d9914955723050c6
-13	187	7517608044594722	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
-837	3296	7517606891808767	CMakeFiles/Vole-Machine-GUI.dir/Vole-Machine-GUI_autogen/mocs_compilation.cpp.obj	557b4224600cde29
-832	3405	7517606892896457	CMakeFiles/Vole-Machine-GUI.dir/main.cpp.obj	ea42c40135da380d
-2621	2859	7517608071301778	Vole-Machine-GUI.exe	bfa5710ce463bea2
 21	188	7517611485429452	Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
 21	188	7517611485429452	Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
 21	188	7517611485429452	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
-21	188	7517611485429452	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
 209	3030	7517611513835837	CMakeFiles/Vole-Machine-GUI.dir/mainwindow.cpp.obj	d9914955723050c6
+21	188	7517611485429452	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
+837	3296	7517606891808767	CMakeFiles/Vole-Machine-GUI.dir/Vole-Machine-GUI_autogen/mocs_compilation.cpp.obj	557b4224600cde29
+832	3405	7517606892896457	CMakeFiles/Vole-Machine-GUI.dir/main.cpp.obj	ea42c40135da380d
 3030	3252	7517611516034760	Vole-Machine-GUI.exe	bfa5710ce463bea2
