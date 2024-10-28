@@ -20,6 +20,10 @@ public:
 private slots:
     void on_openInstructionFile_clicked();
 
+    void on_excuteButton_clicked();
+
+    void on_decodeButton_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
