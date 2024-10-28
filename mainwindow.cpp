@@ -9,7 +9,7 @@
 #include <QMessageBox>
 #include <QFile>
 #include "cpu.h"
-#include <QDebug>
+
 
 using namespace std;
 
@@ -51,7 +51,6 @@ void MainWindow::on_openInstructionFile_clicked()
                 QString instruction;
                 in >> instruction;
                 fileContent.push_back(instruction);
-                qDebug() << instruction;
             }
 
             instructionsFile.close(); // Close the file after reading

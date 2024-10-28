@@ -12,6 +12,11 @@ void load() {
 
 }
 
+
+/**
+ * @fn This Function is to decode Each instrucion from the instructions file
+ * @param instruction the instrucion to de
+*/
 vector<QChar> cpu::decode(const QString& instruction) {
     vector<QChar> decoded;
     // index 0 = o-p code

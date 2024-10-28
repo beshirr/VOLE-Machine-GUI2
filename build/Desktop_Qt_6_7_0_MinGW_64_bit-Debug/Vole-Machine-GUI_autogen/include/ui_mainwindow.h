@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QGroupBox>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -24,6 +25,10 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QPushButton *openInstructionButton;
+    QGroupBox *groupBox;
+    QPushButton *excuteButton;
+    QPushButton *fetchButton;
+    QPushButton *decodeButton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -37,6 +42,18 @@ public:
         openInstructionButton = new QPushButton(centralwidget);
         openInstructionButton->setObjectName("openInstructionButton");
         openInstructionButton->setGeometry(QRect(80, 690, 131, 27));
+        groupBox = new QGroupBox(centralwidget);
+        groupBox->setObjectName("groupBox");
+        groupBox->setGeometry(QRect(20, 20, 381, 601));
+        excuteButton = new QPushButton(centralwidget);
+        excuteButton->setObjectName("excuteButton");
+        excuteButton->setGeometry(QRect(250, 690, 94, 27));
+        fetchButton = new QPushButton(centralwidget);
+        fetchButton->setObjectName("fetchButton");
+        fetchButton->setGeometry(QRect(390, 690, 94, 27));
+        decodeButton = new QPushButton(centralwidget);
+        decodeButton->setObjectName("decodeButton");
+        decodeButton->setGeometry(QRect(540, 690, 94, 27));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -55,6 +72,10 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         openInstructionButton->setText(QCoreApplication::translate("MainWindow", "Add Instructions", nullptr));
+        groupBox->setTitle(QCoreApplication::translate("MainWindow", "CPU", nullptr));
+        excuteButton->setText(QCoreApplication::translate("MainWindow", "Excute", nullptr));
+        fetchButton->setText(QCoreApplication::translate("MainWindow", "Fetch", nullptr));
+        decodeButton->setText(QCoreApplication::translate("MainWindow", "Decode", nullptr));
     } // retranslateUi
 
 };
