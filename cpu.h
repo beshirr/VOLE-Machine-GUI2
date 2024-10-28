@@ -9,12 +9,10 @@
 using namespace std;
 
 
-class cpu
-{
+class cpu {
 public:
     cpu();
     static void execute();
-    static bool isValidInstruction(const QString& instruction);
     static vector<QChar> decode(const QString& instruction);
 };
 

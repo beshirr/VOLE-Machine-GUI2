@@ -31,9 +31,6 @@ MainWindow::~MainWindow()
 }
 
 
-// Vector to hold the content of the file (Each instruction)
-
-
 /**
  * @brief What action to take when clicking add insturction button
  * @details Creating a vector of QStrings to store each instruction

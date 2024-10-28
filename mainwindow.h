@@ -18,10 +18,11 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
+    // Vector to hold the content of the file (Each instruction)
+    vector<QString> fileContent;
+
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-
-    vector<QString> fileContent;
 
 private slots:
     void on_openInstructionFile_clicked();

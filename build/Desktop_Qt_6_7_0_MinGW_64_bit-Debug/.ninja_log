@@ -1,80 +1,40 @@
 # ninja log v5
-21	188	7517611485429452	Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
-21	188	7517611485429452	Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
-21	188	7517611485429452	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
-209	3030	7517611513835837	CMakeFiles/Vole-Machine-GUI.dir/mainwindow.cpp.obj	d9914955723050c6
-21	188	7517611485429452	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
-837	3296	7517606891808767	CMakeFiles/Vole-Machine-GUI.dir/Vole-Machine-GUI_autogen/mocs_compilation.cpp.obj	557b4224600cde29
-832	3405	7517606892896457	CMakeFiles/Vole-Machine-GUI.dir/main.cpp.obj	ea42c40135da380d
-3030	3252	7517611516034760	Vole-Machine-GUI.exe	bfa5710ce463bea2
-9	849	7518070109940728	Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
-9	849	7518070109940728	Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
-9	849	7518070109940728	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
-9	849	7518070109940728	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
-849	2988	7518070131946813	CMakeFiles/Vole-Machine-GUI.dir/Vole-Machine-GUI_autogen/mocs_compilation.cpp.obj	557b4224600cde29
-857	2992	7518070131970088	CMakeFiles/Vole-Machine-GUI.dir/main.cpp.obj	ea42c40135da380d
-5	126	7518071448009549	Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
-5	126	7518071448009549	Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
-5	126	7518071448009549	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
-5	126	7518071448009549	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
-5	128	7518074847041529	Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
-5	128	7518074847041529	Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
-5	128	7518074847041529	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
-5	128	7518074847041529	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
-11	152	7518076791143482	Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
-11	152	7518076791143482	Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
-11	152	7518076791143482	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
-11	152	7518076791143482	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
-13	150	7518077455390989	Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
-13	150	7518077455390989	Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
-13	150	7518077455390989	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
-13	150	7518077455390989	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
-15	157	7518077829951913	Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
-15	157	7518077829951913	Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
-15	157	7518077829951913	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
-15	157	7518077829951913	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
-169	1180	7518077840170253	CMakeFiles/Vole-Machine-GUI.dir/cpu.cpp.obj	e4ec50a912c31f50
-173	2321	7518077851590233	CMakeFiles/Vole-Machine-GUI.dir/mainwindow.cpp.obj	d9914955723050c6
-2322	2694	7518077855272147	Vole-Machine-GUI.exe	92e69c36c1e6f39d
-14	197	7518103417130815	Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
-14	197	7518103417130815	Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
-14	197	7518103417130815	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
-14	197	7518103417130815	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
-218	1598	7518103431176888	CMakeFiles/Vole-Machine-GUI.dir/cpu.cpp.obj	e4ec50a912c31f50
-13	150	7518103928494644	Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
-13	150	7518103928494644	Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
-13	150	7518103928494644	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
-13	150	7518103928494644	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
-14	166	7518105410372739	Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
-14	166	7518105410372739	Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
-14	166	7518105410372739	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
-14	166	7518105410372739	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
-12	151	7518105597569323	Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
-12	151	7518105597569323	Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
-12	151	7518105597569323	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
-12	151	7518105597569323	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
-164	2260	7518105618634518	CMakeFiles/Vole-Machine-GUI.dir/mainwindow.cpp.obj	d9914955723050c6
-2260	2468	7518105620674576	Vole-Machine-GUI.exe	92e69c36c1e6f39d
-7	147	7518112080643238	Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
-7	147	7518112080643238	Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
-7	147	7518112080643238	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
-7	147	7518112080643238	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
-159	2368	7518112102847681	CMakeFiles/Vole-Machine-GUI.dir/mainwindow.cpp.obj	d9914955723050c6
-2368	2580	7518112104921192	Vole-Machine-GUI.exe	92e69c36c1e6f39d
-16	883	7518123444741445	Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
-16	883	7518123444741445	Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
-16	883	7518123444741445	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
-16	883	7518123444741445	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
-888	2160	7518123458289672	CMakeFiles/Vole-Machine-GUI.dir/cpu.cpp.obj	e4ec50a912c31f50
-893	2903	7518123465698053	CMakeFiles/Vole-Machine-GUI.dir/main.cpp.obj	ea42c40135da380d
-883	2984	7518123466524869	CMakeFiles/Vole-Machine-GUI.dir/Vole-Machine-GUI_autogen/mocs_compilation.cpp.obj	557b4224600cde29
-13	158	7518123785679695	Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
-13	158	7518123785679695	Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
-13	158	7518123785679695	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
-13	158	7518123785679695	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
-17	150	7518125255359930	Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
-17	150	7518125255359930	Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
-17	150	7518125255359930	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
-17	150	7518125255359930	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
-163	2129	7518125275130978	CMakeFiles/Vole-Machine-GUI.dir/mainwindow.cpp.obj	d9914955723050c6
-2129	2316	7518125276971423	Vole-Machine-GUI.exe	92e69c36c1e6f39d
+14	165	7518176345602228	Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
+14	165	7518176345602228	Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
+176	2419	7518176368122749	CMakeFiles/Vole-Machine-GUI.dir/mainwindow.cpp.obj	d9914955723050c6
+14	165	7518176345602228	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
+14	165	7518176345602228	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
+497	2192	7518162595563671	CMakeFiles/Vole-Machine-GUI.dir/Vole-Machine-GUI_autogen/mocs_compilation.cpp.obj	557b4224600cde29
+506	2195	7518162595606769	CMakeFiles/Vole-Machine-GUI.dir/main.cpp.obj	ea42c40135da380d
+2419	2632	7518176370230429	Vole-Machine-GUI.exe	92e69c36c1e6f39d
+196	1435	7518175903339709	CMakeFiles/Vole-Machine-GUI.dir/cpu.cpp.obj	e4ec50a912c31f50
+14	169	7518177948493428	Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
+14	169	7518177948493428	Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
+14	169	7518177948493428	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
+14	169	7518177948493428	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
+181	2875	7518177975519572	CMakeFiles/Vole-Machine-GUI.dir/mainwindow.cpp.obj	d9914955723050c6
+2875	3054	7518177977298309	Vole-Machine-GUI.exe	92e69c36c1e6f39d
+13	159	7518178867182286	Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
+13	159	7518178867182286	Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
+13	159	7518178867182286	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
+13	159	7518178867182286	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
+170	2448	7518178890015457	CMakeFiles/Vole-Machine-GUI.dir/mainwindow.cpp.obj	d9914955723050c6
+2448	2629	7518178891842738	Vole-Machine-GUI.exe	92e69c36c1e6f39d
+12	157	7518182202196757	Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
+12	157	7518182202196757	Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
+12	157	7518182202196757	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
+12	157	7518182202196757	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
+168	2739	7518182227962565	CMakeFiles/Vole-Machine-GUI.dir/mainwindow.cpp.obj	d9914955723050c6
+2740	2929	7518182229878008	Vole-Machine-GUI.exe	92e69c36c1e6f39d
+17	163	7518188745285359	Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
+17	163	7518188745285359	Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
+17	163	7518188745285359	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
+17	163	7518188745285359	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
+174	2807	7518188771701354	CMakeFiles/Vole-Machine-GUI.dir/mainwindow.cpp.obj	d9914955723050c6
+2808	2988	7518188773500067	Vole-Machine-GUI.exe	92e69c36c1e6f39d
+13	162	7518195111974286	Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
+13	162	7518195111974286	Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
+13	162	7518195111974286	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/timestamp	8768a7475a67cb8c
+13	162	7518195111974286	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/mocs_compilation.cpp	8768a7475a67cb8c
+174	2479	7518195135139725	CMakeFiles/Vole-Machine-GUI.dir/mainwindow.cpp.obj	d9914955723050c6
+2479	2667	7518195136993260	Vole-Machine-GUI.exe	92e69c36c1e6f39d
