@@ -4,20 +4,21 @@
 
 #include <QString>
 #include <QChar>
+#include "memory.cpp"
 
 using namespace std;
 
 class cpu {
 public:
     static int programCounter;
-    QString instruction;
 
-    cpu();
-    static void fetch();
+public:
+    static void fetch(Memory& memory);
     static void decode();
     static void execute();
+    static void runOneCycle();
+    static void runTillHalt();
 };
 
-int cpu::programCounter = 0;
 
 #endif // CPU_H
