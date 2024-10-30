@@ -5,25 +5,25 @@ using namespace std;
 
 class Memory {
 private:
-    string memory[256];  
-    int size;
+    string m_memory[256];
+    int m_size;
 
 public:
-    Memory() : size(256) {
-        for (int i = 0; i < size; ++i) {
-            memory[i] = "00";
+    Memory() : m_size(256) {
+        for (int i = 0; i < m_size; ++i) {
+            m_memory[i] = "00";
         }
     }
 
     string getCell(int address) {
-        if (address >= 0 && address < size) {
-            return memory[address];
+        if (address >= 0 && address < m_size) {
+            return m_memory[address];
         }
     }
 
     void setCell(int address, const string& val) {
-        if (address >= 0 && address < size) {
-            memory[address] = val;
+        if (address >= 0 && address < m_size) {
+            m_memory[address] = val;
         }
     }
 };
@@ -31,25 +31,25 @@ public:
 
 class Register {
 private:
-    int memory[16]; 
+    int m_register[16];
     int size;
 
 public:
     Register() : size(16) {
         for (int i = 0; i < size; ++i) {
-            memory[i] = 0;
+            m_register[i] = 0;
         }
     }
 
     int getCell(int address) {
         if (address >= 0 && address < size) {
-            return memory[address];
+            return m_register[address];
         }
     }
 
     void setCell(int address, int val) {
         if (address >= 0 && address < size) {
-            memory[address] = val;
+            m_register[address] = val;
         }
     }
 };
