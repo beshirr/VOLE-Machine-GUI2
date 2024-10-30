@@ -179,7 +179,7 @@
       </rect>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_2">
+    <widget class="QLineEdit" name="instructionDecode">
      <property name="geometry">
       <rect>
        <x>140</x>

@@ -2,7 +2,6 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <vector>
 
 using namespace std;
 
@@ -20,7 +19,6 @@ class MainWindow : public QMainWindow
 public:
     // Vector to hold the content of the file (Each instruction)
     vector<QString> fileContent;
-
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
@@ -30,6 +28,8 @@ private slots:
     void on_excuteButton_clicked();
 
     void on_decodeButton_clicked();
+
+    void on_instructionDecode_textChanged(const QString &arg1);
 
 private:
     Ui::MainWindow *ui;

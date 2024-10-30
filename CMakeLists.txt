@@ -17,6 +17,7 @@ set(PROJECT_SOURCES
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
+        memory.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -24,6 +25,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
         cpu.h cpu.cpp
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET Vole-Machine-GUI APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

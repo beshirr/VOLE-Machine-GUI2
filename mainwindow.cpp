@@ -8,9 +8,6 @@
 #include <QFileDialog>
 #include <QMessageBox>
 #include <QFile>
-#include "cpu.h"
-
-
 using namespace std;
 
 MainWindow::MainWindow(QWidget *parent)
@@ -67,11 +64,17 @@ void MainWindow::on_openInstructionFile_clicked()
 
 void MainWindow::on_excuteButton_clicked()
 {
-    cpu::execute();
+
 }
 
 
 void MainWindow::on_decodeButton_clicked()
+{
+
+}
+
+
+void MainWindow::on_instructionDecode_textChanged(const QString &arg1)
 {
 
 }
