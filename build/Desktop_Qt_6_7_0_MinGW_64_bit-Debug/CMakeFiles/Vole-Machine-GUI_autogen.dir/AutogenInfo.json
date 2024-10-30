@@ -265,6 +265,12 @@
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
 			null
+		],
+		[
+			"D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/memory.h",
+			"MU",
+			"EWIEGA46WW/moc_memory.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -350,6 +356,11 @@
 		],
 		[
 			"D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/mainwindow.cpp",
+			"MU",
+			null
+		],
+		[
+			"D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/memory.cpp",
 			"MU",
 			null
 		]

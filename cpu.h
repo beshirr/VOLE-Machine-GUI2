@@ -4,7 +4,7 @@
 
 #include <QString>
 #include <QChar>
-#include "memory.cpp"
+#include "memory.h"
 
 using namespace std;
 

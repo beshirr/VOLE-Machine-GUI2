@@ -199,7 +199,7 @@ build Vole-Machine-GUI_autogen/timestamp Vole-Machine-GUI_autogen/mocs_compilati
 #############################################
 # Phony custom command for CMakeFiles\Vole-Machine-GUI_autogen_timestamp_deps
 
-build CMakeFiles/Vole-Machine-GUI_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/Vole-Machine-GUI_autogen_timestamp_deps: phony C$:/Qt/6.7.0/mingw_64/./bin/uic.exe C$:/Qt/6.7.0/mingw_64/./bin/moc.exe C$:/Qt/6.7.0/mingw_64/lib/libQt6Core.a C$:/Qt/6.7.0/mingw_64/lib/libQt6Widgets.a
+build CMakeFiles/Vole-Machine-GUI_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/Vole-Machine-GUI_autogen_timestamp_deps: phony C$:/Qt/6.7.0/mingw_64/./bin/uic.exe C$:/Qt/6.7.0/mingw_64/./bin/moc.exe C$:/Qt/6.7.0/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.7.0/mingw_64/lib/libQt6Core.a
 
 
 #############################################

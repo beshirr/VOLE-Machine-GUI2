@@ -1,10 +1,46 @@
 # ninja log v5
-3	1998	7519965468500058	Vole-Machine-GUI_autogen/timestamp	24be3b46ef63c18b
-2012	4543	7519965494550626	CMakeFiles/Vole-Machine-GUI.dir/cpu.cpp.obj	a6d9a45e3bb1fbc6
-3	1998	7519965468500058	Vole-Machine-GUI_autogen/mocs_compilation.cpp	24be3b46ef63c18b
-3	1998	7519965468500058	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/Vole-Machine-GUI_autogen/timestamp	24be3b46ef63c18b
-3	1998	7519965468500058	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/Vole-Machine-GUI_autogen/mocs_compilation.cpp	24be3b46ef63c18b
-2008	4960	7519965498718769	CMakeFiles/Vole-Machine-GUI.dir/main.cpp.obj	d7d48eaaac679ac6
-1999	5057	7519965499661447	CMakeFiles/Vole-Machine-GUI.dir/Vole-Machine-GUI_autogen/mocs_compilation.cpp.obj	3ba2e6b19872bbcb
-2003	5806	7519965507173871	CMakeFiles/Vole-Machine-GUI.dir/mainwindow.cpp.obj	a01a90513732b2f4
-5806	6104	7519965510125285	Vole-Machine-GUI.exe	7113cb9f9f7c8b65
+7	796	7520086528244445	Vole-Machine-GUI_autogen/timestamp	24be3b46ef63c18b
+825	4609	7520086567017391	CMakeFiles/Vole-Machine-GUI.dir/cpu.cpp.obj	a6d9a45e3bb1fbc6
+7	796	7520086528244445	Vole-Machine-GUI_autogen/mocs_compilation.cpp	24be3b46ef63c18b
+820	4414	7520086565014135	CMakeFiles/Vole-Machine-GUI.dir/memory.cpp.obj	3fc2bd38531ebac
+7	796	7520086528244445	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/Vole-Machine-GUI_autogen/timestamp	24be3b46ef63c18b
+7	796	7520086528244445	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/Vole-Machine-GUI_autogen/mocs_compilation.cpp	24be3b46ef63c18b
+814	6300	7520086583938919	CMakeFiles/Vole-Machine-GUI.dir/main.cpp.obj	d7d48eaaac679ac6
+796	6438	7520086585352175	CMakeFiles/Vole-Machine-GUI.dir/Vole-Machine-GUI_autogen/mocs_compilation.cpp.obj	3ba2e6b19872bbcb
+804	6515	7520086586103932	CMakeFiles/Vole-Machine-GUI.dir/mainwindow.cpp.obj	a01a90513732b2f4
+6515	6764	7520086588570815	Vole-Machine-GUI.exe	8395c7cede73c065
+21	866	7520144708436245	Vole-Machine-GUI_autogen/timestamp	24be3b46ef63c18b
+21	866	7520144708436245	Vole-Machine-GUI_autogen/mocs_compilation.cpp	24be3b46ef63c18b
+21	866	7520144708436245	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/Vole-Machine-GUI_autogen/timestamp	24be3b46ef63c18b
+21	866	7520144708436245	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/Vole-Machine-GUI_autogen/mocs_compilation.cpp	24be3b46ef63c18b
+867	3153	7520144731922116	CMakeFiles/Vole-Machine-GUI.dir/memory.cpp.obj	3fc2bd38531ebac
+893	3191	7520144732332112	CMakeFiles/Vole-Machine-GUI.dir/cpu.cpp.obj	a6d9a45e3bb1fbc6
+34	817	7520156470107712	Vole-Machine-GUI_autogen/timestamp	24be3b46ef63c18b
+34	817	7520156470107712	Vole-Machine-GUI_autogen/mocs_compilation.cpp	24be3b46ef63c18b
+34	817	7520156470107712	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/Vole-Machine-GUI_autogen/timestamp	24be3b46ef63c18b
+34	817	7520156470107712	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/Vole-Machine-GUI_autogen/mocs_compilation.cpp	24be3b46ef63c18b
+823	3370	7520156496262666	CMakeFiles/Vole-Machine-GUI.dir/memory.cpp.obj	3fc2bd38531ebac
+837	3388	7520156496445810	CMakeFiles/Vole-Machine-GUI.dir/cpu.cpp.obj	a6d9a45e3bb1fbc6
+9	631	7520162191325230	Vole-Machine-GUI_autogen/timestamp	24be3b46ef63c18b
+9	631	7520162191325230	Vole-Machine-GUI_autogen/mocs_compilation.cpp	24be3b46ef63c18b
+9	631	7520162191325230	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/Vole-Machine-GUI_autogen/timestamp	24be3b46ef63c18b
+9	631	7520162191325230	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/Vole-Machine-GUI_autogen/mocs_compilation.cpp	24be3b46ef63c18b
+649	3322	7520162218930677	CMakeFiles/Vole-Machine-GUI.dir/memory.cpp.obj	3fc2bd38531ebac
+657	3336	7520162219095733	CMakeFiles/Vole-Machine-GUI.dir/cpu.cpp.obj	a6d9a45e3bb1fbc6
+6	145	7520162546882575	Vole-Machine-GUI_autogen/timestamp	24be3b46ef63c18b
+6	145	7520162546882575	Vole-Machine-GUI_autogen/mocs_compilation.cpp	24be3b46ef63c18b
+6	145	7520162546882575	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/Vole-Machine-GUI_autogen/timestamp	24be3b46ef63c18b
+6	145	7520162546882575	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/Vole-Machine-GUI_autogen/mocs_compilation.cpp	24be3b46ef63c18b
+7	160	7520163264246202	Vole-Machine-GUI_autogen/timestamp	24be3b46ef63c18b
+7	160	7520163264246202	Vole-Machine-GUI_autogen/mocs_compilation.cpp	24be3b46ef63c18b
+7	160	7520163264246202	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/Vole-Machine-GUI_autogen/timestamp	24be3b46ef63c18b
+7	160	7520163264246202	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/Vole-Machine-GUI_autogen/mocs_compilation.cpp	24be3b46ef63c18b
+5	555	7520163877863451	Vole-Machine-GUI_autogen/timestamp	24be3b46ef63c18b
+5	555	7520163877863451	Vole-Machine-GUI_autogen/mocs_compilation.cpp	24be3b46ef63c18b
+5	555	7520163877863451	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/Vole-Machine-GUI_autogen/timestamp	24be3b46ef63c18b
+5	555	7520163877863451	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/Vole-Machine-GUI_autogen/mocs_compilation.cpp	24be3b46ef63c18b
+566	2665	7520163899419367	CMakeFiles/Vole-Machine-GUI.dir/cpu.cpp.obj	a6d9a45e3bb1fbc6
+563	3808	7520163910908753	CMakeFiles/Vole-Machine-GUI.dir/main.cpp.obj	d7d48eaaac679ac6
+555	3946	7520163912247441	CMakeFiles/Vole-Machine-GUI.dir/Vole-Machine-GUI_autogen/mocs_compilation.cpp.obj	3ba2e6b19872bbcb
+559	4142	7520163914212938	CMakeFiles/Vole-Machine-GUI.dir/mainwindow.cpp.obj	a01a90513732b2f4
+4142	4760	7520163920387795	Vole-Machine-GUI.exe	8395c7cede73c065

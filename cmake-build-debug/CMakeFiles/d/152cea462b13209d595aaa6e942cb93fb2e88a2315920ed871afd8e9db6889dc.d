@@ -1,78 +1,21 @@
 Vole-Machine-GUI_autogen/timestamp: \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXCompiler.cmake.in \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp \
   C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXInformation.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCompilerIdDetection.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineCXXCompiler.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineCompileFeatures.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineCompiler.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineRCCompiler.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineSystem.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeFindBinUtils.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeFindDependencyMacro.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeGenericSystem.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeParseImplicitIncludeInfo.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeParseImplicitLinkInfo.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeParseLibraryArchitecture.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeRCCompiler.cmake.in \
   C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeRCInformation.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystem.cmake.in \
   C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeTestCXXCompiler.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeTestCompilerCommon.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeTestRCCompiler.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckCXXSourceCompiles.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckIncludeFileCXX.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckLibraryExists.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/ADSP-DetermineCompiler.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/ARMCC-DetermineCompiler.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/ARMClang-DetermineCompiler.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/AppleClang-DetermineCompiler.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/Borland-DetermineCompiler.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/Clang-DetermineCompiler.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/Clang-DetermineCompilerInternal.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/Cray-DetermineCompiler.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/Embarcadero-DetermineCompiler.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/Fujitsu-DetermineCompiler.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GHS-DetermineCompiler.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-CXX.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-FindBinUtils.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/HP-CXX-DetermineCompiler.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/IAR-DetermineCompiler.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/Intel-DetermineCompiler.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/MSVC-DetermineCompiler.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/NVHPC-DetermineCompiler.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/NVIDIA-DetermineCompiler.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/PGI-DetermineCompiler.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/PathScale-DetermineCompiler.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/SCO-DetermineCompiler.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/TI-DetermineCompiler.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/Tasking-DetermineCompiler.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/Watcom-DetermineCompiler.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/XL-CXX-DetermineCompiler.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPackageMessage.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/FindThreads.cmake \
@@ -81,14 +24,15 @@ Vole-Machine-GUI_autogen/timestamp: \
   C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Internal/CheckFlagCommonConfig.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Internal/FeatureTesting.cmake \
-  C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-Determine-CXX.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX-ABI.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-windres.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows.cmake \
   C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/WindowsPaths.cmake \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/QChar \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/QFile \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/QString \
   C:/Qt/6.7.0/mingw_64/include/QtCore/q20functional.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/q20memory.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/q20type_traits.h \
@@ -107,6 +51,7 @@ Vole-Machine-GUI_autogen/timestamp: \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qbytearrayalgorithms.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qbytearraylist.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qbytearrayview.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/qcalendar.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qchar.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qcompare.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qcompare_impl.h \
@@ -120,9 +65,14 @@ Vole-Machine-GUI_autogen/timestamp: \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qcontiguouscache.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qdarwinhelpers.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qdatastream.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/qdatetime.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qdebug.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/qdir.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qendian.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qexceptionhandling.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/qfile.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/qfiledevice.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/qfileinfo.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qflags.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qfloat16.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qforeach.h \
@@ -133,12 +83,14 @@ Vole-Machine-GUI_autogen/timestamp: \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qglobalstatic.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qhash.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qhashfunctions.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/qiodevice.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qiodevicebase.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qiterable.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qiterator.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qlatin1stringview.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qline.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qlist.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/qlocale.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qlogging.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qmalloc.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qmap.h \
@@ -190,6 +142,7 @@ Vole-Machine-GUI_autogen/timestamp: \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qtdeprecationmarkers.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qtenvironmentvariables.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qtextstream.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/qtimezone.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qtmetamacros.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qtnoop.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qtpreprocessorsupport.h \
@@ -200,6 +153,7 @@ Vole-Machine-GUI_autogen/timestamp: \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qtversionchecks.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qtypeinfo.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qtypes.h \
+  C:/Qt/6.7.0/mingw_64/include/QtCore/qurl.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qutf8stringview.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qvariant.h \
   C:/Qt/6.7.0/mingw_64/include/QtCore/qvarlengtharray.h \
@@ -231,8 +185,14 @@ Vole-Machine-GUI_autogen/timestamp: \
   C:/Qt/6.7.0/mingw_64/include/QtGui/qtransform.h \
   C:/Qt/6.7.0/mingw_64/include/QtGui/qwindowdefs.h \
   C:/Qt/6.7.0/mingw_64/include/QtGui/qwindowdefs_win.h \
+  C:/Qt/6.7.0/mingw_64/include/QtWidgets/QFileDialog \
   C:/Qt/6.7.0/mingw_64/include/QtWidgets/QMainWindow \
+  C:/Qt/6.7.0/mingw_64/include/QtWidgets/QMessageBox \
+  C:/Qt/6.7.0/mingw_64/include/QtWidgets/qdialog.h \
+  C:/Qt/6.7.0/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
+  C:/Qt/6.7.0/mingw_64/include/QtWidgets/qfiledialog.h \
   C:/Qt/6.7.0/mingw_64/include/QtWidgets/qmainwindow.h \
+  C:/Qt/6.7.0/mingw_64/include/QtWidgets/qmessagebox.h \
   C:/Qt/6.7.0/mingw_64/include/QtWidgets/qsizepolicy.h \
   C:/Qt/6.7.0/mingw_64/include/QtWidgets/qtabwidget.h \
   C:/Qt/6.7.0/mingw_64/include/QtWidgets/qtwidgets-config.h \
@@ -394,6 +354,8 @@ Vole-Machine-GUI_autogen/timestamp: \
   C:/msys64/mingw64/include/c++/14.1.0/bits/allocator.h \
   C:/msys64/mingw64/include/c++/14.1.0/bits/atomic_base.h \
   C:/msys64/mingw64/include/c++/14.1.0/bits/atomic_lockfree_defines.h \
+  C:/msys64/mingw64/include/c++/14.1.0/bits/basic_ios.h \
+  C:/msys64/mingw64/include/c++/14.1.0/bits/basic_ios.tcc \
   C:/msys64/mingw64/include/c++/14.1.0/bits/basic_string.h \
   C:/msys64/mingw64/include/c++/14.1.0/bits/basic_string.tcc \
   C:/msys64/mingw64/include/c++/14.1.0/bits/char_traits.h \
@@ -415,9 +377,12 @@ Vole-Machine-GUI_autogen/timestamp: \
   C:/msys64/mingw64/include/c++/14.1.0/bits/hashtable_policy.h \
   C:/msys64/mingw64/include/c++/14.1.0/bits/invoke.h \
   C:/msys64/mingw64/include/c++/14.1.0/bits/ios_base.h \
+  C:/msys64/mingw64/include/c++/14.1.0/bits/istream.tcc \
   C:/msys64/mingw64/include/c++/14.1.0/bits/list.tcc \
   C:/msys64/mingw64/include/c++/14.1.0/bits/locale_classes.h \
   C:/msys64/mingw64/include/c++/14.1.0/bits/locale_classes.tcc \
+  C:/msys64/mingw64/include/c++/14.1.0/bits/locale_facets.h \
+  C:/msys64/mingw64/include/c++/14.1.0/bits/locale_facets.tcc \
   C:/msys64/mingw64/include/c++/14.1.0/bits/localefwd.h \
   C:/msys64/mingw64/include/c++/14.1.0/bits/memory_resource.h \
   C:/msys64/mingw64/include/c++/14.1.0/bits/memoryfwd.h \
@@ -425,6 +390,7 @@ Vole-Machine-GUI_autogen/timestamp: \
   C:/msys64/mingw64/include/c++/14.1.0/bits/nested_exception.h \
   C:/msys64/mingw64/include/c++/14.1.0/bits/new_allocator.h \
   C:/msys64/mingw64/include/c++/14.1.0/bits/node_handle.h \
+  C:/msys64/mingw64/include/c++/14.1.0/bits/ostream.tcc \
   C:/msys64/mingw64/include/c++/14.1.0/bits/ostream_insert.h \
   C:/msys64/mingw64/include/c++/14.1.0/bits/parse_numbers.h \
   C:/msys64/mingw64/include/c++/14.1.0/bits/postypes.h \
@@ -487,6 +453,7 @@ Vole-Machine-GUI_autogen/timestamp: \
   C:/msys64/mingw64/include/c++/14.1.0/cstring \
   C:/msys64/mingw64/include/c++/14.1.0/ctime \
   C:/msys64/mingw64/include/c++/14.1.0/cwchar \
+  C:/msys64/mingw64/include/c++/14.1.0/cwctype \
   C:/msys64/mingw64/include/c++/14.1.0/debug/assertions.h \
   C:/msys64/mingw64/include/c++/14.1.0/debug/debug.h \
   C:/msys64/mingw64/include/c++/14.1.0/exception \
@@ -497,9 +464,13 @@ Vole-Machine-GUI_autogen/timestamp: \
   C:/msys64/mingw64/include/c++/14.1.0/ext/numeric_traits.h \
   C:/msys64/mingw64/include/c++/14.1.0/ext/string_conversions.h \
   C:/msys64/mingw64/include/c++/14.1.0/ext/type_traits.h \
+  C:/msys64/mingw64/include/c++/14.1.0/filesystem \
   C:/msys64/mingw64/include/c++/14.1.0/functional \
   C:/msys64/mingw64/include/c++/14.1.0/initializer_list \
+  C:/msys64/mingw64/include/c++/14.1.0/ios \
   C:/msys64/mingw64/include/c++/14.1.0/iosfwd \
+  C:/msys64/mingw64/include/c++/14.1.0/iostream \
+  C:/msys64/mingw64/include/c++/14.1.0/istream \
   C:/msys64/mingw64/include/c++/14.1.0/iterator \
   C:/msys64/mingw64/include/c++/14.1.0/limits \
   C:/msys64/mingw64/include/c++/14.1.0/list \
@@ -508,6 +479,7 @@ Vole-Machine-GUI_autogen/timestamp: \
   C:/msys64/mingw64/include/c++/14.1.0/new \
   C:/msys64/mingw64/include/c++/14.1.0/numeric \
   C:/msys64/mingw64/include/c++/14.1.0/optional \
+  C:/msys64/mingw64/include/c++/14.1.0/ostream \
   C:/msys64/mingw64/include/c++/14.1.0/pstl/execution_defs.h \
   C:/msys64/mingw64/include/c++/14.1.0/pstl/glue_numeric_defs.h \
   C:/msys64/mingw64/include/c++/14.1.0/ratio \
@@ -541,6 +513,8 @@ Vole-Machine-GUI_autogen/timestamp: \
   C:/msys64/mingw64/include/c++/14.1.0/x86_64-w64-mingw32/bits/c++config.h \
   C:/msys64/mingw64/include/c++/14.1.0/x86_64-w64-mingw32/bits/c++locale.h \
   C:/msys64/mingw64/include/c++/14.1.0/x86_64-w64-mingw32/bits/cpu_defines.h \
+  C:/msys64/mingw64/include/c++/14.1.0/x86_64-w64-mingw32/bits/ctype_base.h \
+  C:/msys64/mingw64/include/c++/14.1.0/x86_64-w64-mingw32/bits/ctype_inline.h \
   C:/msys64/mingw64/include/c++/14.1.0/x86_64-w64-mingw32/bits/error_constants.h \
   C:/msys64/mingw64/include/c++/14.1.0/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/msys64/mingw64/include/c++/14.1.0/x86_64-w64-mingw32/bits/gthr.h \
@@ -573,6 +547,7 @@ Vole-Machine-GUI_autogen/timestamp: \
   C:/msys64/mingw64/include/time.h \
   C:/msys64/mingw64/include/vadefs.h \
   C:/msys64/mingw64/include/wchar.h \
+  C:/msys64/mingw64/include/wctype.h \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/limits.h \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/stdarg.h \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/stdbool.h \
@@ -589,5 +564,7 @@ Vole-Machine-GUI_autogen/timestamp: \
   D:/FCAI/Level\ 2/First\ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/main.cpp \
   D:/FCAI/Level\ 2/First\ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/mainwindow.cpp \
   D:/FCAI/Level\ 2/First\ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/mainwindow.h \
+  D:/FCAI/Level\ 2/First\ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/memory.cpp \
+  D:/FCAI/Level\ 2/First\ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/memory.h \
   D:/FCAI/Level\ 2/First\ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/mainwindow.ui \
   C:/Program\ Files/JetBrains/CLion\ 2023.2.2/bin/cmake/win/x64/bin/cmake.exe

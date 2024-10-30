@@ -2,19 +2,19 @@
 
 Memory::Memory() : m_size(256) {
     for (int i = 0; i < m_size; ++i) {
-        m_memory[i] = "00";
+        memory[i] = "00";
     }
 }
 
 string Memory::getCell(int address) {
     if (address >= 0 && address < m_size) {
-        return m_memory[address];
+        return memory[address];
     }
 }
 
 void Memory::setCell(int address, const string& val) {
     if (address >= 0 && address < m_size) {
-        m_memory[address] = val;
+        memory[address] = val;
     }
 }
 

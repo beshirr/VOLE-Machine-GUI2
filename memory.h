@@ -10,7 +10,7 @@ using namespace std;
 
 class Memory {
 private:
-    string m_memory[256];
+    string memory[256];
     int m_size;
 
 public:
