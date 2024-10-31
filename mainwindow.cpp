@@ -1,3 +1,5 @@
+// TODO: FIX ON DECODE BUTTON CLICK
+// TODO: HOW TO UPDATE THE MEMORY DISPLAYING
 /**
  * @file mainwindow.cpp
  * @brief Running the Machine and Linking between the UI and the application classes
@@ -15,84 +17,13 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) , ui(new Ui::MainW
     ui->setupUi(this);
     m_cpu = new cpu;
 
-    /**
-     * @brief The decoding display section*/
-    ui->encodedInsMessage->setReadOnly(true);
-    ui->opCodeDisplay->setReadOnly(true);
-    ui->rDisplay->setReadOnly(true);
-    ui->xDisplay->setReadOnly(true);
-    ui->yDisplay->setReadOnly(true);
+    connecting();
+    decodingDisplay();
+    memoryDisplay();
+    registerDisplay();
 
-    /**
-     * @brief Program counter*/
+    // Program counter Display
     ui->pCounter->setText(QString::number(cpu::m_programCounter));
-
-
-    // TODO: TRY TO MAKE THIS ONE FUNCTION FOR BOTH MEMORY AND REGISTER
-
-
-    /**
-     * @brief setting memory display section*/
-    ui->memoryDisplay->setRowCount(256);
-    ui->memoryDisplay->setColumnCount(4);
-    QStringList headers = {"Address", "Binary", "Hex", "Int"};
-    ui->memoryDisplay->setHorizontalHeaderLabels(headers);
-    for (int i = 0; i < 256; ++i) {
-        // Address column (display as hex)
-        QString address = QString::number(i, 16).toUpper().rightJustified(2, '0');
-        ui->memoryDisplay->setItem(i, 0, new QTableWidgetItem(address));
-
-        // Binary column (initialize to zeros)
-        QString binaryValue = "00000000";
-        ui->memoryDisplay->setItem(i, 1, new QTableWidgetItem(binaryValue));
-
-        // Hex column (initialize to zero)
-        QString hexValue = "00";
-        ui->memoryDisplay->setItem(i, 2, new QTableWidgetItem(hexValue));
-
-        QString intValue = "0";
-        ui->memoryDisplay->setItem(i, 3, new QTableWidgetItem(intValue));
-    }
-    // Setting memory display properties
-    ui->memoryDisplay->setEditTriggers(QAbstractItemView::NoEditTriggers); // Make table read-only
-    ui->memoryDisplay->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch); // Stretch columns
-    ui->memoryDisplay->verticalHeader()->setVisible(false); // Hide row numbers if unnecessary
-    ui->memoryDisplay->setSelectionMode(QAbstractItemView::NoSelection); // Disable selection
-
-
-    /**
-     * @brief Setting Register display section*/
-    ui->registerDisplay->setRowCount(16);
-    ui->registerDisplay->setColumnCount(4);
-    QStringList r_headers = {"Address", "Binary", "Hex", "Int"};
-    ui->registerDisplay->setHorizontalHeaderLabels(r_headers);
-    for (int i = 0; i < 256; ++i) {
-        // Address column (display as hex)
-        QString address = QString::number(i, 16).toUpper().rightJustified(2, '0');
-        ui->registerDisplay->setItem(i, 0, new QTableWidgetItem(address));
-
-        // Binary column (initialize to zeros)
-        QString binaryValue = "00000000";
-        ui->registerDisplay->setItem(i, 1, new QTableWidgetItem(binaryValue));
-
-        // Hex column (initialize to zero)
-        QString hexValue = "00";
-        ui->registerDisplay->setItem(i, 2, new QTableWidgetItem(hexValue));
-
-        QString intValue = "0";
-        ui->registerDisplay->setItem(i, 3, new QTableWidgetItem(intValue));
-    }
-    // Setting memory display properties
-    ui->registerDisplay->setEditTriggers(QAbstractItemView::NoEditTriggers); // Make table read-only
-    ui->registerDisplay->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch); // Stretch columns
-    ui->registerDisplay->verticalHeader()->setVisible(false); // Hide row numbers if unnecessary
-    ui->registerDisplay->setSelectionMode(QAbstractItemView::NoSelection); // Disable selection
-
-    /**
-     * @brief Connecting signals*/
-    connect(ui->openInstructionButton, &QPushButton::clicked, this, &MainWindow::on_openInstructionFile_clicked);
-    connect(ui->excuteButton, &QPushButton::clicked, this, &MainWindow::on_executeButton_clicked);
-    connect(ui->decodeButton, &QPushButton::clicked, this, &MainWindow::on_decodeButton_clicked);
 }
 
 
@@ -109,8 +40,103 @@ MainWindow::~MainWindow()
 }
 
 
-void MainWindow::on_openInstructionFile_clicked() {
-    QString fileName = QFileDialog::getOpenFileName(this, tr("Open instruction File"), "", tr("Text Files (*.txt)"));
+/**
+ * @brief Connecting signals*/
+void MainWindow::connecting(){
+    connect(ui->openInstructionButton, &QPushButton::clicked, this,
+            &MainWindow::onOpenInstructionFileClicked);
+    connect(ui->excuteButton, &QPushButton::clicked, this,
+            &MainWindow::onExecuteButtonClicked);
+    connect(ui->decodeButton, &QPushButton::clicked, this,
+            &MainWindow::onDecodeButtonClicked);
+    connect(ui->fetchButton, &QPushButton::clicked, this,
+            &MainWindow::onFetchButtonClicked);
+}
+
+
+
+
+/**
+ * @brief The decoding display section*/
+void MainWindow::decodingDisplay(){
+    ui->encodedInsMessage->setReadOnly(true);
+    ui->opCodeDisplay->setReadOnly(true);
+    ui->rDisplay->setReadOnly(true);
+    ui->xDisplay->setReadOnly(true);
+    ui->yDisplay->setReadOnly(true);
+}
+
+
+
+
+/**
+ * @brief setting memory display section*/
+void MainWindow::memoryDisplay() {
+    ui->memoryDisplay->setRowCount(256);
+    ui->memoryDisplay->setColumnCount(4);
+    QStringList headers = {"Address", "Binary", "Hex", "Int"};
+    ui->memoryDisplay->setHorizontalHeaderLabels(headers);
+    for (int i = 0; i < 256; ++i) {
+        // Address column (display as hex)
+        QString address = QString::number(i, 16).toUpper().rightJustified(2, '0');
+        ui->memoryDisplay->setItem(i, 0, new QTableWidgetItem(address));
+
+        // Binary column (initialize to zeros)
+        QString binaryValue = "00000000";
+        ui->memoryDisplay->setItem(i, 1, new QTableWidgetItem(binaryValue));
+
+        // Hex column (initialize to zero)
+        QString hexValue = m_cpu->m_memory->getCell(i);
+        ui->memoryDisplay->setItem(i, 2, new QTableWidgetItem(hexValue));
+
+        QString intValue = "0";
+        ui->memoryDisplay->setItem(i, 3, new QTableWidgetItem(intValue));
+    }
+    // Setting memory display properties
+    ui->memoryDisplay->setEditTriggers(QAbstractItemView::NoEditTriggers); // Make table read-only
+    ui->memoryDisplay->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch); // Stretch columns
+    ui->memoryDisplay->verticalHeader()->setVisible(false); // Hide row numbers if unnecessary
+    ui->memoryDisplay->setSelectionMode(QAbstractItemView::NoSelection); // Disable selection
+}
+
+
+
+/**
+ * @brief Setting Register display section*/
+void MainWindow::registerDisplay() {
+    ui->registerDisplay->setRowCount(16);
+    ui->registerDisplay->setColumnCount(4);
+    QStringList r_headers = {"Address", "Binary", "Hex", "Int"};
+    ui->registerDisplay->setHorizontalHeaderLabels(r_headers);
+    for (int i = 0; i < 256; ++i) {
+        // Address column (display as hex)
+        QString address = QString::number(i, 16).toUpper().rightJustified(2, '0');
+        ui->registerDisplay->setItem(i, 0, new QTableWidgetItem(address));
+
+        // Binary column (initialize to zeros)
+        QString binaryValue = "00000000";
+        ui->registerDisplay->setItem(i, 1, new QTableWidgetItem(binaryValue));
+
+        // Hex column (initialize to zero)
+        QString hexValue = m_cpu->m_register->getCell(i);
+        ui->registerDisplay->setItem(i, 2, new QTableWidgetItem(hexValue));
+
+        QString intValue = "0";
+        ui->registerDisplay->setItem(i, 3, new QTableWidgetItem(intValue));
+    }
+    // Setting memory display properties
+    ui->registerDisplay->setEditTriggers(QAbstractItemView::NoEditTriggers); // Make table read-only
+    ui->registerDisplay->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch); // Stretch columns
+    ui->registerDisplay->verticalHeader()->setVisible(false); // Hide row numbers if unnecessary
+    ui->registerDisplay->setSelectionMode(QAbstractItemView::NoSelection); // Disable selection
+}
+
+
+
+
+void MainWindow::onOpenInstructionFileClicked() {
+    QString fileName = QFileDialog::getOpenFileName(this, tr("Open instruction File"),
+                                                    "", tr("Text Files (*.txt)"));
 
     if (!fileName.isEmpty()) {
         QFile instructionsFile(fileName);
@@ -119,7 +145,7 @@ void MainWindow::on_openInstructionFile_clicked() {
             QString instruction;
             while (!in.atEnd()) {
                 in >> instruction;
-//                m_fileContent.push_back(instruction);
+                m_cpu->m_memory->setCell(cpu::m_programCounter, instruction);
             }
             instructionsFile.close();
         } else {
@@ -129,14 +155,14 @@ void MainWindow::on_openInstructionFile_clicked() {
 }
 
 
-void MainWindow::on_fetchButton_clicked()
+void MainWindow::onFetchButtonClicked()
 {
     m_cpu->fetch();
     ui->instructionDecode->setText(m_cpu->m_instructionRegister);
 }
 
 
-void MainWindow::on_decodeButton_clicked()
+void MainWindow::onDecodeButtonClicked()
 {
     vector<QString> decoded = m_cpu->decode();
     ui->opCodeDisplay->setText(decoded[0]);
@@ -147,7 +173,7 @@ void MainWindow::on_decodeButton_clicked()
 }
 
 
-void MainWindow::on_executeButton_clicked()
+void MainWindow::onExecuteButtonClicked()
 {
     // m_cpu->execute();
 }

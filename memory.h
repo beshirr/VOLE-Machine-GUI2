@@ -23,8 +23,8 @@ public:
 
 
 class Register {
-protected:
-    string m_register[16];
+private:
+    int m_register[16];
     int size;
 
 public:
