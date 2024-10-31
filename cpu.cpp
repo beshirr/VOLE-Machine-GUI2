@@ -23,7 +23,11 @@ void cpu::fetch() {
 }
 
 
-QString cpu::decode() {
+vector<QString> cpu::decode() {
+    vector<QString> instructionEncode;
+    for (int i = 0; i < 3; ++i) {
+        instructionEncode.emplace_back(m_instructionRegister[i]);
+    }
     QChar op = m_instructionRegister[0];
     QChar r = m_instructionRegister[1];
     QChar x = m_instructionRegister[2];
@@ -82,9 +86,25 @@ QString cpu::decode() {
     }
     else if (op.toUpper() == 'D') {
         message = QString("JUMP to the instruction located in the memory cell at address %1%2 if the bit pattern in register %3\n"
-                          "is greater than  the bit pattern in register number 0. Otherwise, continue with the normal sequence of\n"
+                          "is greater than the bit pattern in register number 0. Otherwise, continue with the normal sequence of\n"
                           "execution.").arg(x).arg(y).arg(r);
     }
-    return message;
+    instructionEncode.emplace_back(message);
+    return instructionEncode;
 }
 
+
+void cpu::execute() {
+    QChar op = m_instructionRegister[0];
+    QChar r = m_instructionRegister[1];
+    QChar x = m_instructionRegister[2];
+    QChar y = m_instructionRegister[3];
+    // TODO: Handle conditions when the CU/ALU methods are implemented
+}
+
+
+void cpu::runOneCycle() {
+    fetch();
+    decode();
+    execute();
+}

@@ -12,12 +12,14 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QGroupBox>
+#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
+#include <QtWidgets/QTableWidget>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QWidget>
 
@@ -28,8 +30,6 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QPushButton *openInstructionButton;
-    QGroupBox *groupBox;
-    QGroupBox *groupBox_2;
     QGroupBox *groupBox_3;
     QPushButton *pushButton_2;
     QPushButton *pushButton_3;
@@ -39,21 +39,25 @@ public:
     QPushButton *decodeButton;
     QPushButton *fetchButton;
     QLabel *label;
-    QLineEdit *lineEdit;
+    QLineEdit *pCounter;
     QLineEdit *instructionDecode;
     QLabel *label_2;
     QLabel *label_3;
-    QLineEdit *lineEdit_3;
-    QTextEdit *textEdit;
+    QLineEdit *opCodeDisplay;
+    QTextEdit *encodedInsMessage;
     QLabel *label_4;
-    QLineEdit *lineEdit_7;
-    QLineEdit *lineEdit_12;
+    QLineEdit *rDisplay;
+    QLineEdit *xDisplay;
     QLabel *label_13;
-    QLineEdit *lineEdit_13;
+    QLineEdit *yDisplay;
     QLabel *label_14;
     QPushButton *pushButton_5;
     QPushButton *pushButton_6;
     QPushButton *pushButton_4;
+    QTableWidget *memoryDisplay;
+    QLabel *label_5;
+    QTableWidget *registerDisplay;
+    QLabel *label_6;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -67,12 +71,6 @@ public:
         openInstructionButton = new QPushButton(centralwidget);
         openInstructionButton->setObjectName("openInstructionButton");
         openInstructionButton->setGeometry(QRect(620, 550, 131, 27));
-        groupBox = new QGroupBox(centralwidget);
-        groupBox->setObjectName("groupBox");
-        groupBox->setGeometry(QRect(20, 20, 291, 521));
-        groupBox_2 = new QGroupBox(centralwidget);
-        groupBox_2->setObjectName("groupBox_2");
-        groupBox_2->setGeometry(QRect(320, 20, 291, 521));
         groupBox_3 = new QGroupBox(centralwidget);
         groupBox_3->setObjectName("groupBox_3");
         groupBox_3->setGeometry(QRect(620, 20, 341, 171));
@@ -100,9 +98,9 @@ public:
         label = new QLabel(groupBox_4);
         label->setObjectName("label");
         label->setGeometry(QRect(10, 30, 131, 41));
-        lineEdit = new QLineEdit(groupBox_4);
-        lineEdit->setObjectName("lineEdit");
-        lineEdit->setGeometry(QRect(140, 40, 113, 26));
+        pCounter = new QLineEdit(groupBox_4);
+        pCounter->setObjectName("pCounter");
+        pCounter->setGeometry(QRect(140, 40, 113, 26));
         instructionDecode = new QLineEdit(groupBox_4);
         instructionDecode->setObjectName("instructionDecode");
         instructionDecode->setGeometry(QRect(140, 80, 113, 26));
@@ -112,27 +110,27 @@ public:
         label_3 = new QLabel(groupBox_4);
         label_3->setObjectName("label_3");
         label_3->setGeometry(QRect(10, 130, 71, 18));
-        lineEdit_3 = new QLineEdit(groupBox_4);
-        lineEdit_3->setObjectName("lineEdit_3");
-        lineEdit_3->setGeometry(QRect(80, 130, 31, 21));
-        textEdit = new QTextEdit(groupBox_4);
-        textEdit->setObjectName("textEdit");
-        textEdit->setGeometry(QRect(10, 170, 321, 71));
+        opCodeDisplay = new QLineEdit(groupBox_4);
+        opCodeDisplay->setObjectName("opCodeDisplay");
+        opCodeDisplay->setGeometry(QRect(80, 130, 31, 21));
+        encodedInsMessage = new QTextEdit(groupBox_4);
+        encodedInsMessage->setObjectName("encodedInsMessage");
+        encodedInsMessage->setGeometry(QRect(10, 170, 321, 71));
         label_4 = new QLabel(groupBox_4);
         label_4->setObjectName("label_4");
         label_4->setGeometry(QRect(120, 130, 21, 18));
-        lineEdit_7 = new QLineEdit(groupBox_4);
-        lineEdit_7->setObjectName("lineEdit_7");
-        lineEdit_7->setGeometry(QRect(140, 130, 31, 21));
-        lineEdit_12 = new QLineEdit(groupBox_4);
-        lineEdit_12->setObjectName("lineEdit_12");
-        lineEdit_12->setGeometry(QRect(200, 130, 31, 21));
+        rDisplay = new QLineEdit(groupBox_4);
+        rDisplay->setObjectName("rDisplay");
+        rDisplay->setGeometry(QRect(140, 130, 31, 21));
+        xDisplay = new QLineEdit(groupBox_4);
+        xDisplay->setObjectName("xDisplay");
+        xDisplay->setGeometry(QRect(200, 130, 31, 21));
         label_13 = new QLabel(groupBox_4);
         label_13->setObjectName("label_13");
         label_13->setGeometry(QRect(180, 130, 21, 18));
-        lineEdit_13 = new QLineEdit(groupBox_4);
-        lineEdit_13->setObjectName("lineEdit_13");
-        lineEdit_13->setGeometry(QRect(260, 130, 31, 21));
+        yDisplay = new QLineEdit(groupBox_4);
+        yDisplay->setObjectName("yDisplay");
+        yDisplay->setGeometry(QRect(260, 130, 31, 21));
         label_14 = new QLabel(groupBox_4);
         label_14->setObjectName("label_14");
         label_14->setGeometry(QRect(240, 130, 21, 18));
@@ -145,6 +143,18 @@ public:
         pushButton_4 = new QPushButton(centralwidget);
         pushButton_4->setObjectName("pushButton_4");
         pushButton_4->setGeometry(QRect(760, 550, 201, 27));
+        memoryDisplay = new QTableWidget(centralwidget);
+        memoryDisplay->setObjectName("memoryDisplay");
+        memoryDisplay->setGeometry(QRect(20, 40, 291, 501));
+        label_5 = new QLabel(centralwidget);
+        label_5->setObjectName("label_5");
+        label_5->setGeometry(QRect(20, 20, 67, 18));
+        registerDisplay = new QTableWidget(centralwidget);
+        registerDisplay->setObjectName("registerDisplay");
+        registerDisplay->setGeometry(QRect(320, 40, 291, 501));
+        label_6 = new QLabel(centralwidget);
+        label_6->setObjectName("label_6");
+        label_6->setGeometry(QRect(320, 20, 67, 18));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -163,8 +173,6 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         openInstructionButton->setText(QCoreApplication::translate("MainWindow", "Add Instructions", nullptr));
-        groupBox->setTitle(QCoreApplication::translate("MainWindow", "Memory", nullptr));
-        groupBox_2->setTitle(QCoreApplication::translate("MainWindow", "Register", nullptr));
         groupBox_3->setTitle(QCoreApplication::translate("MainWindow", "Screen", nullptr));
         pushButton_2->setText(QCoreApplication::translate("MainWindow", "Clear Memory", nullptr));
         pushButton_3->setText(QCoreApplication::translate("MainWindow", "Clear Register", nullptr));
@@ -182,6 +190,8 @@ public:
         pushButton_5->setText(QCoreApplication::translate("MainWindow", "Run one Cycle", nullptr));
         pushButton_6->setText(QCoreApplication::translate("MainWindow", "Run Until Halt", nullptr));
         pushButton_4->setText(QCoreApplication::translate("MainWindow", "How to use", nullptr));
+        label_5->setText(QCoreApplication::translate("MainWindow", "Memory", nullptr));
+        label_6->setText(QCoreApplication::translate("MainWindow", "Register", nullptr));
     } // retranslateUi
 
 };

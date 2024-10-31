@@ -27,32 +27,6 @@
      <string>Add Instructions</string>
     </property>
    </widget>
-   <widget class="QGroupBox" name="groupBox">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>20</y>
-      <width>291</width>
-      <height>521</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>Memory</string>
-    </property>
-   </widget>
-   <widget class="QGroupBox" name="groupBox_2">
-    <property name="geometry">
-     <rect>
-      <x>320</x>
-      <y>20</y>
-      <width>291</width>
-      <height>521</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>Register</string>
-    </property>
-   </widget>
    <widget class="QGroupBox" name="groupBox_3">
     <property name="geometry">
      <rect>
@@ -169,7 +143,7 @@
       <string>Program counter:</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit">
+    <widget class="QLineEdit" name="pCounter">
      <property name="geometry">
       <rect>
        <x>140</x>
@@ -215,7 +189,7 @@
       <string>OP Code:</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_3">
+    <widget class="QLineEdit" name="opCodeDisplay">
      <property name="geometry">
       <rect>
        <x>80</x>
@@ -225,7 +199,7 @@
       </rect>
      </property>
     </widget>
-    <widget class="QTextEdit" name="textEdit">
+    <widget class="QTextEdit" name="encodedInsMessage">
      <property name="geometry">
       <rect>
        <x>10</x>
@@ -248,7 +222,7 @@
       <string>R</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_7">
+    <widget class="QLineEdit" name="rDisplay">
      <property name="geometry">
       <rect>
        <x>140</x>
@@ -258,7 +232,7 @@
       </rect>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_12">
+    <widget class="QLineEdit" name="xDisplay">
      <property name="geometry">
       <rect>
        <x>200</x>
@@ -281,7 +255,7 @@
       <string>X</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_13">
+    <widget class="QLineEdit" name="yDisplay">
      <property name="geometry">
       <rect>
        <x>260</x>
@@ -342,6 +316,52 @@
     </property>
     <property name="text">
      <string>How to use</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="memoryDisplay">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>40</y>
+      <width>291</width>
+      <height>501</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>67</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Memory</string>
+    </property>
+   </widget>
+   <widget class="QTableWidget" name="registerDisplay">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>40</y>
+      <width>291</width>
+      <height>501</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>20</y>
+      <width>67</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Register</string>
     </property>
    </widget>
   </widget>

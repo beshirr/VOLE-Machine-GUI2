@@ -19,7 +19,7 @@ public:
     cpu();
     ~cpu();
     void fetch();
-    QString decode();
+    vector<QString> decode();
     void execute();
     void runOneCycle();
     void runTillHalt();
