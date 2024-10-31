@@ -23,22 +23,22 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 public:
     cpu* m_cpu;
+
 public:
-    MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
-
-private slots:
-    void on_openInstructionFile_clicked();
-
-    void on_executeButton_clicked();
-
-    void on_decodeButton_clicked();
-
-    void on_instructionDecode_textChanged(const QString &arg1);
-
-    void on_fetchButton_clicked();
+    explicit MainWindow(QWidget *parent = nullptr);
+    ~MainWindow() override;
 
 private:
     Ui::MainWindow *ui;
+    void connecting();
+    void decodingDisplay();
+    void memoryDisplay();
+    void registerDisplay();
+
+private slots:
+    void onOpenInstructionFileClicked();
+    void onExecuteButtonClicked();
+    void onDecodeButtonClicked();
+    void onFetchButtonClicked();
 };
 #endif // MAINWINDOW_H
