@@ -1,19 +1,20 @@
 #ifndef ALU_H
 #define ALU_H
 
-#include<iostream>
-#include<string>
 #include <cmath>
+#include "memory.h"
+#include "mainwindow.h"
+
 using namespace std;
 
-class ALU : public Register{
+class ALU {
 public:
     ALU();
     ~ALU();
-    static int hexToDec(string strNumber);
-    static string decToHex(int number);
-    static bool isValid(string val);
+    static int hexToDec(const QString& strNumber);
+    static QString decToHex(int number);
+    static bool isValid(const QString& val);
     static void add(int index1, int index2, int index3, Register& reg);
-    static string reverse(string str);
+    static QString reverse(QString str);
 };
 #endif

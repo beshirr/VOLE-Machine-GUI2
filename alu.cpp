@@ -1,16 +1,19 @@
 #include "alu.h"
 #include"memory.h"
 
-static string reverse(string number){
-    string reverseNum = "";
-    for(int i = number.size()-1; i >= 0; i--){
+
+QString ALU::reverse(QString number){
+    QString reverseNum = "";
+    for(auto i = number.size()-1; i >= 0; i--){
         reverseNum += number[i];
     }
     return reverseNum;
 }
-static int ALU::hexToDec(string strnumber){
+
+// TODO: fix the error at line 38
+int ALU::hexToDec(const QString& strNumber){
     int power = 0;
-    string hexNumber = ALU::reverse(strnumber);
+    QString hexNumber = ALU::reverse(strNumber);
     int decNumber = 0;
     for (int i = 0; i < hexNumber.size()-1; i++){
         if (hexNumber[i] == 'A'){
@@ -38,8 +41,10 @@ static int ALU::hexToDec(string strnumber){
     }
     return decNumber;
 }
-static string ALU::decToHex(int number){
-    string hexNumber = "";
+
+
+QString ALU::decToHex(int number){
+    QString hexNumber;
     while (number >= 16){
         if (number % 16 == 10){
             hexNumber += 'A';
@@ -66,32 +71,37 @@ static string ALU::decToHex(int number){
     }
     if (number % 16 == 10){
             hexNumber += 'A';
-        }
-        else if (number % 16 == 11){
-            hexNumber += 'B';
-        }
-        else if (number % 16 == 12){
-            hexNumber += 'C';
-        }
-        else if (number % 16 == 13){
-            hexNumber += 'D';
-        }
-        else if (number % 16 == 14){
-            hexNumber += 'E';
-        }
-        else if (number % 16 == 15){
-            hexNumber += 'F';
-        }
-        else{
-            hexNumber += to_string(number % 16);
-        }
+    }
+    else if (number % 16 == 11){
+        hexNumber += 'B';
+    }
+    else if (number % 16 == 12){
+        hexNumber += 'C';
+    }
+    else if (number % 16 == 13){
+        hexNumber += 'D';
+    }
+    else if (number % 16 == 14){
+        hexNumber += 'E';
+    }
+    else if (number % 16 == 15){
+        hexNumber += 'F';
+    }
+    else{
+        hexNumber += to_string(number % 16);
+    }
     hexNumber = ALU::reverse(hexNumber);
     return hexNumber;
 }
-bool isValid(string val){
+
+
+bool ALU::isValid(const QString& val){
+
 }
-static void add(int index1, int index2, int index3, Register& reg){
-    int num1 = ALU::hexToDec(reg.m_register[index1]);
-    int num2 = ALU::hexToDec(reg.m_register[index2]);
-    reg.m_register[index3] = ALU::decToHex(num1 + num2);
+
+
+void ALU::add(int index1, int index2, int index3, Register& reg){
+    int num1 = ALU::hexToDec(reg.getCell(index1));
+    int num2 = ALU::hexToDec(reg.getCell(index2));
+    reg.getCell(index3) = ALU::decToHex(num1 + num2);
 }

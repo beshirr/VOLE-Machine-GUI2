@@ -1,4 +1,4 @@
-# Install script for directory: D:/MY projects/MY-github/VOLE-Machine-GUI
+# Install script for directory: D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,15 +34,15 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Program Files/JetBrains/CLion 2023.3.4/bin/mingw/bin/objdump.exe")
+  set(CMAKE_OBJDUMP "C:/msys64/mingw64/bin/objdump.exe")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "D:/MY projects/MY-github/VOLE-Machine-GUI/cmake-build-debug/Vole-Machine-GUI.exe")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/Vole-Machine-GUI.exe")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/Vole-Machine-GUI.exe" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/Vole-Machine-GUI.exe")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "C:/Program Files/JetBrains/CLion 2023.3.4/bin/mingw/bin/strip.exe" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/Vole-Machine-GUI.exe")
+      execute_process(COMMAND "C:/msys64/mingw64/bin/strip.exe" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/Vole-Machine-GUI.exe")
     endif()
   endif()
 endif()
@@ -55,5 +55,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/MY projects/MY-github/VOLE-Machine-GUI/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

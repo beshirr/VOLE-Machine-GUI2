@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-3f621b561b8c5dca1a7f.json",
+					"jsonFile" : "directory-.-Debug-c3ceb42ce285e20ddb6c.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -17,7 +17,8 @@
 					"targetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					]
 				}
 			],
@@ -33,7 +34,8 @@
 					"targetIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					]
 				}
 			],
@@ -42,15 +44,22 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Vole-Machine-GUI::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Vole-Machine-GUI-Debug-08a7b7d56755d4555f26.json",
+					"jsonFile" : "target-Vole-Machine-GUI-Debug-cebee9d65578fa4fcc1b.json",
 					"name" : "Vole-Machine-GUI",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "Vole-Machine-GUI_autogen::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Vole-Machine-GUI_autogen-Debug-68ce5a7e1b56d4771834.json",
+					"jsonFile" : "target-Vole-Machine-GUI_autogen-Debug-a40003897ac60dbcfd28.json",
 					"name" : "Vole-Machine-GUI_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Vole-Machine-GUI_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Vole-Machine-GUI_autogen_timestamp_deps-Debug-16ac555dabea6ad72969.json",
+					"name" : "Vole-Machine-GUI_autogen_timestamp_deps",
 					"projectIndex" : 0
 				}
 			]
@@ -59,12 +68,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "D:/MY projects/MY-github/VOLE-Machine-GUI/cmake-build-debug",
-		"source" : "D:/MY projects/MY-github/VOLE-Machine-GUI"
+		"build" : "D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug",
+		"source" : "D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 6
+		"minor" : 5
 	}
 }
