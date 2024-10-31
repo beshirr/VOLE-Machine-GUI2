@@ -1,8 +1,6 @@
 #ifndef VOLE_MACHINE_GUI_MEMORY_H
 #define VOLE_MACHINE_GUI_MEMORY_H
 
-#include <iostream>
-#include <string>
 #include <QString>
 
 using namespace std;
@@ -10,29 +8,29 @@ using namespace std;
 
 class Memory {
 private:
-    string memory[256];
+    QString memory[256];
     int m_size;
 
 public:
     Memory();
 
-    string getCell(int address);
+    QString getCell(int address);
 
-    void setCell(int address, const string& val);
+    void setCell(int address, const QString& val);
 };
 
 
 class Register {
 private:
-    int m_register[16];
+    QString m_register[16];
     int size;
 
 public:
     Register();
 
-    int getCell(int address);
+    QString getCell(int address);
 
-    void setCell(int address, int val);
+    void setCell(int address, const QString& val);
 };
 
 
