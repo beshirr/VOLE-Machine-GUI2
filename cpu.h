@@ -10,19 +10,19 @@ using namespace std;
 
 class cpu {
 public:
-    static int programCounter;
+    static int m_programCounter;
     Memory* m_memory;
     Register* m_register;
-    QString instructionRegister;
+    QString m_instructionRegister;
 
 public:
     cpu();
     ~cpu();
-    static void fetch(Memory& memory);
-    static void decode();
-    static void execute();
-    static void runOneCycle();
-    static void runTillHalt();
+    void fetch();
+    vector<QChar> decode();
+    void execute();
+    void runOneCycle();
+    void runTillHalt();
 };
 
 

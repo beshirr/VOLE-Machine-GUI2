@@ -112,7 +112,6 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 0: _t->on_openInstructionFile_clicked(); break;
         case 1: _t->on_executeButton_clicked(); break;
         case 2: _t->on_decodeButton_clicked(); break;
-        case 3: _t->on_instructionDecode_textChanged((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         case 4: _t->on_fetchButton_clicked(); break;
         default: ;
         }

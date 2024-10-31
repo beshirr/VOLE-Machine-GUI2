@@ -400,5 +400,4 @@ D:/FCAI/Level\ 2/First\ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h \
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wctype.h \
   D:/FCAI/Level\ 2/First\ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cpu.h \
-  D:/FCAI/Level\ 2/First\ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/memory.cpp \
   D:/FCAI/Level\ 2/First\ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/memory.h

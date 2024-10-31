@@ -21,11 +21,8 @@ QT_END_NAMESPACE
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
-
 public:
-    cpu processor;
-    vector<QString> m_fileContent;
-
+    cpu* m_cpu;
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();

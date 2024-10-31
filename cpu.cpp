@@ -1,8 +1,9 @@
 #include "cpu.h"
 
+int cpu::m_programCounter = 0;
+
 cpu::cpu(){
-    programCounter = 0;
-    instructionRegister = "";
+    m_instructionRegister = "";
     m_memory = new Memory();
     m_register = new Register();
 }
@@ -14,9 +15,14 @@ cpu::~cpu(){
 }
 
 
-void cpu::fetch(Memory& memory) {
-    for (int i = 0; i < 3; i++) {
-        instructionRegister += memory.getCell(programCounter);
-        programCounter++;
+void cpu::fetch() {
+    for (int i = 0; i < 2; i++) {
+        m_instructionRegister += m_memory->getCell(m_programCounter);
+        m_programCounter++;
     }
+}
+
+
+vector<QChar> cpu::decode() {
+
 }

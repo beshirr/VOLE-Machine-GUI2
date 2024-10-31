@@ -3,8 +3,6 @@
  * @brief Running the Machine and Linking between the UI and the application classes
 */
 
-// TODO: Find a way to run the program and control the flow of the machine
-
 #include "mainwindow.h"
 
 /**
@@ -14,6 +12,7 @@
  */
 MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) , ui(new Ui::MainWindow) {
     ui->setupUi(this);
+    m_cpu = new cpu;
     // connect signals
     connect(ui->openInstructionButton, &QPushButton::clicked, this, &MainWindow::on_openInstructionFile_clicked);
     connect(ui->excuteButton, &QPushButton::clicked, this, &MainWindow::on_executeButton_clicked);
@@ -29,16 +28,12 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) , ui(new Ui::MainW
 MainWindow::~MainWindow()
 {
     delete ui;
+    delete m_cpu;
 }
 
-
-// TODO: implement this method
-bool isvalidInstruction(const QString& instruction) {
-    if (instruction.size() != 4) return false;
-}
 
 void MainWindow::on_openInstructionFile_clicked() {
-    QString fileName = QFileDialog::getOpenFileName(this, tr("Open nstruction File"), "", tr("Text Files (*.txt)"));
+    QString fileName = QFileDialog::getOpenFileName(this, tr("Open instruction File"), "", tr("Text Files (*.txt)"));
 
     if (!fileName.isEmpty()) {
         QFile instructionsFile(fileName);
@@ -47,7 +42,7 @@ void MainWindow::on_openInstructionFile_clicked() {
             QString instruction;
             while (!in.atEnd()) {
                 in >> instruction;
-                m_fileContent.push_back(instruction);
+//                m_fileContent.push_back(instruction);
             }
             instructionsFile.close();
             ui->instructionDecode->setText(instruction);
@@ -58,26 +53,20 @@ void MainWindow::on_openInstructionFile_clicked() {
 }
 
 
-void MainWindow::on_executeButton_clicked()
+void MainWindow::on_fetchButton_clicked()
 {
-
+    m_cpu->fetch();
 }
 
 
 void MainWindow::on_decodeButton_clicked()
 {
-
+    m_cpu->decode();
 }
 
 
-void MainWindow::on_instructionDecode_textChanged(const QString &arg1)
+void MainWindow::on_executeButton_clicked()
 {
-
-}
-
-
-void MainWindow::on_fetchButton_clicked()
-{
-
+    // m_cpu->execute();
 }
 
