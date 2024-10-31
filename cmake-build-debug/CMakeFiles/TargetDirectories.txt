@@ -1,9 +1,8 @@
-D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/CMakeFiles/Vole-Machine-GUI.dir
-D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/CMakeFiles/list_install_components.dir
-D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/CMakeFiles/install.dir
-D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/CMakeFiles/install/local.dir
-D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/CMakeFiles/install/strip.dir
-D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/CMakeFiles/Vole-Machine-GUI_autogen_timestamp_deps.dir
-D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/CMakeFiles/Vole-Machine-GUI_autogen.dir
+D:/MY projects/MY-github/VOLE-Machine-GUI/cmake-build-debug/CMakeFiles/Vole-Machine-GUI.dir
+D:/MY projects/MY-github/VOLE-Machine-GUI/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/MY projects/MY-github/VOLE-Machine-GUI/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+D:/MY projects/MY-github/VOLE-Machine-GUI/cmake-build-debug/CMakeFiles/list_install_components.dir
+D:/MY projects/MY-github/VOLE-Machine-GUI/cmake-build-debug/CMakeFiles/install.dir
+D:/MY projects/MY-github/VOLE-Machine-GUI/cmake-build-debug/CMakeFiles/install/local.dir
+D:/MY projects/MY-github/VOLE-Machine-GUI/cmake-build-debug/CMakeFiles/install/strip.dir
+D:/MY projects/MY-github/VOLE-Machine-GUI/cmake-build-debug/CMakeFiles/Vole-Machine-GUI_autogen.dir
