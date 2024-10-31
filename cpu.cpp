@@ -25,6 +25,10 @@ void cpu::fetch() {
 
 vector<QString> cpu::decode() {
     vector<QString> instructionEncode;
+    if (m_instructionRegister.size() < 4) {
+        instructionEncode.emplace_back("Error: Instruction register has insufficient data.");
+        return instructionEncode;
+    }
     for (int i = 0; i < 3; ++i) {
         instructionEncode.emplace_back(m_instructionRegister[i]);
     }

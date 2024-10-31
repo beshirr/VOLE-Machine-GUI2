@@ -34,6 +34,7 @@ private:
     void decodingDisplay();
     void memoryDisplay();
     void registerDisplay();
+    void updateMemoryDisplay();
 
 private slots:
     void onOpenInstructionFileClicked();

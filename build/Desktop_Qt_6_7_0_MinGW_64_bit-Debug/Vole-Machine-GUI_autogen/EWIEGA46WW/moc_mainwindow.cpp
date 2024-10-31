@@ -109,10 +109,10 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         auto *_t = static_cast<MainWindow *>(_o);
         (void)_t;
         switch (_id) {
-        case 0: _t->on_openInstructionFile_clicked(); break;
-        case 1: _t->on_executeButton_clicked(); break;
-        case 2: _t->on_decodeButton_clicked(); break;
-        case 3: _t->on_fetchButton_clicked(); break;
+        case 0: _t->onOpenInstructionFileClicked(); break;
+        case 1: _t->onExecuteButtonClicked(); break;
+        case 2: _t->onDecodeButtonClicked(); break;
+        case 4: _t->onFetchButtonClicked(); break;
         default: ;
         }
     }

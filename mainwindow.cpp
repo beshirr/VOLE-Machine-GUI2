@@ -20,6 +20,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) , ui(new Ui::MainW
     connecting();
     decodingDisplay();
     memoryDisplay();
+    updateMemoryDisplay();
     registerDisplay();
 
     // Program counter Display
@@ -76,22 +77,7 @@ void MainWindow::memoryDisplay() {
     ui->memoryDisplay->setColumnCount(4);
     QStringList headers = {"Address", "Binary", "Hex", "Int"};
     ui->memoryDisplay->setHorizontalHeaderLabels(headers);
-    for (int i = 0; i < 256; ++i) {
-        // Address column (display as hex)
-        QString address = QString::number(i, 16).toUpper().rightJustified(2, '0');
-        ui->memoryDisplay->setItem(i, 0, new QTableWidgetItem(address));
 
-        // Binary column (initialize to zeros)
-        QString binaryValue = "00000000";
-        ui->memoryDisplay->setItem(i, 1, new QTableWidgetItem(binaryValue));
-
-        // Hex column (initialize to zero)
-        QString hexValue = m_cpu->m_memory->getCell(i);
-        ui->memoryDisplay->setItem(i, 2, new QTableWidgetItem(hexValue));
-
-        QString intValue = "0";
-        ui->memoryDisplay->setItem(i, 3, new QTableWidgetItem(intValue));
-    }
     // Setting memory display properties
     ui->memoryDisplay->setEditTriggers(QAbstractItemView::NoEditTriggers); // Make table read-only
     ui->memoryDisplay->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch); // Stretch columns
@@ -99,7 +85,26 @@ void MainWindow::memoryDisplay() {
     ui->memoryDisplay->setSelectionMode(QAbstractItemView::NoSelection); // Disable selection
 }
 
+void MainWindow::updateMemoryDisplay() {
+    for (int i = 0; i < 256; ++i) {
+        // Address column (display as hex)
+        QString address = QString::number(i, 16).toUpper().rightJustified(2, '0');
+        ui->memoryDisplay->setItem(i, 0, new QTableWidgetItem(address));
 
+        // Binary column (initialize with 8-bit binary representation)
+        QString binaryValue = QString("%1").arg(m_cpu->m_memory->getCell(i).toInt(nullptr, 16),
+                                                8, 2, QChar('0'));
+        ui->memoryDisplay->setItem(i, 1, new QTableWidgetItem(binaryValue));
+
+        // Hex column (display the instruction in hex)
+        QString hexValue = m_cpu->m_memory->getCell(i).toUpper();
+        ui->memoryDisplay->setItem(i, 2, new QTableWidgetItem(hexValue));
+
+        // Integer representation of the instruction
+        QString intValue = QString::number(m_cpu->m_memory->getCell(i).toInt(nullptr, 16));
+        ui->memoryDisplay->setItem(i, 3, new QTableWidgetItem(intValue));
+    }
+}
 
 /**
  * @brief Setting Register display section*/
@@ -145,9 +150,11 @@ void MainWindow::onOpenInstructionFileClicked() {
             QString instruction;
             while (!in.atEnd()) {
                 in >> instruction;
-                m_cpu->m_memory->setCell(cpu::m_programCounter, instruction);
+                m_cpu->m_memory->setCell(cpu::m_programCounter++, instruction);
             }
+            cpu::m_programCounter = 0;
             instructionsFile.close();
+            updateMemoryDisplay();
         } else {
             QMessageBox::warning(this, "Error", "Could not open the instructionsFile for reading.");
         }
@@ -158,23 +165,37 @@ void MainWindow::onOpenInstructionFileClicked() {
 void MainWindow::onFetchButtonClicked()
 {
     m_cpu->fetch();
+    updateMemoryDisplay();
     ui->instructionDecode->setText(m_cpu->m_instructionRegister);
+    ui->pCounter->setText(QString::number(cpu::m_programCounter));
 }
 
 
 void MainWindow::onDecodeButtonClicked()
 {
-    vector<QString> decoded = m_cpu->decode();
-    ui->opCodeDisplay->setText(decoded[0]);
-    ui->rDisplay->setText(decoded[1]);
-    ui->xDisplay->setText(decoded[2]);
-    ui->yDisplay->setText(decoded[3]);
-    ui->encodedInsMessage->setText(decoded[4]);
+    auto decoded = m_cpu->decode();
+    if (!decoded.empty()) {
+        ui->opCodeDisplay->setText(decoded[0]);
+        ui->rDisplay->setText(decoded[1]);
+        ui->xDisplay->setText(decoded[2]);
+        ui->yDisplay->setText(decoded[3]);
+        ui->encodedInsMessage->setText(decoded[4]);
+    }
+    else {
+        ui->opCodeDisplay->clear();
+        ui->rDisplay->clear();
+        ui->xDisplay->clear();
+        ui->yDisplay->clear();
+        ui->encodedInsMessage->setText("Failed to Decode");
+    }
+    ui->pCounter->setText(QString::number(cpu::m_programCounter));
 }
 
 
 void MainWindow::onExecuteButtonClicked()
 {
-    // m_cpu->execute();
+     m_cpu->execute();
+     updateMemoryDisplay();
+     ui->pCounter->setText(QString::number(cpu::m_programCounter));
 }
 

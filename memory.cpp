@@ -20,7 +20,7 @@ void Memory::setCell(int address, const QString& val) {
 
 Register::Register() : size(16) {
     for (int i = 0; i < size; ++i) {
-        m_register[i] = "0";
+        m_register[i] = "00";
     }
 }
 
