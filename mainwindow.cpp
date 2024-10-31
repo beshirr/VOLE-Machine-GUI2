@@ -1,78 +1,72 @@
 /**
- * @brief This file is the implementation for the mainwindow.h wich manages the flow of the machine
+ * @file mainwindow.cpp
+ * @brief Running the Machine and Linking between the UI and the application classes
 */
 
-
 #include "mainwindow.h"
-#include "./ui_mainwindow.h"
-#include <QFileDialog>
-#include <QMessageBox>
-#include <QFile>
-#include "cpu.h"
 
-
-using namespace std;
-
-MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
-{
+/**
+ * @brief Constructor for MainWindow class. Initializes the UI and connects signals.
+ *
+ * @param parent Pointer to the parent widget.
+ */
+MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) , ui(new Ui::MainWindow) {
     ui->setupUi(this);
-
+    m_cpu = new cpu;
+    // connect signals
     connect(ui->openInstructionButton, &QPushButton::clicked, this, &MainWindow::on_openInstructionFile_clicked);
-    connect(ui->excuteButton, &QPushButton::clicked, this, &MainWindow::on_excuteButton_clicked);
+    connect(ui->excuteButton, &QPushButton::clicked, this, &MainWindow::on_executeButton_clicked);
     connect(ui->decodeButton, &QPushButton::clicked, this, &MainWindow::on_decodeButton_clicked);
 }
 
-
+/**
+ * @brief Destructor for MainWindow class.
+ *
+ * This destructor is responsible for cleaning up the dynamically allocated memory for the UI.
+ * It is called when the MainWindow object is destroyed.
+ */
 MainWindow::~MainWindow()
 {
     delete ui;
+    delete m_cpu;
 }
 
 
-/**
- * @brief What action to take when clicking add insturction button
- * @details Creating a vector of QStrings to store each instruction
-*/
-void MainWindow::on_openInstructionFile_clicked()
-{
-    // Getting the Instructions file name
-    QString fileName = QFileDialog::getOpenFileName(this, "Open File", "", "All Files (*.*);;Text Files (*.txt);;Images (*.png *.jpg)");
+void MainWindow::on_openInstructionFile_clicked() {
+    QString fileName = QFileDialog::getOpenFileName(this, tr("Open instruction File"), "", tr("Text Files (*.txt)"));
 
     if (!fileName.isEmpty()) {
-        QMessageBox::information(this, "File Selected", "Instructions Loaded Successfully");
-        // Loading the Instructions file
         QFile instructionsFile(fileName);
-
-        if (instructionsFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
-            // Create a QTextStream to read from the file
+        if (instructionsFile.open(QFile::ReadOnly | QFile::Text)) {
             QTextStream in(&instructionsFile);
-            // Reading the instructions with a delimiter of whitespaces and newlines
+            QString instruction;
             while (!in.atEnd()) {
-                QString instruction;
                 in >> instruction;
-                fileContent.push_back(instruction);
+//                m_fileContent.push_back(instruction);
             }
-
             instructionsFile.close();
-        }
-
-        else {
-            QMessageBox::warning(this, "Error", "Could not open the file for reading.");
+            ui->instructionDecode->setText(instruction);
+        } else {
+            QMessageBox::warning(this, "Error", "Could not open the instructionsFile for reading.");
         }
     }
 }
 
 
-void MainWindow::on_excuteButton_clicked()
+void MainWindow::on_fetchButton_clicked()
 {
-    cpu::execute();
+    m_cpu->fetch();
 }
 
 
 void MainWindow::on_decodeButton_clicked()
 {
+    m_cpu->decode();
+}
 
+
+void MainWindow::on_executeButton_clicked()
+{
+    // m_cpu->execute();
 }
 

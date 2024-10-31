@@ -2,18 +2,28 @@
 #define CPU_H
 
 
-#include <vector>
 #include <QString>
 #include <QChar>
+#include "memory.h"
 
 using namespace std;
 
-
 class cpu {
 public:
+    static int m_programCounter;
+    Memory* m_memory;
+    Register* m_register;
+    QString m_instructionRegister;
+
+public:
     cpu();
-    static void execute();
-    static vector<QChar> decode(const QString& instruction);
+    ~cpu();
+    void fetch();
+    QString decode();
+    void execute();
+    void runOneCycle();
+    void runTillHalt();
 };
+
 
 #endif // CPU_H
