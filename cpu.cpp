@@ -1,10 +1,20 @@
 #include "cpu.h"
 
-int cpu::programCounter = 0;
+cpu::cpu(){
+    programCounter = 0;
+    instructionRegister = "";
+    m_memory = new Memory();
+    m_register = new Register();
+}
+
+
+cpu::~cpu(){
+    delete m_memory;
+    delete m_register;
+}
+
 
 void cpu::fetch(Memory& memory) {
-    // NOTE: THIS VARIABLE WILL BE USED ONLY FOR DISPLAYING IN THE UI
-    QString instructionRegister;
     for (int i = 0; i < 3; i++) {
         instructionRegister += memory.getCell(programCounter);
         programCounter++;
