@@ -41,5 +41,6 @@ private slots:
     void on_execute_button_clicked();
     void onDecodeButtonClicked();
     void onFetchButtonClicked();
+    void on_resetCounter_clicked();
 };
 #endif // MAINWINDOW_H

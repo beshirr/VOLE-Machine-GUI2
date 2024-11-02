@@ -212,3 +212,10 @@ void MainWindow::on_execute_button_clicked()
      ui->pCounter->setText(QString::number(cpu::m_programCounter));
 }
 
+
+void MainWindow::on_resetCounter_clicked()
+{
+    cpu::m_programCounter = 0;
+    ui->pCounter->setText(QString::number(cpu::m_programCounter));
+}
+
