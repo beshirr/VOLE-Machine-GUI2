@@ -43,5 +43,6 @@ private slots:
     void onFetchButtonClicked();
     void on_resetCounter_clicked();
     void on_pCounter_textChanged(const QString &arg1);
+    void on_instructionDecode_textChanged(const QString &arg1);
 };
 #endif // MAINWINDOW_H

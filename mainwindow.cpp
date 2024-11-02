@@ -227,3 +227,10 @@ void MainWindow::on_pCounter_textChanged(const QString &arg1)
     ui->pCounter->setText(QString::number(cpu::m_programCounter));
 }
 
+
+void MainWindow::on_instructionDecode_textChanged(const QString &arg1)
+{
+    m_cpu->m_instructionRegister = arg1;
+    ui->encodedInsMessage->setText(arg1);
+}
+
