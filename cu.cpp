@@ -1,6 +1,7 @@
 #include "cu.h"
 #include "memory.h"
 #include <QString>
+#include "cpu.h"
 
 cu::cu() {}
 
@@ -30,6 +31,12 @@ void cu::move(int indexReg1, int indexReg2, Register& reg){
     reg.setCell(indexReg2, valueToMove);
 }
 
-void cu::jump(int indexReg, int indexMem, Register& reg){
-    
+void cu::jump(int indexReg, int Newprogamcounter, Register& reg) 
+{
+    if (reg.getCell(indexReg) == reg.getCell(0)) {
+        cpu::m_programCounter = Newprogamcounter;
+    }
+
 }
+
+    
