@@ -1,50 +1,45 @@
 #include "cu.h"
 #include "memory.h"
 #include <QString>
-<<<<<<< HEAD
 #include "cpu.h"
-=======
 #include <stdexcept>
->>>>>>> b9ca679db2b6d34e6869089d6d18202fa5279ad2
+#include "alu.h"
 
 cu::cu() {}
 
-void cu::load(int indexReg, int indexMem, Memory& mem, Register& reg){
-    Qstring valueToLoad = mem.getCell(indexMem);
-    reg.setCell(indexReg, valueToLoad);
+void cu::load(QString indexReg, QString indexMem, Memory& mem, Register& reg){
+    QString valueToLoad = mem.getCell(ALU::hexToDec(indexMem));
+    reg.setCell(ALU::hexToDec(indexReg), valueToLoad);
 }
 
-void cu::load(int indexReg, QString val, Register& reg){
-    reg.setCell(indexReg, val);
+void cu::load(QString indexReg, QString val, Register& reg){
+    reg.setCell(ALU::hexToDec(indexReg), val);
 }
 
-void cu::store(int indexReg, int indexMem, Memory& mem, Register& reg){
-    Qstring valueToLoad = reg.getCell(indexReg); 
+void cu::store(QString indexReg, QString indexMem, Memory& mem, Register& reg){
+    QString valueToStore = reg.getCell(ALU::hexToDec(indexReg));
 
-    if (to_string(indexMem) == "00") {
-        cout << valueToLoad << endl;
+    if (indexMem == "00") {
+        cout << valueToStore << endl;
     }
-    mem.setCell(indexMem, valueToLoad);
+    mem.setCell(ALU::hexToDec(indexMem), valueToStore);
 }
 
-void cu::move(int indexReg1, int indexReg2, Register& reg){
-    QString valueToMove = reg.getCell(indexReg1);
-    reg.setCell(indexReg1, "00");
-    reg.setCell(indexReg2, valueToMove);
+void cu::move(QString indexReg1, QString indexReg2, Register& reg){
+    QString valueToMove = reg.getCell(ALU::hexToDec(indexReg1));
+    reg.setCell(ALU::hexToDec(indexReg1), "00");
+    reg.setCell(ALU::hexToDec(indexReg2), valueToMove);
 }
 
-<<<<<<< HEAD
-void cu::jump(int indexReg, int Newprogamcounter, Register& reg) 
+void cu::jump(QString indexReg, int NewProgramCounter, Register& reg)
 {
-    if (reg.getCell(indexReg) == reg.getCell(0)) {
-        cpu::m_programCounter = Newprogamcounter;
+    if (reg.getCell(ALU::hexToDec(indexReg)) == reg.getCell(0)) {
+        cpu::m_programCounter = NewProgramCounter;
     }
 
 }
 
-    
-=======
 void halt(){
     throw runtime_error("execution of halt instruction");
 }
->>>>>>> b9ca679db2b6d34e6869089d6d18202fa5279ad2
+
