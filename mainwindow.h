@@ -35,6 +35,7 @@ private:
     void memoryDisplay();
     void registerDisplay();
     void updateMemoryDisplay();
+    void updateRegisterDisplay();
 
 private slots:
     void onOpenInstructionFileClicked();
@@ -44,5 +45,8 @@ private slots:
     void on_resetCounter_clicked();
     void on_pCounter_textChanged(const QString &arg1);
     void on_instructionDecode_textChanged(const QString &arg1);
+    void on_runOneCycleButton_clicked();
+    void on_clearMemoryButton_clicked();
+    void on_clearRegButton_clicked();
 };
 #endif // MAINWINDOW_H

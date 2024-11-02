@@ -20,6 +20,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) , ui(new Ui::MainW
     memoryDisplay();
     updateMemoryDisplay();
     registerDisplay();
+    updateRegisterDisplay();
 
     // Program counter Display
     ui->pCounter->setText(QString::number(cpu::m_programCounter));
@@ -50,6 +51,9 @@ void MainWindow::connecting(){
             &MainWindow::onDecodeButtonClicked);
     connect(ui->fetchButton, &QPushButton::clicked, this,
             &MainWindow::onFetchButtonClicked);
+    connect(ui->clearMemoryButton, &QPushButton::clicked, this,
+            &MainWindow::on_clearMemoryButton_clicked);
+
 }
 
 
@@ -111,6 +115,16 @@ void MainWindow::registerDisplay() {
     ui->registerDisplay->setColumnCount(4);
     QStringList r_headers = {"Address", "Binary", "Hex", "Int"};
     ui->registerDisplay->setHorizontalHeaderLabels(r_headers);
+
+    // Setting memory display properties
+    ui->registerDisplay->setEditTriggers(QAbstractItemView::NoEditTriggers); // Make table read-only
+    ui->registerDisplay->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch); // Stretch columns
+    ui->registerDisplay->verticalHeader()->setVisible(false); // Hide row numbers if unnecessary
+    ui->registerDisplay->setSelectionMode(QAbstractItemView::NoSelection); // Disable selection
+}
+
+
+void MainWindow::updateRegisterDisplay() {
     for (int i = 0; i < 256; ++i) {
         // Address column (display as hex)
         QString address = QString::number(i, 16).toUpper().rightJustified(2, '0');
@@ -127,15 +141,7 @@ void MainWindow::registerDisplay() {
         QString intValue = "0";
         ui->registerDisplay->setItem(i, 3, new QTableWidgetItem(intValue));
     }
-    // Setting memory display properties
-    ui->registerDisplay->setEditTriggers(QAbstractItemView::NoEditTriggers); // Make table read-only
-    ui->registerDisplay->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch); // Stretch columns
-    ui->registerDisplay->verticalHeader()->setVisible(false); // Hide row numbers if unnecessary
-    ui->registerDisplay->setSelectionMode(QAbstractItemView::NoSelection); // Disable selection
 }
-
-
-
 
 void MainWindow::onOpenInstructionFileClicked() {
     QString fileName = QFileDialog::getOpenFileName(this, tr("Open instruction File"),
@@ -231,6 +237,30 @@ void MainWindow::on_pCounter_textChanged(const QString &arg1)
 void MainWindow::on_instructionDecode_textChanged(const QString &arg1)
 {
     m_cpu->m_instructionRegister = arg1;
-    ui->encodedInsMessage->setText(arg1);
+
+}
+
+
+void MainWindow::on_runOneCycleButton_clicked()
+{
+
+}
+
+
+void MainWindow::on_clearMemoryButton_clicked()
+{
+    for (int i = 0; i < 256; i++) {
+        m_cpu->m_memory->setCell(i, "00");
+    }
+    updateMemoryDisplay();
+}
+
+
+void MainWindow::on_clearRegButton_clicked()
+{
+    for (int i = 0; i < 16; i++) {
+        m_cpu->m_register->setCell(i, "00");
+    }
+    updateRegisterDisplay();
 }
 
