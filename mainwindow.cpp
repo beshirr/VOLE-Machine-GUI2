@@ -219,3 +219,11 @@ void MainWindow::on_resetCounter_clicked()
     ui->pCounter->setText(QString::number(cpu::m_programCounter));
 }
 
+
+void MainWindow::on_pCounter_textChanged(const QString &arg1)
+{
+    bool ok;
+    cpu::m_programCounter = arg1.toInt(&ok);
+    ui->pCounter->setText(QString::number(cpu::m_programCounter));
+}
+
