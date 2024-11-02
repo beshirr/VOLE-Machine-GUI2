@@ -1,5 +1,3 @@
-// TODO: FIX ON DECODE BUTTON CLICK
-// TODO: HOW TO UPDATE THE MEMORY DISPLAYING
 /**
  * @file mainwindow.cpp
  * @brief Running the Machine and Linking between the UI and the application classes
@@ -47,7 +45,7 @@ void MainWindow::connecting(){
     connect(ui->openInstructionButton, &QPushButton::clicked, this,
             &MainWindow::onOpenInstructionFileClicked);
     connect(ui->excuteButton, &QPushButton::clicked, this,
-            &MainWindow::onExecuteButtonClicked);
+            &MainWindow::on_execute_button_clicked);
     connect(ui->decodeButton, &QPushButton::clicked, this,
             &MainWindow::onDecodeButtonClicked);
     connect(ui->fetchButton, &QPushButton::clicked, this,
@@ -150,14 +148,27 @@ void MainWindow::onOpenInstructionFileClicked() {
             QString instruction;
             while (!in.atEnd()) {
                 in >> instruction;
-                m_cpu->m_memory->setCell(cpu::m_programCounter++, instruction);
+                QString cell;
+                for (int i = 0; i < 2; i++) {
+                    cell += instruction[i];
+                }
+                m_cpu->m_memory->setCell(cpu::m_programCounter++, cell);
+                cell = "";
+                for (int i = 2; i < 4; i++) {
+                    cell += instruction[i];
+                }
+                m_cpu->m_memory->setCell(cpu::m_programCounter++, cell);
             }
             cpu::m_programCounter = 0;
             instructionsFile.close();
             updateMemoryDisplay();
+            QMessageBox::information(this, "File Opened", "Instructions file opened successfully");
         } else {
             QMessageBox::warning(this, "Error", "Could not open the instructionsFile for reading.");
         }
+    }
+    else {
+        QMessageBox::warning(this, "Error", "Could not open the instructionFile");
     }
 }
 
@@ -166,6 +177,7 @@ void MainWindow::onFetchButtonClicked()
 {
     m_cpu->fetch();
     updateMemoryDisplay();
+    ui->instructionDecode->clear();
     ui->instructionDecode->setText(m_cpu->m_instructionRegister);
     ui->pCounter->setText(QString::number(cpu::m_programCounter));
 }
@@ -174,12 +186,13 @@ void MainWindow::onFetchButtonClicked()
 void MainWindow::onDecodeButtonClicked()
 {
     auto decoded = m_cpu->decode();
-    if (!decoded.empty()) {
-        ui->opCodeDisplay->setText(decoded[0]);
-        ui->rDisplay->setText(decoded[1]);
-        ui->xDisplay->setText(decoded[2]);
-        ui->yDisplay->setText(decoded[3]);
-        ui->encodedInsMessage->setText(decoded[4]);
+
+    if (decoded.size() != 4) {
+        ui->opCodeDisplay->setText(m_cpu->m_instructionRegister[0]);
+        ui->rDisplay->setText(m_cpu->m_instructionRegister[1]);
+        ui->xDisplay->setText(m_cpu->m_instructionRegister[2]);
+        ui->yDisplay->setText(m_cpu->m_instructionRegister[3]);
+        ui->encodedInsMessage->setText(decoded);
     }
     else {
         ui->opCodeDisplay->clear();
@@ -192,7 +205,7 @@ void MainWindow::onDecodeButtonClicked()
 }
 
 
-void MainWindow::onExecuteButtonClicked()
+void MainWindow::on_execute_button_clicked()
 {
      m_cpu->execute();
      updateMemoryDisplay();
