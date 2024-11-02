@@ -38,7 +38,7 @@ private:
 
 private slots:
     void onOpenInstructionFileClicked();
-    void onExecuteButtonClicked();
+    void on_execute_button_clicked();
     void onDecodeButtonClicked();
     void onFetchButtonClicked();
 };

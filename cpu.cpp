@@ -1,3 +1,5 @@
+// TODO: File does not read the first instruction
+
 #include "cpu.h"
 
 int cpu::m_programCounter = 0;
@@ -16,6 +18,7 @@ cpu::~cpu(){
 
 
 void cpu::fetch() {
+    m_instructionRegister = "";
     for (int i = 0; i < 2; i++) {
         m_instructionRegister += m_memory->getCell(m_programCounter);
         m_programCounter++;
@@ -23,15 +26,7 @@ void cpu::fetch() {
 }
 
 
-vector<QString> cpu::decode() {
-    vector<QString> instructionEncode;
-    if (m_instructionRegister.size() < 4) {
-        instructionEncode.emplace_back("Error: Instruction register has insufficient data.");
-        return instructionEncode;
-    }
-    for (int i = 0; i < 3; ++i) {
-        instructionEncode.emplace_back(m_instructionRegister[i]);
-    }
+QString cpu::decode() {
     QChar op = m_instructionRegister[0];
     QChar r = m_instructionRegister[1];
     QChar x = m_instructionRegister[2];
@@ -43,7 +38,7 @@ vector<QString> cpu::decode() {
                           "whose address is %2%3").arg(r).arg(x).arg(y);
     }
     else if (op == '2') {
-        message = QString("LOAD the register %1 with the bit pattern %1%2.").arg(r).arg(x).arg(y);
+        message = QString("LOAD the register %1 with the bit pattern %2%3.").arg(r).arg(x).arg(y);
     }
     else if (op == '3') {
         if (x == '0' && y == '0') {
@@ -51,7 +46,7 @@ vector<QString> cpu::decode() {
         }
         else {
             message = QString("STORE the bit pattern found in register %1 in the memory cell "
-                              "whose address is %1%2.").arg(r).arg(x).arg(y);
+                              "whose address is %2%3.").arg(r).arg(x).arg(y);
         }
     }
     else if (op == '4') {
@@ -93,8 +88,11 @@ vector<QString> cpu::decode() {
                           "is greater than the bit pattern in register number 0. Otherwise, continue with the normal sequence of\n"
                           "execution.").arg(x).arg(y).arg(r);
     }
-    instructionEncode.emplace_back(message);
-    return instructionEncode;
+    else if (op == '0') {
+        message = QString("No Instruction to execute");
+    }
+
+    return message;
 }
 
 
