@@ -7,11 +7,11 @@
 class cu{
 public:
     cu();
-    static void load(int indexReg, int indexMem, Memory& mem, Register& reg);
-    static void load(int indexReg, QString val, Register& reg);
-    static void store(int indexReg, int indexMem, Memory& mem, Register& reg); 
-    static void move(int indexReg1, int indexReg2, Register& reg);
-    static void jump(int indexReg, int Newprogamcounter, Register& reg); 
+    static void load(QString indexReg, QString indexMem, Memory& mem, Register& reg);
+    static void load(QString indexReg, QString val, Register& reg);
+    static void store(QString indexReg, QString indexMem, Memory& mem, Register& reg);
+    static void move(QString indexReg1, QString indexReg2, Register& reg);
+    static void jump(QString indexReg, int NewProgramCounter, Register& reg);
     static void halt();
 };
 
