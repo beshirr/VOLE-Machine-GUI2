@@ -1,16 +1,13 @@
 #include "cu.h"
 #include "memory.h"
 #include <QString>
-<<<<<<< HEAD
 #include "cpu.h"
-=======
 #include <stdexcept>
->>>>>>> b9ca679db2b6d34e6869089d6d18202fa5279ad2
 
 cu::cu() {}
 
 void cu::load(int indexReg, int indexMem, Memory& mem, Register& reg){
-    Qstring valueToLoad = mem.getCell(indexMem);
+    QString valueToLoad = mem.getCell(indexMem);
     reg.setCell(indexReg, valueToLoad);
 }
 
@@ -19,7 +16,7 @@ void cu::load(int indexReg, QString val, Register& reg){
 }
 
 void cu::store(int indexReg, int indexMem, Memory& mem, Register& reg){
-    Qstring valueToLoad = reg.getCell(indexReg); 
+    QString valueToLoad = reg.getCell(indexReg);
 
     if (to_string(indexMem) == "00") {
         cout << valueToLoad << endl;
@@ -33,18 +30,15 @@ void cu::move(int indexReg1, int indexReg2, Register& reg){
     reg.setCell(indexReg2, valueToMove);
 }
 
-<<<<<<< HEAD
-void cu::jump(int indexReg, int Newprogamcounter, Register& reg) 
+void cu::jump(int indexReg, int newProgramCounter, Register& reg)
 {
     if (reg.getCell(indexReg) == reg.getCell(0)) {
-        cpu::m_programCounter = Newprogamcounter;
+        cpu::m_programCounter = newProgramCounter;
     }
 
 }
 
     
-=======
 void halt(){
     throw runtime_error("execution of halt instruction");
 }
->>>>>>> b9ca679db2b6d34e6869089d6d18202fa5279ad2
