@@ -1,10 +1,14 @@
+// TODO: MEMORY CELL MANUALLY CHANGE
+// TODO: STARTING INDEX
+// TODO: HALT
+// TODO: Handle memory mapping for the screen (address 00)
+
 /**
  * @file mainwindow.cpp
  * @brief Running the Machine and Linking between the UI and the application classes
 */
 
 #include "mainwindow.h"
-
 
 /**
  * @brief Constructor for MainWindow class. Initializes the UI and connects signals.
@@ -72,8 +76,6 @@ void MainWindow::decodingDisplay(){
 }
 
 
-
-
 /**
  * @brief setting memory display section*/
 void MainWindow::memoryDisplay() {
@@ -83,10 +85,9 @@ void MainWindow::memoryDisplay() {
     ui->memoryDisplay->setHorizontalHeaderLabels(headers);
 
     // Setting memory display properties
-    ui->memoryDisplay->setEditTriggers(QAbstractItemView::NoEditTriggers); // Make table read-only
-    ui->memoryDisplay->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch); // Stretch columns
-    ui->memoryDisplay->verticalHeader()->setVisible(false); // Hide row numbers if unnecessary
-    ui->memoryDisplay->setSelectionMode(QAbstractItemView::NoSelection); // Disable selection
+    ui->memoryDisplay->setEditTriggers(QAbstractItemView::DoubleClicked | QAbstractItemView::SelectedClicked);
+    ui->memoryDisplay->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    ui->memoryDisplay->verticalHeader()->setVisible(false);
 }
 
 void MainWindow::updateMemoryDisplay() {
@@ -267,5 +268,30 @@ void MainWindow::on_clearRegButton_clicked()
         m_cpu->m_register->setCell(i, "00");
     }
     updateRegisterDisplay();
+}
+
+
+void MainWindow::on_memoryDisplay_cellChanged(int row, int column)
+{
+    if (column == 1) {
+        QString newBinaryValue = ui->memoryDisplay->item(row, column)->text();
+        QString newHexValue = QString::number(newBinaryValue.toInt(nullptr, 2), 16).toUpper().rightJustified(2, '0');
+        m_cpu->m_memory->setCell(row, newHexValue);
+        updateMemoryDisplay();
+    }
+
+    else if (column == 2) {
+        QString newHexValue = ui->memoryDisplay->item(row, column)->text();
+        QString newBinaryValue = QString::number(newHexValue.toInt(nullptr, 16), 2).rightJustified(8, '0');
+        m_cpu->m_memory->setCell(row, newBinaryValue);
+        updateMemoryDisplay();
+    }
+
+    else if (column == 3) {
+        QString newIntValue = ui->memoryDisplay->item(row, column)->text();
+        QString newHexValue = QString::number(newIntValue.toInt(nullptr, 10), 16).toUpper().rightJustified(2, '0');
+        m_cpu->m_memory->setCell(row, newHexValue);
+        updateMemoryDisplay();
+    }
 }
 

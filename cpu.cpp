@@ -99,10 +99,6 @@ void cpu::execute() {
     QString r = m_instructionRegister[1];
     QChar x = m_instructionRegister[2];
     QChar y = m_instructionRegister[3];
-    // TODO: Handle conditions when the CU/ALU methods are implemented
-    // TODO: UPDATE THE PROGRAM COUNTER AFTER JUMPING
-    // TODO: Handle memory mapping for the screen (address 00)
-    // TODO: Handle halting (op == 'C')
 
     if (op == '1') {
         QString memoryIndex = x; memoryIndex += y;

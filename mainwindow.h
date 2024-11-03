@@ -44,9 +44,10 @@ private slots:
     void onFetchButtonClicked();
     void on_resetCounter_clicked();
     void on_pCounter_textChanged(const QString &arg1);
-    void on_instructionDecode_textChanged(const QString &arg1);
+    void on_instructionDecode_textChanged(const QString &arg1) const;
     void on_runOneCycleButton_clicked();
     void on_clearMemoryButton_clicked();
     void on_clearRegButton_clicked();
+    void on_memoryDisplay_cellChanged(int row, int column);
 };
 #endif // MAINWINDOW_H

@@ -16,7 +16,7 @@ void cu::store(const QString& indexReg, const QString& indexMem, Memory& mem, Re
     QString valueToStore = reg.getCell(indexReg.toInt(nullptr, 16));
 
     if (indexMem == "00") {
-        // TODO: SCREEN OUTPUT
+        
     }
     mem.setCell(indexMem.toInt(nullptr, 16), valueToStore);
 }
@@ -27,7 +27,6 @@ void cu::move(const QString& indexReg1, const QString& indexReg2, Register& reg)
     reg.setCell(indexReg2.toInt(nullptr, 16), valueToMove);
 }
 
-// TODO: WHEN CALLING THIS FUNCTION DO NOT FORGET TO UPDATE THE PROGRAM COUNTER m_programCounter = programCounter
 void cu::jump(const QString& indexReg, const QString& indexMem, Register& reg, Memory& mem, int programCounter)
 {
     if (reg.getCell(indexReg.toInt(nullptr, 16)) == reg.getCell(0)) {
