@@ -187,7 +187,6 @@ void MainWindow::onFetchButtonClicked()
 {
     m_cpu->fetch();
     updateMemoryDisplay();
-    ui->instructionDecode->clear();
     ui->instructionDecode->setText(m_cpu->m_instructionRegister);
     ui->pCounter->setText(QString::number(cpu::m_programCounter));
 }
@@ -247,7 +246,9 @@ void MainWindow::on_instructionDecode_textChanged(const QString &arg1) const
 
 void MainWindow::on_runOneCycleButton_clicked()
 {
-
+    MainWindow::onFetchButtonClicked();
+    MainWindow::onDecodeButtonClicked();
+    MainWindow::on_execute_button_clicked();
 }
 
 

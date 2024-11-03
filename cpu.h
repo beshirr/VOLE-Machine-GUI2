@@ -8,9 +8,10 @@
 #include "alu.h"
 #include "cu.h"
 
+
 using namespace std;
 
-class processor {
+class cpu {
 public:
     static int m_programCounter;
     Memory* m_memory;
@@ -18,8 +19,8 @@ public:
     QString m_instructionRegister;
 
 public:
-    processor();
-    ~processor();
+    cpu();
+    ~cpu();
     void fetch();
     QString decode();
     void execute();

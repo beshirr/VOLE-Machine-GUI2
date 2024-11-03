@@ -1,5 +1,3 @@
-// TODO: File does not read the first instruction
-
 #include "cpu.h"
 
 int cpu::m_programCounter = 0;
@@ -81,7 +79,7 @@ QString cpu::decode() {
                           "execution.").arg(x).arg(y).arg(r);
     }
     else if (op.toUpper() == 'C') {
-        // TODO: Figure out how to handle this case to make the execution stops.
+        message = "Halt";
     }
     else if (op.toUpper() == 'D') {
         message = QString("JUMP to the instruction located in the memory cell at address %1%2 if the bit pattern in register %3\n"
@@ -98,10 +96,44 @@ QString cpu::decode() {
 
 void cpu::execute() {
     QChar op = m_instructionRegister[0];
-    QChar r = m_instructionRegister[1];
+    QString r = m_instructionRegister[1];
     QChar x = m_instructionRegister[2];
     QChar y = m_instructionRegister[3];
     // TODO: Handle conditions when the CU/ALU methods are implemented
+    // TODO: UPDATE THE PROGRAM COUNTER AFTER JUMPING
+    // TODO: Handle memory mapping for the screen (address 00)
+    // TODO: Handle halting (op == 'C')
+
+    if (op == '1') {
+        QString memoryIndex = x; memoryIndex += y;
+        cu::load(r, memoryIndex, *m_memory, *m_register);
+    }
+
+    else if (op == '2') {
+        QString value = x; value += y;
+        cu::load(r, value, *m_register);
+    }
+
+    else if (op == '3') {
+        QString memoryIndex = x; memoryIndex += y;
+        cu::store(r, memoryIndex, *m_memory, *m_register);
+    }
+
+    else if (op == '4') {
+        cu::move(x, y, *m_register);
+    }
+
+    // TODO: op 5&6
+    // TODO: full list?
+
+    else if (op == 'B') {
+        QString memoryIndex = x; memoryIndex += y;
+        cu::jump(r, memoryIndex, *m_register, *m_memory, m_programCounter);
+    }
+
+    else if (op == 'C') {
+        cu::halt();
+    }
 }
 
 
