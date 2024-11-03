@@ -13,7 +13,7 @@ public:
     static int hexToDec(const QString& strNumber);
     static QString decToHex(int number);
     static bool isValid(const QString& val);
-    static void addInteger(int index1, int index2, int index3, Register& reg);
+    static void addInteger(const QString& index1, const QString& index2, const QString& index3, Register& reg);
     static void addFloat(int index1, int index2, int index3, Register& reg);
     static QString reverse(QString str);
     static QString hexToBin(QString strNumber);

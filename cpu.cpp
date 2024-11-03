@@ -1,6 +1,6 @@
 #include "cpu.h"
 
-int cpu::m_programCounter = 1;
+int cpu::m_programCounter = 0;
 
 cpu::cpu(){
     m_instructionRegister = "";
@@ -119,15 +119,18 @@ void cpu::execute() {
         cu::move(x, y, *m_register);
     }
 
-    // TODO: op 5&6
-    // TODO: full list?
+    else if (op == '5') {
+        ALU::addInteger(x, y, r, *m_register);
+    }
+
+    // TODO: op 6
 
     else if (op == 'B') {
         QString memoryIndex = x; memoryIndex += y;
         cu::jump(r, memoryIndex, *m_register, *m_memory, m_programCounter);
     }
 
-    else if (op == 'C') {
+    else if (op.toUpper() == 'C') {
         cu::halt();
     }
 }

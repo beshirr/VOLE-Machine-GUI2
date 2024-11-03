@@ -153,8 +153,8 @@ QString ALU::decToHex(int number){
 //}
 
 
-void ALU::addInteger(int index1, int index2, int index3, Register& reg){
-    int num1 = ALU::hexToDec(reg.getCell(index1));
-    int num2 = ALU::hexToDec(reg.getCell(index2));
-    reg.setCell(index3, ALU::decToHex(num1 + num2));
+void ALU::addInteger(const QString& index1, const QString& index2, const QString& index3, Register& reg){
+    int num1 = ALU::hexToDec(reg.getCell(index1.toInt(nullptr, 16)));
+    int num2 = ALU::hexToDec(reg.getCell(index2.toInt(nullptr, 16)));
+    reg.setCell(index3.toInt(nullptr, 16), ALU::decToHex(num1 + num2));
 }
