@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>985</width>
-    <height>627</height>
+    <width>983</width>
+    <height>623</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -25,19 +25,6 @@
     </property>
     <property name="text">
      <string>Add Instructions</string>
-    </property>
-   </widget>
-   <widget class="QGroupBox" name="groupBox_3">
-    <property name="geometry">
-     <rect>
-      <x>620</x>
-      <y>20</y>
-      <width>341</width>
-      <height>171</height>
-     </rect>
-    </property>
-    <property name="title">
-     <string>Screen</string>
     </property>
    </widget>
    <widget class="QPushButton" name="clearMemoryButton">
@@ -377,13 +364,36 @@
      <string>Register</string>
     </property>
    </widget>
+   <widget class="QTextEdit" name="screen">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>40</y>
+      <width>341</width>
+      <height>151</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>20</y>
+      <width>67</width>
+      <height>18</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Screen</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>985</width>
+     <width>983</width>
      <height>23</height>
     </rect>
    </property>

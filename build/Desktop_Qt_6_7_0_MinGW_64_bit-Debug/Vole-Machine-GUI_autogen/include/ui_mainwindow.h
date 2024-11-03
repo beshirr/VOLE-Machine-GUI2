@@ -30,7 +30,6 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QPushButton *openInstructionButton;
-    QGroupBox *groupBox_3;
     QPushButton *clearMemoryButton;
     QPushButton *clearRegButton;
     QPushButton *pushButton;
@@ -59,6 +58,8 @@ public:
     QLabel *label_5;
     QTableWidget *registerDisplay;
     QLabel *label_6;
+    QTextEdit *screen;
+    QLabel *label_7;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -66,15 +67,12 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(985, 627);
+        MainWindow->resize(983, 623);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         openInstructionButton = new QPushButton(centralwidget);
         openInstructionButton->setObjectName("openInstructionButton");
         openInstructionButton->setGeometry(QRect(620, 550, 131, 27));
-        groupBox_3 = new QGroupBox(centralwidget);
-        groupBox_3->setObjectName("groupBox_3");
-        groupBox_3->setGeometry(QRect(620, 20, 341, 171));
         clearMemoryButton = new QPushButton(centralwidget);
         clearMemoryButton->setObjectName("clearMemoryButton");
         clearMemoryButton->setGeometry(QRect(20, 550, 291, 27));
@@ -159,10 +157,16 @@ public:
         label_6 = new QLabel(centralwidget);
         label_6->setObjectName("label_6");
         label_6->setGeometry(QRect(320, 20, 67, 18));
+        screen = new QTextEdit(centralwidget);
+        screen->setObjectName("screen");
+        screen->setGeometry(QRect(620, 40, 341, 151));
+        label_7 = new QLabel(centralwidget);
+        label_7->setObjectName("label_7");
+        label_7->setGeometry(QRect(620, 20, 67, 18));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 985, 23));
+        menubar->setGeometry(QRect(0, 0, 983, 23));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -177,7 +181,6 @@ public:
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         openInstructionButton->setText(QCoreApplication::translate("MainWindow", "Add Instructions", nullptr));
-        groupBox_3->setTitle(QCoreApplication::translate("MainWindow", "Screen", nullptr));
         clearMemoryButton->setText(QCoreApplication::translate("MainWindow", "Clear Memory", nullptr));
         clearRegButton->setText(QCoreApplication::translate("MainWindow", "Clear Register", nullptr));
         pushButton->setText(QCoreApplication::translate("MainWindow", "Clear Screen", nullptr));
@@ -197,6 +200,7 @@ public:
         pushButton_4->setText(QCoreApplication::translate("MainWindow", "How to use", nullptr));
         label_5->setText(QCoreApplication::translate("MainWindow", "Memory", nullptr));
         label_6->setText(QCoreApplication::translate("MainWindow", "Register", nullptr));
+        label_7->setText(QCoreApplication::translate("MainWindow", "Screen", nullptr));
     } // retranslateUi
 
 };

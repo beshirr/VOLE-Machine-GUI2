@@ -1,5 +1,4 @@
 #include "alu.h"
-#include"memory.h"
 
 
 QString ALU::reverse(QString number){

@@ -303,7 +303,6 @@ D:/FCAI/Level\ 2/First\ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/
   C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/iomanip \
   C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ios \
   C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/iosfwd \
-  C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/iostream \
   C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/istream \
   C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/iterator \
   C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/limits \
@@ -399,5 +398,7 @@ D:/FCAI/Level\ 2/First\ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h \
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wctype.h \
+  D:/FCAI/Level\ 2/First\ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/alu.h \
   D:/FCAI/Level\ 2/First\ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cpu.h \
+  D:/FCAI/Level\ 2/First\ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cu.h \
   D:/FCAI/Level\ 2/First\ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/memory.h

@@ -304,7 +304,6 @@ D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/mainwind
  mdp:C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/iomanip
  mdp:C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/ios
  mdp:C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/iosfwd
- mdp:C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/iostream
  mdp:C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/istream
  mdp:C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/iterator
  mdp:C:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/limits
@@ -400,8 +399,10 @@ D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/mainwind
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/vadefs.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h
  mdp:C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wctype.h
+ mdp:D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/alu.h
  mdp:D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/Vole-Machine-GUI_autogen/moc_predefs.h
  mdp:D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cpu.h
+ mdp:D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cu.h
  mdp:D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/mainwindow.h
  mdp:D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/memory.h
  uic:./ui_mainwindow.h
@@ -416,3 +417,4 @@ D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/memory.h
 D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/alu.h
 D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cu.h
 D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/alu.cpp
+D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cu.cpp

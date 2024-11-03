@@ -3,7 +3,6 @@
 
 #include <cmath>
 #include "memory.h"
-#include "mainwindow.h"
 
 using namespace std;
 

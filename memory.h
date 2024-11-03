@@ -1,7 +1,6 @@
 #ifndef VOLE_MACHINE_GUI_MEMORY_H
 #define VOLE_MACHINE_GUI_MEMORY_H
 
-#include <iostream>
 #include <string>
 #include <QString>
 

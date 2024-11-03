@@ -189,8 +189,6 @@ D:/FCAI/Level\ 2/First\ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-
   C:/msys64/mingw64/include/c++/14.1.0/bits/allocator.h \
   C:/msys64/mingw64/include/c++/14.1.0/bits/atomic_base.h \
   C:/msys64/mingw64/include/c++/14.1.0/bits/atomic_lockfree_defines.h \
-  C:/msys64/mingw64/include/c++/14.1.0/bits/basic_ios.h \
-  C:/msys64/mingw64/include/c++/14.1.0/bits/basic_ios.tcc \
   C:/msys64/mingw64/include/c++/14.1.0/bits/basic_string.h \
   C:/msys64/mingw64/include/c++/14.1.0/bits/basic_string.tcc \
   C:/msys64/mingw64/include/c++/14.1.0/bits/char_traits.h \
@@ -212,12 +210,9 @@ D:/FCAI/Level\ 2/First\ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-
   C:/msys64/mingw64/include/c++/14.1.0/bits/hashtable_policy.h \
   C:/msys64/mingw64/include/c++/14.1.0/bits/invoke.h \
   C:/msys64/mingw64/include/c++/14.1.0/bits/ios_base.h \
-  C:/msys64/mingw64/include/c++/14.1.0/bits/istream.tcc \
   C:/msys64/mingw64/include/c++/14.1.0/bits/list.tcc \
   C:/msys64/mingw64/include/c++/14.1.0/bits/locale_classes.h \
   C:/msys64/mingw64/include/c++/14.1.0/bits/locale_classes.tcc \
-  C:/msys64/mingw64/include/c++/14.1.0/bits/locale_facets.h \
-  C:/msys64/mingw64/include/c++/14.1.0/bits/locale_facets.tcc \
   C:/msys64/mingw64/include/c++/14.1.0/bits/localefwd.h \
   C:/msys64/mingw64/include/c++/14.1.0/bits/memory_resource.h \
   C:/msys64/mingw64/include/c++/14.1.0/bits/memoryfwd.h \
@@ -225,7 +220,6 @@ D:/FCAI/Level\ 2/First\ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-
   C:/msys64/mingw64/include/c++/14.1.0/bits/nested_exception.h \
   C:/msys64/mingw64/include/c++/14.1.0/bits/new_allocator.h \
   C:/msys64/mingw64/include/c++/14.1.0/bits/node_handle.h \
-  C:/msys64/mingw64/include/c++/14.1.0/bits/ostream.tcc \
   C:/msys64/mingw64/include/c++/14.1.0/bits/ostream_insert.h \
   C:/msys64/mingw64/include/c++/14.1.0/bits/parse_numbers.h \
   C:/msys64/mingw64/include/c++/14.1.0/bits/postypes.h \
@@ -288,7 +282,6 @@ D:/FCAI/Level\ 2/First\ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-
   C:/msys64/mingw64/include/c++/14.1.0/cstring \
   C:/msys64/mingw64/include/c++/14.1.0/ctime \
   C:/msys64/mingw64/include/c++/14.1.0/cwchar \
-  C:/msys64/mingw64/include/c++/14.1.0/cwctype \
   C:/msys64/mingw64/include/c++/14.1.0/debug/assertions.h \
   C:/msys64/mingw64/include/c++/14.1.0/debug/debug.h \
   C:/msys64/mingw64/include/c++/14.1.0/exception \
@@ -302,10 +295,7 @@ D:/FCAI/Level\ 2/First\ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-
   C:/msys64/mingw64/include/c++/14.1.0/filesystem \
   C:/msys64/mingw64/include/c++/14.1.0/functional \
   C:/msys64/mingw64/include/c++/14.1.0/initializer_list \
-  C:/msys64/mingw64/include/c++/14.1.0/ios \
   C:/msys64/mingw64/include/c++/14.1.0/iosfwd \
-  C:/msys64/mingw64/include/c++/14.1.0/iostream \
-  C:/msys64/mingw64/include/c++/14.1.0/istream \
   C:/msys64/mingw64/include/c++/14.1.0/iterator \
   C:/msys64/mingw64/include/c++/14.1.0/limits \
   C:/msys64/mingw64/include/c++/14.1.0/list \
@@ -314,7 +304,6 @@ D:/FCAI/Level\ 2/First\ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-
   C:/msys64/mingw64/include/c++/14.1.0/new \
   C:/msys64/mingw64/include/c++/14.1.0/numeric \
   C:/msys64/mingw64/include/c++/14.1.0/optional \
-  C:/msys64/mingw64/include/c++/14.1.0/ostream \
   C:/msys64/mingw64/include/c++/14.1.0/pstl/execution_defs.h \
   C:/msys64/mingw64/include/c++/14.1.0/pstl/glue_numeric_defs.h \
   C:/msys64/mingw64/include/c++/14.1.0/ratio \
@@ -348,8 +337,6 @@ D:/FCAI/Level\ 2/First\ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-
   C:/msys64/mingw64/include/c++/14.1.0/x86_64-w64-mingw32/bits/c++config.h \
   C:/msys64/mingw64/include/c++/14.1.0/x86_64-w64-mingw32/bits/c++locale.h \
   C:/msys64/mingw64/include/c++/14.1.0/x86_64-w64-mingw32/bits/cpu_defines.h \
-  C:/msys64/mingw64/include/c++/14.1.0/x86_64-w64-mingw32/bits/ctype_base.h \
-  C:/msys64/mingw64/include/c++/14.1.0/x86_64-w64-mingw32/bits/ctype_inline.h \
   C:/msys64/mingw64/include/c++/14.1.0/x86_64-w64-mingw32/bits/error_constants.h \
   C:/msys64/mingw64/include/c++/14.1.0/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/msys64/mingw64/include/c++/14.1.0/x86_64-w64-mingw32/bits/gthr.h \
@@ -382,12 +369,13 @@ D:/FCAI/Level\ 2/First\ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-
   C:/msys64/mingw64/include/time.h \
   C:/msys64/mingw64/include/vadefs.h \
   C:/msys64/mingw64/include/wchar.h \
-  C:/msys64/mingw64/include/wctype.h \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/limits.h \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/stdarg.h \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/stdbool.h \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/stddef.h \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/stdint.h \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/14.1.0/include/syslimits.h \
+  D:/FCAI/Level\ 2/First\ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/alu.h \
   D:/FCAI/Level\ 2/First\ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cpu.h \
+  D:/FCAI/Level\ 2/First\ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cu.h \
   D:/FCAI/Level\ 2/First\ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/memory.h
