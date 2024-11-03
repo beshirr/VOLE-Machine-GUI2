@@ -273,25 +273,29 @@ void MainWindow::on_clearRegButton_clicked()
 
 void MainWindow::on_memoryDisplay_cellChanged(int row, int column)
 {
-    if (column == 1) {
-        QString newBinaryValue = ui->memoryDisplay->item(row, column)->text();
-        QString newHexValue = QString::number(newBinaryValue.toInt(nullptr, 2), 16).toUpper().rightJustified(2, '0');
-        m_cpu->m_memory->setCell(row, newHexValue);
-        updateMemoryDisplay();
-    }
-
-    else if (column == 2) {
-        QString newHexValue = ui->memoryDisplay->item(row, column)->text();
-        QString newBinaryValue = QString::number(newHexValue.toInt(nullptr, 16), 2).rightJustified(8, '0');
-        m_cpu->m_memory->setCell(row, newBinaryValue);
-        updateMemoryDisplay();
-    }
-
-    else if (column == 3) {
-        QString newIntValue = ui->memoryDisplay->item(row, column)->text();
-        QString newHexValue = QString::number(newIntValue.toInt(nullptr, 10), 16).toUpper().rightJustified(2, '0');
-        m_cpu->m_memory->setCell(row, newHexValue);
-        updateMemoryDisplay();
-    }
+//    disconnect(ui->memoryDisplay, &QTableWidget::cellChanged, this, &MainWindow::on_memoryDisplay_cellChanged);
+//
+//    if (column == 1) {
+//        QString newBinaryValue = ui->memoryDisplay->item(row, column)->text();
+//        QString newHexValue = QString::number(newBinaryValue.toInt(nullptr, 2), 16).toUpper().rightJustified(2, '0');
+//        m_cpu->m_memory->setCell(row, newHexValue);
+//        updateMemoryDisplay();
+//    }
+//
+//    else if (column == 2) {
+//        QString newHexValue = ui->memoryDisplay->item(row, column)->text();
+//        QString newBinaryValue = QString::number(newHexValue.toInt(nullptr, 16), 2).rightJustified(8, '0');
+//        m_cpu->m_memory->setCell(row, newBinaryValue);
+//        updateMemoryDisplay();
+//    }
+//
+//    else if (column == 3) {
+//        QString newIntValue = ui->memoryDisplay->item(row, column)->text();
+//        QString newHexValue = QString::number(newIntValue.toInt(nullptr, 10), 16).toUpper().rightJustified(2, '0');
+//        m_cpu->m_memory->setCell(row, newHexValue);
+//        updateMemoryDisplay();
+//    }
+//
+//    connect(ui->memoryDisplay, &QTableWidget::cellChanged, this, &MainWindow::on_memoryDisplay_cellChanged);
 }
 

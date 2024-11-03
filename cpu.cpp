@@ -1,6 +1,6 @@
 #include "cpu.h"
 
-int cpu::m_programCounter = 0;
+int cpu::m_programCounter = 1;
 
 cpu::cpu(){
     m_instructionRegister = "";
