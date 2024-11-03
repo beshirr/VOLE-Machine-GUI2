@@ -12,6 +12,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_PREFIX_PATH "C:/QT/6.8.0/mingw_64")
 set(CMAKE_PREFIX_PATH "C:/Qt/6.7.0/mingw_64")
 
+# Find Qt
+set(Qt6_DIR "C:/Qt/6.7.0/mingw_64/lib/cmake/Qt6")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -march=native")
 
 find_package(Qt6 REQUIRED COMPONENTS Core Widgets)
 
@@ -28,6 +31,7 @@ set(PROJECT_SOURCES
         memory.h
         alu.cpp
         cu.h
+        cu.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

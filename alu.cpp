@@ -35,7 +35,7 @@ int ALU::hexToDec(const QString& strNumber){
             decNumber += 15 * pow(16, power);
         }
         else{
-            decNumber += (hexNumber[i] - '0') * pow(16, power);
+//            decNumber += (hexNumber[i] - '0') * pow(16, power);
         }
         power++;
     }

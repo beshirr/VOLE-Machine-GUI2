@@ -11,7 +11,7 @@ public:
     static void load(int indexReg, QString val, Register& reg);
     static void store(int indexReg, int indexMem, Memory& mem, Register& reg); 
     static void move(int indexReg1, int indexReg2, Register& reg);
-    static void jump(int indexReg, int Newprogamcounter, Register& reg); 
+    static void jump(int indexReg, int newProgramCounter, Register& reg);
     static void halt();
 };
 

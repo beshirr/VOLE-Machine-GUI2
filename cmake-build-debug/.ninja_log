@@ -1,11 +1,12 @@
 # ninja log v5
-6	963	7521030468178558	Vole-Machine-GUI_autogen/timestamp	24be3b46ef63c18b
-984	3518	7521030494314241	CMakeFiles/Vole-Machine-GUI.dir/cpu.cpp.obj	a6d9a45e3bb1fbc6
-6	963	7521030468178558	Vole-Machine-GUI_autogen/mocs_compilation.cpp	24be3b46ef63c18b
-578	2830	7520715133263933	CMakeFiles/Vole-Machine-GUI.dir/memory.cpp.obj	3fc2bd38531ebac
-6	963	7521030468178558	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/Vole-Machine-GUI_autogen/timestamp	24be3b46ef63c18b
-6	963	7521030468178558	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/Vole-Machine-GUI_autogen/mocs_compilation.cpp	24be3b46ef63c18b
-971	4772	7521030506915431	CMakeFiles/Vole-Machine-GUI.dir/main.cpp.obj	d7d48eaaac679ac6
-967	4802	7521030507222731	CMakeFiles/Vole-Machine-GUI.dir/Vole-Machine-GUI_autogen/mocs_compilation.cpp.obj	3ba2e6b19872bbcb
-581	3720	7520715142201236	CMakeFiles/Vole-Machine-GUI.dir/mainwindow.cpp.obj	a01a90513732b2f4
-2296	2455	7520715597888613	Vole-Machine-GUI.exe	8395c7cede73c065
+63	187	7521935890875595	Vole-Machine-GUI_autogen/timestamp	24be3b46ef63c18b
+214	2426	7521935913155581	CMakeFiles/Vole-Machine-GUI.dir/cpu.cpp.obj	dfde92f3f4f8aff1
+63	187	7521935890875595	Vole-Machine-GUI_autogen/mocs_compilation.cpp	24be3b46ef63c18b
+212	1774	7521906235818909	CMakeFiles/Vole-Machine-GUI.dir/memory.cpp.obj	36880339368d9abf
+63	187	7521935890875595	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/Vole-Machine-GUI_autogen/timestamp	24be3b46ef63c18b
+63	187	7521935890875595	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/Vole-Machine-GUI_autogen/mocs_compilation.cpp	24be3b46ef63c18b
+203	4128	7521935930258818	CMakeFiles/Vole-Machine-GUI.dir/main.cpp.obj	85490de05805f860
+206	4196	7521935930873831	CMakeFiles/Vole-Machine-GUI.dir/Vole-Machine-GUI_autogen/mocs_compilation.cpp.obj	fbe4ab69fb99f5db
+199	4544	7521935934428015	CMakeFiles/Vole-Machine-GUI.dir/mainwindow.cpp.obj	6b1ed8a94faf6c86
+4544	4747	7521935936420657	Vole-Machine-GUI.exe	8ae767815bc261c4
+210	4456	7521935933553178	CMakeFiles/Vole-Machine-GUI.dir/alu.cpp.obj	7be531af0810d679

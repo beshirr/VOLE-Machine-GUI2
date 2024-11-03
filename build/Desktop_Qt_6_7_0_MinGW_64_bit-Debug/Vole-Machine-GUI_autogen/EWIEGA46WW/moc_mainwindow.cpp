@@ -36,13 +36,16 @@ namespace {
 struct qt_meta_stringdata_CLASSMainWindowENDCLASS_t {};
 constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers::stringData(
     "MainWindow",
-    "on_openInstructionFile_clicked",
+    "onOpenInstructionFileClicked",
     "",
-    "on_executeButton_clicked",
-    "on_decodeButton_clicked",
-    "on_instructionDecode_textChanged",
+    "on_execute_button_clicked",
+    "onDecodeButtonClicked",
+    "onFetchButtonClicked",
+    "on_resetCounter_clicked",
+    "on_pCounter_textChanged",
     "arg1",
-    "on_fetchButton_clicked"
+    "on_instructionDecode_textChanged",
+    "on_runOneCycleButton_clicked"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -55,7 +58,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       5,   14, // methods
+       8,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -63,17 +66,23 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   44,    2, 0x08,    1 /* Private */,
-       3,    0,   45,    2, 0x08,    2 /* Private */,
-       4,    0,   46,    2, 0x08,    3 /* Private */,
-       5,    1,   47,    2, 0x08,    4 /* Private */,
-       7,    0,   50,    2, 0x08,    6 /* Private */,
+       1,    0,   62,    2, 0x08,    1 /* Private */,
+       3,    0,   63,    2, 0x08,    2 /* Private */,
+       4,    0,   64,    2, 0x08,    3 /* Private */,
+       5,    0,   65,    2, 0x08,    4 /* Private */,
+       6,    0,   66,    2, 0x08,    5 /* Private */,
+       7,    1,   67,    2, 0x08,    6 /* Private */,
+       9,    1,   70,    2, 0x08,    8 /* Private */,
+      10,    0,   73,    2, 0x08,   10 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QString,    6,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::QString,    8,
+    QMetaType::Void, QMetaType::QString,    8,
     QMetaType::Void,
 
        0        // eod
@@ -88,16 +97,23 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
     qt_incomplete_metaTypeArray<qt_meta_stringdata_CLASSMainWindowENDCLASS_t,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<MainWindow, std::true_type>,
-        // method 'on_openInstructionFile_clicked'
+        // method 'onOpenInstructionFileClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'on_executeButton_clicked'
+        // method 'on_execute_button_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'on_decodeButton_clicked'
+        // method 'onDecodeButtonClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'onFetchButtonClicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_resetCounter_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_pCounter_textChanged'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
         // method 'on_instructionDecode_textChanged'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<const QString &, std::false_type>,
-        // method 'on_fetchButton_clicked'
+        // method 'on_runOneCycleButton_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -110,9 +126,13 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         (void)_t;
         switch (_id) {
         case 0: _t->onOpenInstructionFileClicked(); break;
-        case 1: _t->onExecuteButtonClicked(); break;
+        case 1: _t->on_execute_button_clicked(); break;
         case 2: _t->onDecodeButtonClicked(); break;
-        case 4: _t->onFetchButtonClicked(); break;
+        case 3: _t->onFetchButtonClicked(); break;
+        case 4: _t->on_resetCounter_clicked(); break;
+        case 5: _t->on_pCounter_textChanged((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 6: _t->on_instructionDecode_textChanged((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 7: _t->on_runOneCycleButton_clicked(); break;
         default: ;
         }
     }
@@ -137,13 +157,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 5)
+        if (_id < 8)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 5;
+        _id -= 8;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 5)
+        if (_id < 8)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 5;
+        _id -= 8;
     }
     return _id;
 }

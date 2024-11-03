@@ -52,7 +52,7 @@ build cmake_object_order_depends_target_Vole-Machine-GUI: phony || Vole-Machine-
 build CMakeFiles/Vole-Machine-GUI.dir/Vole-Machine-GUI_autogen/mocs_compilation.cpp.obj: CXX_COMPILER__Vole-Machine-GUI_unscanned_Debug D$:/FCAI/Level$ 2/First$ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/Vole-Machine-GUI_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_Vole-Machine-GUI
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\Vole-Machine-GUI.dir\Vole-Machine-GUI_autogen\mocs_compilation.cpp.obj.d
-  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  FLAGS = -march=native -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -I"D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/Vole-Machine-GUI_autogen/include" -isystem C:/Qt/6.7.0/mingw_64/include/QtCore -isystem C:/Qt/6.7.0/mingw_64/include -isystem C:/Qt/6.7.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.7.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.7.0/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\Vole-Machine-GUI.dir
   OBJECT_FILE_DIR = CMakeFiles\Vole-Machine-GUI.dir\Vole-Machine-GUI_autogen
@@ -60,7 +60,7 @@ build CMakeFiles/Vole-Machine-GUI.dir/Vole-Machine-GUI_autogen/mocs_compilation.
 build CMakeFiles/Vole-Machine-GUI.dir/main.cpp.obj: CXX_COMPILER__Vole-Machine-GUI_unscanned_Debug D$:/FCAI/Level$ 2/First$ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/main.cpp || cmake_object_order_depends_target_Vole-Machine-GUI
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\Vole-Machine-GUI.dir\main.cpp.obj.d
-  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  FLAGS = -march=native -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -I"D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/Vole-Machine-GUI_autogen/include" -isystem C:/Qt/6.7.0/mingw_64/include/QtCore -isystem C:/Qt/6.7.0/mingw_64/include -isystem C:/Qt/6.7.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.7.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.7.0/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\Vole-Machine-GUI.dir
   OBJECT_FILE_DIR = CMakeFiles\Vole-Machine-GUI.dir
@@ -68,7 +68,7 @@ build CMakeFiles/Vole-Machine-GUI.dir/main.cpp.obj: CXX_COMPILER__Vole-Machine-G
 build CMakeFiles/Vole-Machine-GUI.dir/mainwindow.cpp.obj: CXX_COMPILER__Vole-Machine-GUI_unscanned_Debug D$:/FCAI/Level$ 2/First$ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/mainwindow.cpp || cmake_object_order_depends_target_Vole-Machine-GUI
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\Vole-Machine-GUI.dir\mainwindow.cpp.obj.d
-  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  FLAGS = -march=native -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -I"D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/Vole-Machine-GUI_autogen/include" -isystem C:/Qt/6.7.0/mingw_64/include/QtCore -isystem C:/Qt/6.7.0/mingw_64/include -isystem C:/Qt/6.7.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.7.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.7.0/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\Vole-Machine-GUI.dir
   OBJECT_FILE_DIR = CMakeFiles\Vole-Machine-GUI.dir
@@ -76,7 +76,7 @@ build CMakeFiles/Vole-Machine-GUI.dir/mainwindow.cpp.obj: CXX_COMPILER__Vole-Mac
 build CMakeFiles/Vole-Machine-GUI.dir/memory.cpp.obj: CXX_COMPILER__Vole-Machine-GUI_unscanned_Debug D$:/FCAI/Level$ 2/First$ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/memory.cpp || cmake_object_order_depends_target_Vole-Machine-GUI
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\Vole-Machine-GUI.dir\memory.cpp.obj.d
-  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  FLAGS = -march=native -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -I"D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/Vole-Machine-GUI_autogen/include" -isystem C:/Qt/6.7.0/mingw_64/include/QtCore -isystem C:/Qt/6.7.0/mingw_64/include -isystem C:/Qt/6.7.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.7.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.7.0/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\Vole-Machine-GUI.dir
   OBJECT_FILE_DIR = CMakeFiles\Vole-Machine-GUI.dir
@@ -84,7 +84,15 @@ build CMakeFiles/Vole-Machine-GUI.dir/memory.cpp.obj: CXX_COMPILER__Vole-Machine
 build CMakeFiles/Vole-Machine-GUI.dir/alu.cpp.obj: CXX_COMPILER__Vole-Machine-GUI_unscanned_Debug D$:/FCAI/Level$ 2/First$ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/alu.cpp || cmake_object_order_depends_target_Vole-Machine-GUI
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\Vole-Machine-GUI.dir\alu.cpp.obj.d
-  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  FLAGS = -march=native -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -I"D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/Vole-Machine-GUI_autogen/include" -isystem C:/Qt/6.7.0/mingw_64/include/QtCore -isystem C:/Qt/6.7.0/mingw_64/include -isystem C:/Qt/6.7.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.7.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.7.0/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\Vole-Machine-GUI.dir
+  OBJECT_FILE_DIR = CMakeFiles\Vole-Machine-GUI.dir
+
+build CMakeFiles/Vole-Machine-GUI.dir/cu.cpp.obj: CXX_COMPILER__Vole-Machine-GUI_unscanned_Debug D$:/FCAI/Level$ 2/First$ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cu.cpp || cmake_object_order_depends_target_Vole-Machine-GUI
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\Vole-Machine-GUI.dir\cu.cpp.obj.d
+  FLAGS = -march=native -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -I"D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/Vole-Machine-GUI_autogen/include" -isystem C:/Qt/6.7.0/mingw_64/include/QtCore -isystem C:/Qt/6.7.0/mingw_64/include -isystem C:/Qt/6.7.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.7.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.7.0/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\Vole-Machine-GUI.dir
   OBJECT_FILE_DIR = CMakeFiles\Vole-Machine-GUI.dir
@@ -92,7 +100,7 @@ build CMakeFiles/Vole-Machine-GUI.dir/alu.cpp.obj: CXX_COMPILER__Vole-Machine-GU
 build CMakeFiles/Vole-Machine-GUI.dir/cpu.cpp.obj: CXX_COMPILER__Vole-Machine-GUI_unscanned_Debug D$:/FCAI/Level$ 2/First$ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cpu.cpp || cmake_object_order_depends_target_Vole-Machine-GUI
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\Vole-Machine-GUI.dir\cpu.cpp.obj.d
-  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  FLAGS = -march=native -g -std=gnu++17 -fdiagnostics-color=always
   INCLUDES = -I"D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/Vole-Machine-GUI_autogen/include" -isystem C:/Qt/6.7.0/mingw_64/include/QtCore -isystem C:/Qt/6.7.0/mingw_64/include -isystem C:/Qt/6.7.0/mingw_64/mkspecs/win32-g++ -isystem C:/Qt/6.7.0/mingw_64/include/QtWidgets -isystem C:/Qt/6.7.0/mingw_64/include/QtGui
   OBJECT_DIR = CMakeFiles\Vole-Machine-GUI.dir
   OBJECT_FILE_DIR = CMakeFiles\Vole-Machine-GUI.dir
@@ -105,8 +113,8 @@ build CMakeFiles/Vole-Machine-GUI.dir/cpu.cpp.obj: CXX_COMPILER__Vole-Machine-GU
 #############################################
 # Link the executable Vole-Machine-GUI.exe
 
-build Vole-Machine-GUI.exe: CXX_EXECUTABLE_LINKER__Vole-Machine-GUI_Debug CMakeFiles/Vole-Machine-GUI.dir/Vole-Machine-GUI_autogen/mocs_compilation.cpp.obj CMakeFiles/Vole-Machine-GUI.dir/main.cpp.obj CMakeFiles/Vole-Machine-GUI.dir/mainwindow.cpp.obj CMakeFiles/Vole-Machine-GUI.dir/memory.cpp.obj CMakeFiles/Vole-Machine-GUI.dir/alu.cpp.obj CMakeFiles/Vole-Machine-GUI.dir/cpu.cpp.obj | C$:/Qt/6.7.0/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.7.0/mingw_64/lib/libQt6Gui.a C$:/Qt/6.7.0/mingw_64/lib/libQt6Core.a C$:/Qt/6.7.0/mingw_64/lib/libQt6EntryPoint.a || Vole-Machine-GUI_autogen Vole-Machine-GUI_autogen_timestamp_deps
-  FLAGS = -g
+build Vole-Machine-GUI.exe: CXX_EXECUTABLE_LINKER__Vole-Machine-GUI_Debug CMakeFiles/Vole-Machine-GUI.dir/Vole-Machine-GUI_autogen/mocs_compilation.cpp.obj CMakeFiles/Vole-Machine-GUI.dir/main.cpp.obj CMakeFiles/Vole-Machine-GUI.dir/mainwindow.cpp.obj CMakeFiles/Vole-Machine-GUI.dir/memory.cpp.obj CMakeFiles/Vole-Machine-GUI.dir/alu.cpp.obj CMakeFiles/Vole-Machine-GUI.dir/cu.cpp.obj CMakeFiles/Vole-Machine-GUI.dir/cpu.cpp.obj | C$:/Qt/6.7.0/mingw_64/lib/libQt6Widgets.a C$:/Qt/6.7.0/mingw_64/lib/libQt6Gui.a C$:/Qt/6.7.0/mingw_64/lib/libQt6Core.a C$:/Qt/6.7.0/mingw_64/lib/libQt6EntryPoint.a || Vole-Machine-GUI_autogen Vole-Machine-GUI_autogen_timestamp_deps
+  FLAGS = -march=native -g
   LINK_FLAGS = -mwindows
   LINK_LIBRARIES = C:/Qt/6.7.0/mingw_64/lib/libQt6Widgets.a  C:/Qt/6.7.0/mingw_64/lib/libQt6Gui.a  C:/Qt/6.7.0/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lmingw32  C:/Qt/6.7.0/mingw_64/lib/libQt6EntryPoint.a  -lshell32  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Vole-Machine-GUI.dir

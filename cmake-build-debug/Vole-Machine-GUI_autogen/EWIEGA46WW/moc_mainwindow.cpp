@@ -38,7 +38,7 @@ constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers::string
     "MainWindow",
     "onOpenInstructionFileClicked",
     "",
-    "onExecuteButtonClicked",
+    "on_execute_button_clicked",
     "onDecodeButtonClicked",
     "onFetchButtonClicked"
 );
@@ -86,7 +86,7 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<MainWindow, std::true_type>,
         // method 'onOpenInstructionFileClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'onExecuteButtonClicked'
+        // method 'on_execute_button_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'onDecodeButtonClicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
@@ -103,7 +103,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         (void)_t;
         switch (_id) {
         case 0: _t->onOpenInstructionFileClicked(); break;
-        case 1: _t->onExecuteButtonClicked(); break;
+        case 1: _t->on_execute_button_clicked(); break;
         case 2: _t->onDecodeButtonClicked(); break;
         case 3: _t->onFetchButtonClicked(); break;
         default: ;

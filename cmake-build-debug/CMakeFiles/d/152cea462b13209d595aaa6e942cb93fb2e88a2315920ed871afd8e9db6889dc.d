@@ -563,6 +563,7 @@ Vole-Machine-GUI_autogen/timestamp: \
   Vole-Machine-GUI_autogen/moc_predefs.h \
   D:/FCAI/Level\ 2/First\ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cpu.cpp \
   D:/FCAI/Level\ 2/First\ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cpu.h \
+  D:/FCAI/Level\ 2/First\ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cu.h \
   D:/FCAI/Level\ 2/First\ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/main.cpp \
   D:/FCAI/Level\ 2/First\ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/mainwindow.cpp \
   D:/FCAI/Level\ 2/First\ semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/mainwindow.h \

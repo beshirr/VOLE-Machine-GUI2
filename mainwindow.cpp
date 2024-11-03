@@ -53,6 +53,8 @@ void MainWindow::connecting(){
             &MainWindow::onFetchButtonClicked);
     connect(ui->clearMemoryButton, &QPushButton::clicked, this,
             &MainWindow::on_clearMemoryButton_clicked);
+    connect(ui->clearRegButton, &QPushButton::clicked, this,
+            &MainWindow::on_clearRegButton_clicked);
 
 }
 
@@ -213,9 +215,9 @@ void MainWindow::onDecodeButtonClicked()
 
 void MainWindow::on_execute_button_clicked()
 {
-     m_cpu->execute();
-     updateMemoryDisplay();
-     ui->pCounter->setText(QString::number(cpu::m_programCounter));
+    m_cpu->execute();
+    updateMemoryDisplay();
+    ui->pCounter->setText(QString::number(cpu::m_programCounter));
 }
 
 
