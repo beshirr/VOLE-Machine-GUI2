@@ -132,15 +132,17 @@ void MainWindow::updateRegisterDisplay() {
         QString address = QString::number(i, 16).toUpper().rightJustified(2, '0');
         ui->registerDisplay->setItem(i, 0, new QTableWidgetItem(address));
 
-        // Binary column (initialize to zeros)
-        QString binaryValue = "00000000";
+        // Binary column (initialize with 8-bit binary representation)
+        QString binaryValue = QString("%1").arg(m_cpu->m_register->getCell(i).toInt(nullptr, 16),
+                                                8, 2, QChar('0'));
         ui->registerDisplay->setItem(i, 1, new QTableWidgetItem(binaryValue));
 
-        // Hex column (initialize to zero)
-        QString hexValue = m_cpu->m_register->getCell(i);
+        // Hex column (display the instruction in hex)
+        QString hexValue = m_cpu->m_register->getCell(i).toUpper();
         ui->registerDisplay->setItem(i, 2, new QTableWidgetItem(hexValue));
 
-        QString intValue = "0";
+        // Integer representation of the instruction
+        QString intValue = QString::number(m_cpu->m_register->getCell(i).toInt(nullptr, 16));
         ui->registerDisplay->setItem(i, 3, new QTableWidgetItem(intValue));
     }
 }
@@ -217,6 +219,7 @@ void MainWindow::on_execute_button_clicked()
 {
     m_cpu->execute();
     updateMemoryDisplay();
+    updateRegisterDisplay();
     ui->pCounter->setText(QString::number(cpu::m_programCounter));
 }
 
@@ -236,10 +239,9 @@ void MainWindow::on_pCounter_textChanged(const QString &arg1)
 }
 
 
-void MainWindow::on_instructionDecode_textChanged(const QString &arg1)
+void MainWindow::on_instructionDecode_textChanged(const QString &arg1) const
 {
     m_cpu->m_instructionRegister = arg1;
-
 }
 
 

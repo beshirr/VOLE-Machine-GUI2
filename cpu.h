@@ -5,10 +5,12 @@
 #include <QString>
 #include <QChar>
 #include "memory.h"
+#include "alu.h"
+#include "cu.h"
 
 using namespace std;
 
-class cpu {
+class processor {
 public:
     static int m_programCounter;
     Memory* m_memory;
@@ -16,8 +18,8 @@ public:
     QString m_instructionRegister;
 
 public:
-    cpu();
-    ~cpu();
+    processor();
+    ~processor();
     void fetch();
     QString decode();
     void execute();
