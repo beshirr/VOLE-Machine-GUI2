@@ -98,6 +98,13 @@ QString ALU::decToBin(int number) {
         number /= 2;
     }
     binNumber = reverse(binNumber);
+    if (binNumber.size() < 8){
+        int counter = binNumber.size();
+        while (counter < 8){
+            binNumber += '0';
+            counter++;
+        }
+    }
     return binNumber;
 }
 
