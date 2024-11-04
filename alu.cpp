@@ -46,6 +46,13 @@ QString ALU::hexToBin(QString strNumber){
             }
             integerVal /= 2;
         }
+        if (binaryHalf[i].size() < 4){
+            int counter = binaryHalf[i].size();
+            while (counter < 4){
+                binaryHalf[i] += '0';
+                counter++;
+            }
+        }
         binaryHalf[i] = reverse(binaryHalf[i]);
         binaryNumber += binaryHalf[i];
     }
@@ -62,15 +69,13 @@ QString ALU::hexToBin(QString strNumber){
 int ALU::binToDec(QString strNumber) {
     int power = 7;
     int decNumber = 0;
-    int sign = 0;
     for (int i = 0; i < 8; ++i) {
-        if(sign == 0){
+        if(i == 0){
             decNumber -= strNumber[i].digitValue() * pow(2, power);
         }
         else{
             decNumber += strNumber[i].digitValue() * pow(2, power);
         }
-        sign++;
         power--;
     }
     return decNumber;
