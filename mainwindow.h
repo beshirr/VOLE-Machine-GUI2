@@ -7,6 +7,8 @@
 #include <QMessageBox>
 #include <QFile>
 #include <QRegularExpression>
+#include <QHeaderView>
+#include <QHeaderView>
 #include "cpu.h"
 
 using namespace std;

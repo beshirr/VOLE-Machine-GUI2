@@ -1,4 +1,3 @@
-// TODO: Handle memory mapping for the screen (address 00)
 // TODO: CODE ENHANCEMENTS AND DOCUMENTATION
 
 /**
@@ -81,8 +80,8 @@ void MainWindow::decodingDisplay(){
  * @brief setting memory display section*/
 void MainWindow::memoryDisplay() {
     ui->memoryDisplay->setRowCount(256);
-    ui->memoryDisplay->setColumnCount(4);
-    QStringList headers = {"Address", "Binary", "Hex", "Int"};
+    ui->memoryDisplay->setColumnCount(5);
+    QStringList headers = {"Address", "Binary", "Hex", "Int", "Float"};
     ui->memoryDisplay->setHorizontalHeaderLabels(headers);
 
     // Setting memory display properties
@@ -90,6 +89,10 @@ void MainWindow::memoryDisplay() {
     ui->memoryDisplay->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     ui->memoryDisplay->verticalHeader()->setVisible(false);
     ui->memoryDisplay->setSelectionMode(QAbstractItemView::NoSelection);
+
+    // Resize columns based on content
+    ui->memoryDisplay->horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeToContents);
+    ui->memoryDisplay->horizontalHeader()->setSectionResizeMode(1, QHeaderView::ResizeToContents);
 }
 
 void MainWindow::updateMemoryDisplay() {
@@ -108,8 +111,11 @@ void MainWindow::updateMemoryDisplay() {
         ui->memoryDisplay->setItem(i, 2, new QTableWidgetItem(hexValue));
 
         // Integer representation of the instruction
-        QString intValue = QString::number(m_cpu->m_memory->getCell(i).toInt(nullptr, 16));
-        ui->memoryDisplay->setItem(i, 3, new QTableWidgetItem(intValue));
+        int intValue = ALU::hexToDec(m_cpu->m_memory->getCell(i));
+        ui->memoryDisplay->setItem(i, 3, new QTableWidgetItem(QString::number(intValue)));
+
+        float floatValue = ALU::hexToFloat(m_cpu->m_memory->getCell(i));
+        ui->memoryDisplay->setItem(i, 4, new QTableWidgetItem(QString::number(floatValue)));
     }
 }
 
@@ -117,8 +123,8 @@ void MainWindow::updateMemoryDisplay() {
  * @brief Setting Register display section*/
 void MainWindow::registerDisplay() {
     ui->registerDisplay->setRowCount(16);
-    ui->registerDisplay->setColumnCount(4);
-    QStringList r_headers = {"Address", "Binary", "Hex", "Int"};
+    ui->registerDisplay->setColumnCount(5);
+    QStringList r_headers = {"Address", "Binary", "Hex", "Int", "Float"};
     ui->registerDisplay->setHorizontalHeaderLabels(r_headers);
 
     // Setting memory display properties
@@ -126,6 +132,9 @@ void MainWindow::registerDisplay() {
     ui->registerDisplay->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     ui->registerDisplay->verticalHeader()->setVisible(false);
     ui->registerDisplay->setSelectionMode(QAbstractItemView::NoSelection);
+    // Resize columns based on content
+    ui->registerDisplay->horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeToContents);
+    ui->registerDisplay->horizontalHeader()->setSectionResizeMode(1, QHeaderView::ResizeToContents);
 }
 
 
@@ -145,9 +154,13 @@ void MainWindow::updateRegisterDisplay() {
         ui->registerDisplay->setItem(i, 2, new QTableWidgetItem(hexValue));
 
         // Integer representation of the instruction
-        QString intValue = QString::number(m_cpu->m_register->getCell(i).toInt(nullptr, 16));
-        ui->registerDisplay->setItem(i, 3, new QTableWidgetItem(intValue));
+        int intValue = ALU::hexToDec(m_cpu->m_register->getCell(i));
+        ui->registerDisplay->setItem(i, 3, new QTableWidgetItem(QString::number(intValue)));
+
+        float floatValue = ALU::hexToFloat(m_cpu->m_register->getCell(i));
+        ui->registerDisplay->setItem(i, 4, new QTableWidgetItem(QString::number(floatValue)));
     }
+
 }
 
 void MainWindow::onOpenInstructionFileClicked() {
