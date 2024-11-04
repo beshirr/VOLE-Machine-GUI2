@@ -174,21 +174,21 @@ float ALU::binToFloat(QString strNumber) {
         mantissa += strNumber[i].digitValue() * pow(2, power);
         power--;
     }
-    floatNum = (mantissa / 16.0) * pow(2, exponent - 4) * pow(-1, strNumber[0].diginValue());
+    floatNum = (mantissa / 16.0) * pow(2, exponent - 4) * pow(-1, strNumber[0].digitValue());
     return floatNum;
 }
 
-float ALU::hexToFloat(int strNumber) {
+float ALU::hexToFloat(QString& strNumber) {
     QString binNumber = hexToBin(strNumber);
     float floatNumber = binToFloat(binNumber);
     return floatNumber;
 }
 
 QString ALU::floatToBin(float number) {
-    Qstring binNumber = "";
+    QString binNumber = "";
     QString signBit;
     if(number < 0){
-        signBit = "1"
+        signBit = "1";
     }
     else{
         signBit = "0";

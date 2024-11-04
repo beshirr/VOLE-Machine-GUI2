@@ -22,7 +22,7 @@ public:
     static float binToFloat(QString strNumber);
     static QString floatToBin(float number);
     static QString binToHex(QString strNumber);
-    static float hexToFloat(QString strNumber);
+    static float hexToFloat(QString& strNumber);
     static QString floatToHex(float number);
 };
 #endif
