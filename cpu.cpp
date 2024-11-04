@@ -97,7 +97,12 @@ void cpu::execute() {
 
     else if (op == '3') {
         QString memoryIndex = x; memoryIndex += y;
+        if (memoryIndex == "00") {
+            m_isScreen = true;
+        }
+
         cu::store(r, memoryIndex, *m_memory, *m_register);
+
     }
 
     else if (op == '4') {
@@ -122,9 +127,3 @@ void cpu::execute() {
     }
 }
 
-
-void cpu::runOneCycle() {
-    fetch();
-    decode();
-    execute();
-}

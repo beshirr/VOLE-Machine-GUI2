@@ -1,5 +1,3 @@
-// TODO: MEMORY CELL MANUALLY CHANGE OPTIMIZATION
-// TODO: HALT IS WORKING BUT DOES NOT EXECUTE
 // TODO: Handle memory mapping for the screen (address 00)
 // TODO: CODE ENHANCEMENTS AND DOCUMENTATION
 
@@ -30,6 +28,7 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) , ui(new Ui::MainW
     ui->pCounter->setText(QString::number(cpu::m_programCounter));
     ui->decodeButton->setEnabled(false);
     ui->excuteButton->setEnabled(false);
+    ui->screen->setReadOnly(true);
 }
 
 
@@ -87,9 +86,10 @@ void MainWindow::memoryDisplay() {
     ui->memoryDisplay->setHorizontalHeaderLabels(headers);
 
     // Setting memory display properties
-    ui->memoryDisplay->setEditTriggers(QAbstractItemView::DoubleClicked | QAbstractItemView::SelectedClicked);
+    ui->memoryDisplay->setEditTriggers(QAbstractItemView::NoEditTriggers);
     ui->memoryDisplay->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     ui->memoryDisplay->verticalHeader()->setVisible(false);
+    ui->memoryDisplay->setSelectionMode(QAbstractItemView::NoSelection);
 }
 
 void MainWindow::updateMemoryDisplay() {
@@ -122,10 +122,10 @@ void MainWindow::registerDisplay() {
     ui->registerDisplay->setHorizontalHeaderLabels(r_headers);
 
     // Setting memory display properties
-    ui->registerDisplay->setEditTriggers(QAbstractItemView::NoEditTriggers); // Make table read-only
-    ui->registerDisplay->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch); // Stretch columns
-    ui->registerDisplay->verticalHeader()->setVisible(false); // Hide row numbers if unnecessary
-    ui->registerDisplay->setSelectionMode(QAbstractItemView::NoSelection); // Disable selection
+    ui->registerDisplay->setEditTriggers(QAbstractItemView::NoEditTriggers);
+    ui->registerDisplay->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    ui->registerDisplay->verticalHeader()->setVisible(false);
+    ui->registerDisplay->setSelectionMode(QAbstractItemView::NoSelection);
 }
 
 
@@ -223,13 +223,23 @@ void MainWindow::onDecodeButtonClicked()
     ui->excuteButton->setEnabled(true);
 }
 
+bool memLimitReached = true;
 
 void MainWindow::on_execute_button_clicked()
 {
-    m_cpu->execute();
-    updateMemoryDisplay();
-    updateRegisterDisplay();
-    ui->pCounter->setText(QString::number(cpu::m_programCounter));
+    try {
+        m_cpu->execute();
+        if (m_cpu->m_isScreen) {
+            ui->screen->setText(m_cpu->m_memory->getCell(0));
+        }
+        m_cpu->m_isScreen = false;
+        updateMemoryDisplay();
+        updateRegisterDisplay();
+        ui->pCounter->setText(QString::number(cpu::m_programCounter));
+    } catch (...) {
+        QMessageBox::information(this, "Halt", "Execution Terminated due to a halt");
+        memLimitReached = false;
+    }
 }
 
 
@@ -286,58 +296,21 @@ void MainWindow::on_clearRegButton_clicked()
 }
 
 
-void MainWindow::on_memoryDisplay_cellChanged(int row, int column)
-{
-    // static bool updating = false;
-    // if (updating) return;
-    // updating = true;
-
-    // QTableWidgetItem* item = ui->memoryDisplay->item(row, column);
-
-    // QString cellValue = item->text();
-    // bool ok = false;
-    // QString newHexValue;
-
-    // if (column == 1) { // Binary
-    //     int intValue = cellValue.toInt(&ok, 2);
-    //     if (ok) newHexValue = QString::number(intValue, 16).toUpper().rightJustified(2, '0');
-    // }
-    // else if (column == 2) { // Hex
-    //     int intValue = cellValue.toInt(&ok, 16);
-    //     if (ok) newHexValue = cellValue.toUpper().rightJustified(2, '0');
-    // }
-    // else if (column == 3) { // Decimal
-    //     int intValue = cellValue.toInt(&ok, 10);
-    //     if (ok) newHexValue = QString::number(intValue, 16).toUpper().rightJustified(2, '0');
-    // }
-
-    // if (ok) {
-    //     m_cpu->m_memory->setCell(row, newHexValue);
-    //     updateMemoryDisplay();
-    // } else {
-    //     qDebug() << "Error: Invalid input in cell";
-    // }
-
-    // updating = false;
-}
-
-
-
 void MainWindow::on_runUntilHaltButton_clicked()
 {
     while (cpu::m_programCounter <= 254) {
 
-        try {
-            MainWindow::onFetchButtonClicked();
-            MainWindow::onDecodeButtonClicked();
-            MainWindow::on_execute_button_clicked();
-
-        } catch (...) {
-            QMessageBox::information(this, "Halt", "Execution Terminated due to a halt");
+        MainWindow::onFetchButtonClicked();
+        MainWindow::onDecodeButtonClicked();
+        MainWindow::on_execute_button_clicked();
+        if (!memLimitReached) {
+            memLimitReached = true;
             return;
         }
     }
 
+
     QMessageBox::information(this, "Memory End", "Memory end is reached");
+
 }
 

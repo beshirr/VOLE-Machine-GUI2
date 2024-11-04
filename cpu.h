@@ -17,6 +17,7 @@ public:
     Memory* m_memory;
     Register* m_register;
     QString m_instructionRegister;
+    bool m_isScreen = false;
 
 public:
     cpu();
@@ -24,8 +25,6 @@ public:
     void fetch();
     QString decode();
     void execute();
-    void runOneCycle();
-    void runTillHalt();
 };
 
 

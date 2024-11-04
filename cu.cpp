@@ -14,10 +14,6 @@ void cu::load(const QString& indexReg, const QString& val, Register& reg){
 
 void cu::store(const QString& indexReg, const QString& indexMem, Memory& mem, Register& reg){
     QString valueToStore = reg.getCell(indexReg.toInt(nullptr, 16));
-
-    if (indexMem == "00") {
-        
-    }
     mem.setCell(indexMem.toInt(nullptr, 16), valueToStore);
 }
 
