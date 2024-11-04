@@ -14,7 +14,7 @@ public:
     static QString decToHex(int number);
     static bool isValid(const QString& val);
     static void addInteger(const QString& index1, const QString& index2, const QString& index3, Register& reg);
-    static void addFloat(int index1, int index2, int index3, Register& reg);
+    static void addFloat(const QString& index1, const QString& index2, const QString& index3, Register &reg);
     static QString reverse(QString str);
     static QString hexToBin(QString strNumber);
     static int binToDec(QString strNumber);
@@ -22,7 +22,7 @@ public:
     static float binToFloat(QString strNumber);
     static QString floatToBin(float number);
     static QString binToHex(QString strNumber);
-    static float hexToFloat(QString& strNumber);
+    static float hexToFloat(QString strNumber);
     static QString floatToHex(float number);
 };
 #endif

@@ -178,7 +178,7 @@ float ALU::binToFloat(QString strNumber) {
     return floatNum;
 }
 
-float ALU::hexToFloat(QString& strNumber) {
+float ALU::hexToFloat(QString strNumber) {
     QString binNumber = hexToBin(strNumber);
     float floatNumber = binToFloat(binNumber);
     return floatNumber;
@@ -239,8 +239,8 @@ QString ALU::floatToHex(float number) {
     return hexNumber;
 }
 
-QString ALU::addFloat(int index1, int index2, int index3, Register &reg) {
-    float num1 = ALU::hexToFloat(reg.getCell(index1);
-    float num2 = ALU::hexToFloat(reg.getCell(index2);
-    reg.setCell(index3, ALU::floatToHex(num1 + num2);
+void ALU::addFloat(const QString& index1, const QString& index2, const QString& index3, Register &reg) {
+    float num1 = ALU::hexToFloat(reg.getCell(index1.toInt(nullptr, 16)));
+    float num2 = ALU::hexToFloat(reg.getCell(index2.toInt(nullptr, 16)));
+    reg.setCell(index3.toInt(nullptr, 16), ALU::floatToHex(num1 + num2));
 }
