@@ -1,6 +1,6 @@
 #include "cpu.h"
 
-int cpu::m_programCounter = 1;
+int cpu::m_programCounter = 0;
 
 cpu::cpu(){
     m_instructionRegister = "";
@@ -58,21 +58,7 @@ QString cpu::decode() {
         message = QString("ADD the bit patterns in registers %1 and %2 as though they represented values in "
                           "floating-point notation and leave the floating-point result in register %3.").arg(x).arg(y).arg(r);
     }
-    else if (op == '7') {
-        message = QString("BITWISE OR (v) the content of register %1 and %2, and put the "
-                          "result in register %3.").arg(x).arg(y).arg(r);
-    }
-    else if (op == '8') {
-        message = QString("BITWISE AND (^) the content of register %1 and %2, and put the "
-                          "result in register %3.").arg(x).arg(y).arg(r);
-    }
-    else if (op == '9') {
-        message = QString("BITWISE XOR the content of register %1 and %2, and put the "
-                          "result in register %3.").arg(x).arg(y).arg(r);
-    }
-    else if (op.toUpper() == 'A') {
-        message = QString("ROTATE the content of register %1 cyclically right %2 steps.").arg(x).arg(y);
-    }
+
     else if (op.toUpper() == 'B') {
         message = QString("JUMP to the instruction located in the memory cell at address %1%2 if the bit pattern in register %3\n"
                           "is equal to the bit pattern in register number 0. Otherwise, continue with the normal sequence of\n"
@@ -81,15 +67,14 @@ QString cpu::decode() {
     else if (op.toUpper() == 'C') {
         message = "Halt";
     }
-    else if (op.toUpper() == 'D') {
-        message = QString("JUMP to the instruction located in the memory cell at address %1%2 if the bit pattern in register %3\n"
-                          "is greater than the bit pattern in register number 0. Otherwise, continue with the normal sequence of\n"
-                          "execution.").arg(x).arg(y).arg(r);
-    }
+
     else if (op == '0') {
         message = QString("No Instruction to execute");
     }
 
+    else {
+        message = QString("Unknown instruction");
+    }
     return message;
 }
 
@@ -119,15 +104,18 @@ void cpu::execute() {
         cu::move(x, y, *m_register);
     }
 
-    // TODO: op 5&6
-    // TODO: full list?
+    else if (op == '5') {
+        ALU::addInteger(x, y, r, *m_register);
+    }
+
+    // TODO: op 6
 
     else if (op == 'B') {
         QString memoryIndex = x; memoryIndex += y;
         cu::jump(r, memoryIndex, *m_register, *m_memory, m_programCounter);
     }
 
-    else if (op == 'C') {
+    else if (op.toUpper() == 'C') {
         cu::halt();
     }
 }

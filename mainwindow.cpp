@@ -1,7 +1,7 @@
-// TODO: MEMORY CELL MANUALLY CHANGE
-// TODO: STARTING INDEX
-// TODO: HALT
+// TODO: MEMORY CELL MANUALLY CHANGE OPTIMIZATION
+// TODO: HALT IS WORKING BUT DOES NOT EXECUTE
 // TODO: Handle memory mapping for the screen (address 00)
+// TODO: CODE ENHANCEMENTS AND DOCUMENTATION
 
 /**
  * @file mainwindow.cpp
@@ -28,6 +28,8 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) , ui(new Ui::MainW
 
     // Program counter Display
     ui->pCounter->setText(QString::number(cpu::m_programCounter));
+    ui->decodeButton->setEnabled(false);
+    ui->excuteButton->setEnabled(false);
 }
 
 
@@ -190,6 +192,12 @@ void MainWindow::onFetchButtonClicked()
     updateMemoryDisplay();
     ui->instructionDecode->setText(m_cpu->m_instructionRegister);
     ui->pCounter->setText(QString::number(cpu::m_programCounter));
+    if (m_cpu->m_instructionRegister.length() != 4) {
+        ui->decodeButton->setEnabled(false);
+    }
+    else {
+        ui->decodeButton->setEnabled(true);
+    }
 }
 
 
@@ -197,7 +205,7 @@ void MainWindow::onDecodeButtonClicked()
 {
     auto decoded = m_cpu->decode();
 
-    if (decoded.size() != 4) {
+    if (decoded.length() != 4) {
         ui->opCodeDisplay->setText(m_cpu->m_instructionRegister[0]);
         ui->rDisplay->setText(m_cpu->m_instructionRegister[1]);
         ui->xDisplay->setText(m_cpu->m_instructionRegister[2]);
@@ -212,6 +220,7 @@ void MainWindow::onDecodeButtonClicked()
         ui->encodedInsMessage->setText("Failed to Decode");
     }
     ui->pCounter->setText(QString::number(cpu::m_programCounter));
+    ui->excuteButton->setEnabled(true);
 }
 
 
@@ -242,6 +251,12 @@ void MainWindow::on_pCounter_textChanged(const QString &arg1)
 void MainWindow::on_instructionDecode_textChanged(const QString &arg1) const
 {
     m_cpu->m_instructionRegister = arg1;
+    if (m_cpu->m_instructionRegister.length() != 4) {
+        ui->decodeButton->setEnabled(false);
+    }
+    else {
+        ui->decodeButton->setEnabled(true);
+    }
 }
 
 
@@ -273,29 +288,56 @@ void MainWindow::on_clearRegButton_clicked()
 
 void MainWindow::on_memoryDisplay_cellChanged(int row, int column)
 {
-//    disconnect(ui->memoryDisplay, &QTableWidget::cellChanged, this, &MainWindow::on_memoryDisplay_cellChanged);
-//
-//    if (column == 1) {
-//        QString newBinaryValue = ui->memoryDisplay->item(row, column)->text();
-//        QString newHexValue = QString::number(newBinaryValue.toInt(nullptr, 2), 16).toUpper().rightJustified(2, '0');
-//        m_cpu->m_memory->setCell(row, newHexValue);
-//        updateMemoryDisplay();
-//    }
-//
-//    else if (column == 2) {
-//        QString newHexValue = ui->memoryDisplay->item(row, column)->text();
-//        QString newBinaryValue = QString::number(newHexValue.toInt(nullptr, 16), 2).rightJustified(8, '0');
-//        m_cpu->m_memory->setCell(row, newBinaryValue);
-//        updateMemoryDisplay();
-//    }
-//
-//    else if (column == 3) {
-//        QString newIntValue = ui->memoryDisplay->item(row, column)->text();
-//        QString newHexValue = QString::number(newIntValue.toInt(nullptr, 10), 16).toUpper().rightJustified(2, '0');
-//        m_cpu->m_memory->setCell(row, newHexValue);
-//        updateMemoryDisplay();
-//    }
-//
-//    connect(ui->memoryDisplay, &QTableWidget::cellChanged, this, &MainWindow::on_memoryDisplay_cellChanged);
+    // static bool updating = false;
+    // if (updating) return;
+    // updating = true;
+
+    // QTableWidgetItem* item = ui->memoryDisplay->item(row, column);
+
+    // QString cellValue = item->text();
+    // bool ok = false;
+    // QString newHexValue;
+
+    // if (column == 1) { // Binary
+    //     int intValue = cellValue.toInt(&ok, 2);
+    //     if (ok) newHexValue = QString::number(intValue, 16).toUpper().rightJustified(2, '0');
+    // }
+    // else if (column == 2) { // Hex
+    //     int intValue = cellValue.toInt(&ok, 16);
+    //     if (ok) newHexValue = cellValue.toUpper().rightJustified(2, '0');
+    // }
+    // else if (column == 3) { // Decimal
+    //     int intValue = cellValue.toInt(&ok, 10);
+    //     if (ok) newHexValue = QString::number(intValue, 16).toUpper().rightJustified(2, '0');
+    // }
+
+    // if (ok) {
+    //     m_cpu->m_memory->setCell(row, newHexValue);
+    //     updateMemoryDisplay();
+    // } else {
+    //     qDebug() << "Error: Invalid input in cell";
+    // }
+
+    // updating = false;
+}
+
+
+
+void MainWindow::on_runUntilHaltButton_clicked()
+{
+    while (cpu::m_programCounter <= 254) {
+
+        try {
+            MainWindow::onFetchButtonClicked();
+            MainWindow::onDecodeButtonClicked();
+            MainWindow::on_execute_button_clicked();
+
+        } catch (...) {
+            QMessageBox::information(this, "Halt", "Execution Terminated due to a halt");
+            return;
+        }
+    }
+
+    QMessageBox::information(this, "Memory End", "Memory end is reached");
 }
 
