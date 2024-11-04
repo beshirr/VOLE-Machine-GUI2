@@ -1,4 +1,5 @@
 // TODO: CODE ENHANCEMENTS AND DOCUMENTATION
+// TODO: screen output
 
 /**
  * @file mainwindow.cpp
@@ -19,15 +20,14 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) , ui(new Ui::MainW
     connecting();
     decodingDisplay();
     memoryDisplay();
-    updateMemoryDisplay();
     registerDisplay();
-    updateRegisterDisplay();
 
     // Program counter Display
     ui->pCounter->setText(QString::number(cpu::m_programCounter));
     ui->decodeButton->setEnabled(false);
     ui->excuteButton->setEnabled(false);
     ui->screen->setReadOnly(true);
+
 }
 
 
@@ -93,9 +93,10 @@ void MainWindow::memoryDisplay() {
     // Resize columns based on content
     ui->memoryDisplay->horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeToContents);
     ui->memoryDisplay->horizontalHeader()->setSectionResizeMode(1, QHeaderView::ResizeToContents);
-}
+    ui->memoryDisplay->horizontalHeader()->setSectionResizeMode(2, QHeaderView::ResizeToContents);
+    ui->memoryDisplay->horizontalHeader()->setSectionResizeMode(3, QHeaderView::ResizeToContents);
+    ui->memoryDisplay->horizontalHeader()->setSectionResizeMode(4, QHeaderView::ResizeToContents);
 
-void MainWindow::updateMemoryDisplay() {
     for (int i = 0; i < 256; ++i) {
         // Address column (display as hex)
         QString address = QString::number(i, 16).toUpper().rightJustified(2, '0');
@@ -111,13 +112,30 @@ void MainWindow::updateMemoryDisplay() {
         ui->memoryDisplay->setItem(i, 2, new QTableWidgetItem(hexValue));
 
         // Integer representation of the instruction
-        int intValue = ALU::hexToDec(m_cpu->m_memory->getCell(i));
-        ui->memoryDisplay->setItem(i, 3, new QTableWidgetItem(QString::number(intValue)));
+        QString intValue = QString::number(m_cpu->m_memory->getCell(i).toInt(nullptr, 16));
+        ui->memoryDisplay->setItem(i, 3, new QTableWidgetItem(intValue));
 
-        float floatValue = ALU::hexToFloat(m_cpu->m_memory->getCell(i));
-        ui->memoryDisplay->setItem(i, 4, new QTableWidgetItem(QString::number(floatValue)));
+        // float floatValue = ALU::hexToFloat(m_cpu->m_memory->getCell(i));
+        ui->memoryDisplay->setItem(i, 4, new QTableWidgetItem(intValue));
     }
 }
+
+void MainWindow::updateMemoryDisplay() {
+    for (int i = 0; i < 256; ++i) {
+        QString hexValue = m_cpu->m_memory->getCell(i).toUpper();
+        if (hexValue != ui->memoryDisplay->item(i, 2)->text()) { // Update only if different
+            QString binaryValue = QString("%1").arg(hexValue.toInt(nullptr, 16), 8, 2, QChar('0'));
+            QString intValue = QString::number(hexValue.toInt(nullptr, 16));
+            float floatValue = ALU::hexToFloat(hexValue);
+
+            ui->memoryDisplay->item(i, 1)->setText(binaryValue);
+            ui->memoryDisplay->item(i, 2)->setText(hexValue);
+            ui->memoryDisplay->item(i, 3)->setText(intValue);
+            ui->memoryDisplay->item(i, 4)->setText(QString::number(floatValue));
+        }
+    }
+}
+
 
 /**
  * @brief Setting Register display section*/
@@ -135,10 +153,9 @@ void MainWindow::registerDisplay() {
     // Resize columns based on content
     ui->registerDisplay->horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeToContents);
     ui->registerDisplay->horizontalHeader()->setSectionResizeMode(1, QHeaderView::ResizeToContents);
-}
+    ui->registerDisplay->horizontalHeader()->setSectionResizeMode(2, QHeaderView::ResizeToContents);
+    ui->registerDisplay->horizontalHeader()->setSectionResizeMode(3, QHeaderView::ResizeToContents);
 
-
-void MainWindow::updateRegisterDisplay() {
     for (int i = 0; i < 256; ++i) {
         // Address column (display as hex)
         QString address = QString::number(i, 16).toUpper().rightJustified(2, '0');
@@ -154,13 +171,30 @@ void MainWindow::updateRegisterDisplay() {
         ui->registerDisplay->setItem(i, 2, new QTableWidgetItem(hexValue));
 
         // Integer representation of the instruction
-        int intValue = ALU::hexToDec(m_cpu->m_register->getCell(i));
-        ui->registerDisplay->setItem(i, 3, new QTableWidgetItem(QString::number(intValue)));
+        QString intValue = QString::number(m_cpu->m_memory->getCell(i).toInt(nullptr, 16));
+        ui->registerDisplay->setItem(i, 3, new QTableWidgetItem(intValue));
 
-        float floatValue = ALU::hexToFloat(m_cpu->m_register->getCell(i));
-        ui->registerDisplay->setItem(i, 4, new QTableWidgetItem(QString::number(floatValue)));
+        // float floatValue = ALU::hexToFloat(m_cpu->m_memory->getCell(i));
+        ui->registerDisplay->setItem(i, 4, new QTableWidgetItem(intValue));
     }
+}
 
+
+void MainWindow::updateRegisterDisplay() {
+
+    for (int i = 0; i < 256; ++i) {
+        QString hexValue = m_cpu->m_register->getCell(i);
+        if (hexValue != ui->registerDisplay->item(i, 2)->text()) { // Update only if different
+            QString binaryValue = QString("%1").arg(hexValue.toInt(nullptr, 16), 8, 2, QChar('0'));
+            QString intValue = QString::number(hexValue.toInt(nullptr, 16));
+            float floatValue = ALU::hexToFloat(hexValue);
+
+            ui->registerDisplay->item(i, 1)->setText(binaryValue);
+            ui->registerDisplay->item(i, 2)->setText(hexValue);
+            ui->registerDisplay->item(i, 3)->setText(intValue);
+            ui->registerDisplay->item(i, 4)->setText(QString::number(floatValue));
+        }
+    }
 }
 
 void MainWindow::onOpenInstructionFileClicked() {
