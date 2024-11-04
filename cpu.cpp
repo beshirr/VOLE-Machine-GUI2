@@ -108,7 +108,9 @@ void cpu::execute() {
         ALU::addInteger(x, y, r, *m_register);
     }
 
-    // TODO: op 6
+    else if (op == '6') {
+        ALU::addFloat(x, y, r, *m_register);
+    }
 
     else if (op == 'B') {
         QString memoryIndex = x; memoryIndex += y;
