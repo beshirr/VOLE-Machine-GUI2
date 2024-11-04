@@ -158,3 +158,89 @@ void ALU::addInteger(int index1, int index2, int index3, Register& reg){
     int num2 = ALU::hexToDec(reg.getCell(index2));
     reg.setCell(index3, ALU::decToHex(num1 + num2));
 }
+
+float ALU::binToFloat(QString strNumber) {
+    int exponent = 0;
+    int power = 2;
+    int mantissa = 0;
+    float floatNum;
+    for (int i = 1; i < 4; ++i) {
+        exponent += strNumber[i].digitValue() * pow(2, power);
+        power--;
+    }
+    exponent -= 4;
+    power = 3;
+    for (int i = 4; i < 8; ++i) {
+        mantissa += strNumber[i].digitValue() * pow(2, power);
+        power--;
+    }
+    floatNum = (mantissa / 16.0) * pow(2, exponent - 4) * pow(-1, strNumber[0].diginValue());
+    return floatNum;
+}
+
+float ALU::hexToFloat(int strNumber) {
+    QString binNumber = hexToBin(strNumber);
+    float floatNumber = binToFloat(binNumber);
+    return floatNumber;
+}
+
+QString ALU::floatToBin(float number) {
+    Qstring binNumber = "";
+    QString signBit;
+    if(number < 0){
+        signBit = "1"
+    }
+    else{
+        signBit = "0";
+    }
+    int exponent = 0;
+    QString strExponent = "";
+    while (number > 1 || number < 0.5){
+        if(number > 1){
+            exponent++;
+            number /= 2;
+        }
+        else if(number < 0.5){
+            exponent--;
+            number *= 2;
+        }
+    }
+    exponent += 4;
+    while (exponent > 0){
+        if(exponent % 2 == 0){
+            strExponent += '0';
+        }
+        else{
+            strExponent += '1';
+        }
+        exponent /= 2;
+    }
+    strExponent = ALU::reverse(strExponent);
+    int intMantissa = number * 16;
+    QString mantissa = "";
+    while (intMantissa > 0){
+        if(intMantissa % 2 == 0){
+            mantissa += '0';
+        }
+        else{
+            mantissa += '1';
+        }
+        intMantissa /= 2;
+    }
+    mantissa = ALU::reverse(mantissa);
+    binNumber += signBit + strExponent + mantissa;
+    return binNumber;
+
+}
+
+QString ALU::floatToHex(float number) {
+    QString binNumber = floatToBin(number);
+    QString hexNumber = binToHex(binNumber);
+    return hexNumber;
+}
+
+QString ALU::addFloat(int index1, int index2, int index3, Register &reg) {
+    float num1 = ALU::hexToFloat(reg.getCell(index1);
+    float num2 = ALU::hexToFloat(reg.getCell(index2);
+    reg.setCell(index3, ALU::floatToHex(num1 + num2);
+}

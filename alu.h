@@ -19,6 +19,10 @@ public:
     static QString hexToBin(QString strNumber);
     static int binToDec(QString strNumber);
     static QString decToBin(int number);
+    static float binToFloat(QString strNumber);
+    static QString floatToBin(float number);
     static QString binToHex(QString strNumber);
+    static float hexToFloat(QString strNumber);
+    static QString floatToHex(float number);
 };
 #endif
