@@ -302,7 +302,7 @@ float ALU::binToFloat(QString strNumber) {
         mantissa += strNumber[i].digitValue() * pow(2, power);
         power--;
     }
-    floatNum = (mantissa / 16.0) * pow(2, exponent - 4) * pow(-1, strNumber[0].digitValue());
+    floatNum = (mantissa / 16.0) * pow(2, exponent) * pow(-1, strNumber[0].digitValue());
     return floatNum;
 }
 
