@@ -341,7 +341,7 @@ float ALU::hexToFloat(QString strNumber) {
  *
  * @note The input floating-point number should be within the range of a valid 8-bit floating-point number.
  */
-QString floatToBin(float number) {
+QString ALU::floatToBin(float number) {
     QString binNumber = "";
     QString signBit;
     if(number < 0){
@@ -397,8 +397,8 @@ QString floatToBin(float number) {
         }
     }
     binNumber += signBit;
-    binNumber += reverse(strExponent);
-    binNumber += reverse(strMantissa);
+    binNumber += ALU::reverse(strExponent);
+    binNumber += ALU::reverse(strMantissa);
 
     return binNumber;
 }
@@ -417,8 +417,8 @@ QString floatToBin(float number) {
  * @note The input floating-point number should be within the range of a valid 8-bit floating-point number.
  */
 QString ALU::floatToHex(float number) {
-    QString binNumber = floatToBin(number);
-    QString hexNumber = binToHex(binNumber);
+    QString binNumber = ALU::floatToBin(number);
+    QString hexNumber = ALU::binToHex(binNumber);
     return hexNumber;
 }
 
