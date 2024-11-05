@@ -154,7 +154,6 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 7: _t->on_runOneCycleButton_clicked(); break;
         case 8: _t->on_clearMemoryButton_clicked(); break;
         case 9: _t->on_clearRegButton_clicked(); break;
-        case 10: _t->on_memoryDisplay_cellChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
         default: ;
         }
     }

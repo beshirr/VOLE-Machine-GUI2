@@ -51,7 +51,6 @@ private slots:
     void on_runOneCycleButton_clicked();
     void on_clearMemoryButton_clicked();
     void on_clearRegButton_clicked();
-    void on_memoryDisplay_cellChanged(int row, int column);
     void on_runUntilHaltButton_clicked();
 };
 #endif // MAINWINDOW_H

@@ -25,7 +25,6 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) , ui(new Ui::MainW
     ui->decodeButton->setEnabled(false);
     ui->excuteButton->setEnabled(false);
     ui->screen->setReadOnly(true);
-
 }
 
 
@@ -113,8 +112,7 @@ void MainWindow::memoryDisplay() {
         QString intValue = QString::number(m_cpu->m_memory->getCell(i).toInt(nullptr, 16));
         ui->memoryDisplay->setItem(i, 3, new QTableWidgetItem(intValue));
 
-        float floatValue = ALU::hexToFloat(m_cpu->m_memory->getCell(i));
-        ui->memoryDisplay->setItem(i, 4, new QTableWidgetItem(floatValue));
+        ui->memoryDisplay->setItem(i, 4, new QTableWidgetItem('0'));
     }
 }
 
@@ -285,6 +283,7 @@ void MainWindow::on_execute_button_clicked()
         QMessageBox::information(this, "Halt", "Execution Terminated due to a halt");
         memLimitReached = false;
     }
+    ui->excuteButton->setEnabled(false);
 }
 
 
@@ -317,6 +316,12 @@ void MainWindow::on_instructionDecode_textChanged(const QString &arg1) const
 
 void MainWindow::on_runOneCycleButton_clicked()
 {
+    if (cpu::m_programCounter == 256) {
+        QMessageBox::information(this, "Halt", "Execution terminated due to program counter exceeding the memory limit");
+        memLimitReached = false;
+        return;
+    }
+
     MainWindow::onFetchButtonClicked();
     MainWindow::onDecodeButtonClicked();
     MainWindow::on_execute_button_clicked();
@@ -341,6 +346,7 @@ void MainWindow::on_clearRegButton_clicked()
 }
 
 
+
 void MainWindow::on_runUntilHaltButton_clicked()
 {
     while (cpu::m_programCounter <= 254) {
@@ -356,6 +362,5 @@ void MainWindow::on_runUntilHaltButton_clicked()
 
 
     QMessageBox::information(this, "Memory End", "Memory end is reached");
-
 }
 
