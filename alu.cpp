@@ -341,28 +341,28 @@ float ALU::hexToFloat(QString strNumber) {
  *
  * @note The input floating-point number should be within the range of a valid 8-bit floating-point number.
  */
-QString ALU::floatToBin(float number) {
+QString floatToBin(float number) {
     QString binNumber = "";
     QString signBit;
     if(number < 0){
         signBit = "1";
+        number *= (-1);
     }
     else{
         signBit = "0";
     }
     int exponent = 0;
-    QString strExponent = "";
-    while (number > 1 || number < 0.5){
-        if(number > 1){
-            exponent++;
-            number /= 2;
-        }
-        else if(number < 0.5){
-            exponent--;
-            number *= 2;
+    int mantissa = 0;
+    number *= 16;
+    for (int i = 3; i >= -4; i--){
+        if (number / pow(2, i) == int(number / pow(2, i))){
+            exponent = i;
+            break;
         }
     }
+    mantissa = number / (pow(2, exponent));
     exponent += 4;
+    QString strExponent = "";
     while (exponent > 0){
         if(exponent % 2 == 0){
             strExponent += '0';
@@ -372,20 +372,34 @@ QString ALU::floatToBin(float number) {
         }
         exponent /= 2;
     }
-    strExponent = ALU::reverse(strExponent);
-    int intMantissa = number * 16;
-    QString mantissa = "";
-    while (intMantissa > 0){
-        if(intMantissa % 2 == 0){
-            mantissa += '0';
+    if (binNumber.size() < 3){
+        int counter = strExponent.size();
+        while (counter < 3){
+            strExponent += '0';
+            counter++;
+        }
+    }
+    QString strMantissa = "";
+    while (mantissa > 0){
+        if(mantissa % 2 == 0){
+            strMantissa += '0';
         }
         else{
-            mantissa += '1';
+            strMantissa += '1';
         }
-        intMantissa /= 2;
+        mantissa /= 2;
     }
-    mantissa = ALU::reverse(mantissa);
-    binNumber += signBit + strExponent + mantissa;
+    if (strMantissa.size() < 4){
+        int counter = strMantissa.size();
+        while (counter < 4){
+            strMantissa += '0';
+            counter++;
+        }
+    }
+    binNumber += signBit;
+    binNumber += reverse(strExponent);
+    binNumber += reverse(strMantissa);
+
     return binNumber;
 }
 
