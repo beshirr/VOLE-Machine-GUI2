@@ -18,7 +18,7 @@ cpu::~cpu(){
 void cpu::fetch() {
     m_instructionRegister = "";
     for (int i = 0; i < 2; i++) {
-        m_instructionRegister += m_memory->getCell(m_programCounter);
+        m_instructionRegister += m_memory->getCell(m_programCounter).toUpper();
         m_programCounter++;
     }
 }

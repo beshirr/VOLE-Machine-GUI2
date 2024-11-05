@@ -1,12 +1,10 @@
-// TODO: CODE ENHANCEMENTS AND DOCUMENTATION
-// TODO: screen output
-
 /**
  * @file mainwindow.cpp
  * @brief Running the Machine and Linking between the UI and the application classes
 */
 
 #include "mainwindow.h"
+
 
 /**
  * @brief Constructor for MainWindow class. Initializes the UI and connects signals.
@@ -115,8 +113,8 @@ void MainWindow::memoryDisplay() {
         QString intValue = QString::number(m_cpu->m_memory->getCell(i).toInt(nullptr, 16));
         ui->memoryDisplay->setItem(i, 3, new QTableWidgetItem(intValue));
 
-        // float floatValue = ALU::hexToFloat(m_cpu->m_memory->getCell(i));
-        ui->memoryDisplay->setItem(i, 4, new QTableWidgetItem(intValue));
+        float floatValue = ALU::hexToFloat(m_cpu->m_memory->getCell(i));
+        ui->memoryDisplay->setItem(i, 4, new QTableWidgetItem(floatValue));
     }
 }
 
@@ -125,7 +123,7 @@ void MainWindow::updateMemoryDisplay() {
         QString hexValue = m_cpu->m_memory->getCell(i).toUpper();
         if (hexValue != ui->memoryDisplay->item(i, 2)->text()) { // Update only if different
             QString binaryValue = QString("%1").arg(hexValue.toInt(nullptr, 16), 8, 2, QChar('0'));
-            QString intValue = QString::number(hexValue.toInt(nullptr, 16));
+            QString intValue = QString::number(ALU::hexToDec(hexValue));
             float floatValue = ALU::hexToFloat(hexValue);
 
             ui->memoryDisplay->item(i, 1)->setText(binaryValue);
@@ -174,19 +172,19 @@ void MainWindow::registerDisplay() {
         QString intValue = QString::number(m_cpu->m_memory->getCell(i).toInt(nullptr, 16));
         ui->registerDisplay->setItem(i, 3, new QTableWidgetItem(intValue));
 
-        // float floatValue = ALU::hexToFloat(m_cpu->m_memory->getCell(i));
-        ui->registerDisplay->setItem(i, 4, new QTableWidgetItem(intValue));
+        float floatValue = ALU::hexToFloat(m_cpu->m_memory->getCell(i));
+        ui->registerDisplay->setItem(i, 4, new QTableWidgetItem(floatValue));
     }
 }
 
 
 void MainWindow::updateRegisterDisplay() {
 
-    for (int i = 0; i < 256; ++i) {
-        QString hexValue = m_cpu->m_register->getCell(i);
+    for (int i = 0; i < 16; ++i) {
+        QString hexValue = m_cpu->m_register->getCell(i).toUpper();
         if (hexValue != ui->registerDisplay->item(i, 2)->text()) { // Update only if different
             QString binaryValue = QString("%1").arg(hexValue.toInt(nullptr, 16), 8, 2, QChar('0'));
-            QString intValue = QString::number(hexValue.toInt(nullptr, 16));
+            QString intValue = QString::number(ALU::hexToDec(hexValue));
             float floatValue = ALU::hexToFloat(hexValue);
 
             ui->registerDisplay->item(i, 1)->setText(binaryValue);
