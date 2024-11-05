@@ -1,3 +1,8 @@
+/**
+ * @file mainwindow.h
+ * @brief This is the main window header file for the application
+ * */
+
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 

@@ -1,3 +1,9 @@
+/**
+ * @file alu.h
+ *
+ * @brief this file contains the definition of the ALU class which is responsible for the Arithmetic logical operations
+ * */
+
 #ifndef ALU_H
 #define ALU_H
 
@@ -8,11 +14,8 @@ using namespace std;
 
 class ALU {
 public:
-    ALU();
-    ~ALU();
     static int hexToDec(const QString& strNumber);
     static QString decToHex(int number);
-    static bool isValid(const QString& val);
     static void addInteger(const QString& index1, const QString& index2, const QString& index3, Register& reg);
     static void addFloat(const QString& index1, const QString& index2, const QString& index3, Register &reg);
     static QString reverse(QString str);

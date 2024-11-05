@@ -1,20 +1,49 @@
+/**
+ * @file cpu.cpp
+ * @brief The declaration of the cpu.h file
+ * */
+
 #include "cpu.h"
+
 
 int cpu::m_programCounter = 0;
 
+
+/**
+ * @brief Constructor for the cpu class.
+ *
+ * Initializes the instruction register to an empty string, creates instances of Memory and Register classes,
+ * and sets the program counter to 0.
+ */
 cpu::cpu(){
     m_instructionRegister = "";
     m_memory = new Memory();
     m_register = new Register();
+    m_programCounter = 0;
 }
 
 
+/**
+ * @brief Destructor for the cpu class.
+ *
+ * Deallocates the dynamically allocated memory for the Memory and Register objects.
+ * This ensures that no memory leaks occur when the cpu object goes out of scope.
+ */
 cpu::~cpu(){
-    delete m_memory;
-    delete m_register;
+    delete m_memory;  ///< Deallocate memory for the Memory object.
+    delete m_register;  ///< Deallocate memory for the Register object.
 }
 
 
+/**
+ * @brief Fetches the next instruction from memory.
+ *
+ * This function reads the next two cells from memory starting from the program counter,
+ * converts their content to uppercase, and stores it in the instruction register.
+ * The program counter is then incremented by 2.
+ *
+ * @return void
+ */
 void cpu::fetch() {
     m_instructionRegister = "";
     for (int i = 0; i < 2; i++) {
@@ -24,6 +53,15 @@ void cpu::fetch() {
 }
 
 
+/**
+ * @brief Decodes the instruction stored in the instruction register and generates a human-readable message.
+ *
+ * This function takes the instruction stored in the instruction register and decodes it to generate a human-readable message.
+ * The instruction is a 4-character string where the first character represents the operation code (op), and the remaining
+ * three characters represent the registers (r, x, y).
+ *
+ * @return QString - A human-readable message describing the decoded instruction.
+ */
 QString cpu::decode() {
     QChar op = m_instructionRegister[0];
     QChar r = m_instructionRegister[1];
@@ -79,6 +117,19 @@ QString cpu::decode() {
 }
 
 
+/**
+ * @brief Executes the instruction stored in the instruction register.
+ * This function decodes the instruction register and performs the corresponding operation.
+ * The instruction is a 4-character string where the first character represents the operation code (op),
+ * and the remaining three characters represent the registers (r, x, y).
+ *
+ * @param op - The operation code character.
+ * @param r - The register character for the destination register.
+ * @param x - The register character for the first source register.
+ * @param y - The register character for the second source register.
+ *
+ * @return void
+ */
 void cpu::execute() {
     QChar op = m_instructionRegister[0];
     QString r = m_instructionRegister[1];

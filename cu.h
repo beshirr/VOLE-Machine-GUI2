@@ -1,3 +1,10 @@
+/**
+ * @file cu.h
+ *
+ * @brief This file contains the definition of the cu class which is responsible of controlling the execution
+ * by loading and storing data to and from both the memory and register.
+ * */
+
 #ifndef CU_H
 #define CU_H
 
@@ -8,7 +15,6 @@
 
 class cu{
 public:
-    cu();
     static void load(const QString& indexReg, const QString& indexMem, Memory& mem, Register& reg);
     static void load(const QString& indexReg, const QString& val, Register& reg);
     static void store(const QString& indexReg, const QString& indexMem, Memory& mem, Register& reg);

@@ -3,6 +3,7 @@
  * @brief Running the Machine and Linking between the UI and the application classes
 */
 
+
 #include "mainwindow.h"
 
 
@@ -20,7 +21,6 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent) , ui(new Ui::MainW
     memoryDisplay();
     registerDisplay();
 
-    // Program counter Display
     ui->pCounter->setText(QString::number(cpu::m_programCounter));
     ui->decodeButton->setEnabled(false);
     ui->excuteButton->setEnabled(false);
@@ -42,7 +42,18 @@ MainWindow::~MainWindow()
 
 
 /**
- * @brief Connecting signals*/
+ * @brief Connects the UI buttons to their respective slots.
+ *
+ * This function connects the following UI buttons to their respective slots:
+ * - openInstructionButton: onOpenInstructionFileClicked
+ * - executeButton: on_execute_button_clicked
+ * - decodeButton: onDecodeButtonClicked
+ * - fetchButton: onFetchButtonClicked
+ * - clearMemoryButton: on_clearMemoryButton_clicked
+ * - clearRegButton: on_clearRegButton_clicked
+ *
+ * The connections are made using the Qt's connect function, which allows the UI to react to user actions.
+ */
 void MainWindow::connecting(){
     connect(ui->openInstructionButton, &QPushButton::clicked, this,
             &MainWindow::onOpenInstructionFileClicked);
@@ -56,14 +67,17 @@ void MainWindow::connecting(){
             &MainWindow::on_clearMemoryButton_clicked);
     connect(ui->clearRegButton, &QPushButton::clicked, this,
             &MainWindow::on_clearRegButton_clicked);
-
 }
 
 
-
-
 /**
- * @brief The decoding display section*/
+ * @brief Function to set the display properties for the decoded instruction components.
+ *
+ * This function configures the read-only mode for the UI elements that display the decoded
+ * instruction components. It ensures that the user cannot modify these fields directly.
+ *
+ * @return void
+ */
 void MainWindow::decodingDisplay(){
     ui->encodedInsMessage->setReadOnly(true);
     ui->opCodeDisplay->setReadOnly(true);
@@ -74,7 +88,14 @@ void MainWindow::decodingDisplay(){
 
 
 /**
- * @brief setting memory display section*/
+ * @brief Function to set the display properties for the memory section.
+ *
+ * This function configures the memory display table in the UI. It sets the number of rows and columns,
+ * the header labels, and various display properties such as edit triggers, column resizing, and
+ * visibility of the vertical header.
+ *
+ * @return void
+ */
 void MainWindow::memoryDisplay() {
     ui->memoryDisplay->setRowCount(256);
     ui->memoryDisplay->setColumnCount(5);
@@ -116,6 +137,16 @@ void MainWindow::memoryDisplay() {
     }
 }
 
+
+/**
+ * @brief Updates the memory display table in the UI.
+ *
+ * This function iterates through each memory cell and updates the corresponding
+ * table items in the UI. It checks if the cell value has changed before updating
+ * the display to optimize performance.
+ *
+ * @return void
+ */
 void MainWindow::updateMemoryDisplay() {
     for (int i = 0; i < 256; ++i) {
         QString hexValue = m_cpu->m_memory->getCell(i).toUpper();
@@ -134,7 +165,14 @@ void MainWindow::updateMemoryDisplay() {
 
 
 /**
- * @brief Setting Register display section*/
+ * @brief Function to set the display properties for the register section.
+ *
+ * This function configures the register display table in the UI. It sets the number of rows and columns,
+ * the header labels, and various display properties such as edit triggers, column resizing, and
+ * visibility of the vertical header.
+ *
+ * @return void
+ */
 void MainWindow::registerDisplay() {
     ui->registerDisplay->setRowCount(16);
     ui->registerDisplay->setColumnCount(5);
@@ -146,13 +184,15 @@ void MainWindow::registerDisplay() {
     ui->registerDisplay->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
     ui->registerDisplay->verticalHeader()->setVisible(false);
     ui->registerDisplay->setSelectionMode(QAbstractItemView::NoSelection);
+
     // Resize columns based on content
     ui->registerDisplay->horizontalHeader()->setSectionResizeMode(0, QHeaderView::ResizeToContents);
     ui->registerDisplay->horizontalHeader()->setSectionResizeMode(1, QHeaderView::ResizeToContents);
     ui->registerDisplay->horizontalHeader()->setSectionResizeMode(2, QHeaderView::ResizeToContents);
     ui->registerDisplay->horizontalHeader()->setSectionResizeMode(3, QHeaderView::ResizeToContents);
+    ui->registerDisplay->horizontalHeader()->setSectionResizeMode(4, QHeaderView::ResizeToContents);
 
-    for (int i = 0; i < 256; ++i) {
+    for (int i = 0; i < 16; ++i) {
         // Address column (display as hex)
         QString address = QString::number(i, 16).toUpper().rightJustified(2, '0');
         ui->registerDisplay->setItem(i, 0, new QTableWidgetItem(address));
@@ -176,15 +216,29 @@ void MainWindow::registerDisplay() {
 }
 
 
+/**
+ * @brief Updates the register display table in the UI.
+ *
+ * This function iterates through each register cell and updates the corresponding
+ * table items in the UI. It checks if the cell value has changed before updating
+ * the display to optimize performance.
+ *
+ * @return void
+ */
 void MainWindow::updateRegisterDisplay() {
 
     for (int i = 0; i < 16; ++i) {
         QString hexValue = m_cpu->m_register->getCell(i).toUpper();
-        if (hexValue != ui->registerDisplay->item(i, 2)->text()) { // Update only if different
-            QString binaryValue = QString("%1").arg(hexValue.toInt(nullptr, 16), 8, 2, QChar('0'));
+
+        // Only update if the hex value has changed
+        if (hexValue != ui->registerDisplay->item(i, 2)->text()) {
+
+            QString binaryValue = QString("%1").arg(hexValue.toInt(nullptr, 16),
+                                                        8, 2, QChar('0'));
             QString intValue = QString::number(ALU::hexToDec(hexValue));
             float floatValue = ALU::hexToFloat(hexValue);
 
+            // Update the corresponding table items
             ui->registerDisplay->item(i, 1)->setText(binaryValue);
             ui->registerDisplay->item(i, 2)->setText(hexValue);
             ui->registerDisplay->item(i, 3)->setText(intValue);
@@ -193,6 +247,21 @@ void MainWindow::updateRegisterDisplay() {
     }
 }
 
+
+/**
+ * @brief Opens and processes an instruction file.
+ *
+ * This function opens a file dialog to select an instruction file.
+ * It then reads the instructions from the file, converts them into hexadecimal format,
+ * and stores them in the CPU's memory starting from the program counter.
+ *
+ * @return void
+ *
+ * @note The function assumes that each instruction is a 4-digit hexadecimal number.
+ *       It reads the instructions from the file in pairs, with each pair representing
+ *       an instruction. The instructions are stored in the memory starting from the
+ *       program counter.
+ */
 void MainWindow::onOpenInstructionFileClicked() {
     QString fileName = QFileDialog::getOpenFileName(this, tr("Open instruction File"),
                                                     "", tr("Text Files (*.txt)"));
@@ -229,6 +298,16 @@ void MainWindow::onOpenInstructionFileClicked() {
 }
 
 
+/**
+ * @brief Fetches the instruction from memory and updates the instruction register.
+ *
+ * This function is responsible for fetching the instruction from memory at the current program counter.
+ * It then updates the instruction register with the fetched instruction. The function also updates the
+ * memory display and the program counter display in the UI. Additionally, it enables or disables the decode
+ * button based on the length of the fetched instruction.
+ *
+ * @return void
+ */
 void MainWindow::onFetchButtonClicked()
 {
     m_cpu->fetch();
@@ -244,6 +323,18 @@ void MainWindow::onFetchButtonClicked()
 }
 
 
+/**
+ * @brief Decodes the instruction fetched from memory and updates the UI.
+ *
+ * This function decodes the instruction fetched from memory using the CPU's decode method.
+ * It then updates the UI components related to the decoded instruction, such as the opcode,
+ * registers, and encoded instruction message. If the decoded instruction length is not equal
+ * to 4, it updates the UI components with the decoded instruction components. Otherwise, it
+ * clears the UI components and displays a failure message. Finally, it updates the program
+ * counter and enables the execute button.
+ *
+ * @return void
+ */
 void MainWindow::onDecodeButtonClicked()
 {
     auto decoded = m_cpu->decode();
@@ -266,8 +357,25 @@ void MainWindow::onDecodeButtonClicked()
     ui->excuteButton->setEnabled(true);
 }
 
+
+// A Flag to indicate if program counter has reached the end of the memory
 bool memLimitReached = true;
 
+
+/**
+ * @brief Executes the instruction fetched from memory.
+ *
+ * This function executes the instruction fetched from memory using the CPU's execute method.
+ * It updates the UI components related to memory, registers, and the program counter.
+ * If the executed instruction writes to the screen, it updates the screen display in the UI.
+ * If an exception occurs during execution, it displays a message indicating the termination of execution.
+ * Finally, it disables the execute button.
+ *
+ * @return void
+ *
+ * @throws std::exception If an exception occurs during execution (Halt instruction).
+ *
+ */
 void MainWindow::on_execute_button_clicked()
 {
     try {
@@ -287,6 +395,13 @@ void MainWindow::on_execute_button_clicked()
 }
 
 
+/**
+ * @brief Resets the program counter to 0 and updates the UI.
+ *
+ * This function resets the program counter to 0 and updates the program counter display in the UI.
+ *
+ * @return void
+ */
 void MainWindow::on_resetCounter_clicked()
 {
     cpu::m_programCounter = 0;
@@ -294,6 +409,16 @@ void MainWindow::on_resetCounter_clicked()
 }
 
 
+/**
+ * @brief Updates the program counter display in the UI.
+ *
+ * This function is called when the program counter's text changes. It converts the new text to an integer,
+ * updates the program counter value, and then updates the program counter display in the UI.
+ *
+ * @param arg1 The new text for the program counter.
+ *
+ * @return void
+ */
 void MainWindow::on_pCounter_textChanged(const QString &arg1)
 {
     bool ok;
@@ -302,6 +427,18 @@ void MainWindow::on_pCounter_textChanged(const QString &arg1)
 }
 
 
+/**
+ * @brief Updates the instruction register and enables/disables the decode button.
+ *
+ * This function is called when the text in the instruction decode line edit changes.
+ * It updates the instruction register with the new text and checks if the length of the
+ * instruction register is equal to 4. If it is not, the decode button is disabled. Otherwise,
+ * the decode button is enabled.
+ *
+ * @param arg1 The new text for the instruction decode line edit.
+ *
+ * @return void
+ */
 void MainWindow::on_instructionDecode_textChanged(const QString &arg1) const
 {
     m_cpu->m_instructionRegister = arg1;
@@ -314,6 +451,16 @@ void MainWindow::on_instructionDecode_textChanged(const QString &arg1) const
 }
 
 
+/**
+ * @brief Executes a single cycle of the CPU.
+ *
+ * This function performs a single cycle of the CPU by fetching, decoding, and executing
+ * an instruction. It checks if the program counter has reached the memory limit (256).
+ * If it has, it displays a message indicating the termination of execution. Otherwise,
+ * it fetches, decodes, and executes the instruction.
+ *
+ * @return void
+ */
 void MainWindow::on_runOneCycleButton_clicked()
 {
     if (cpu::m_programCounter == 256) {
@@ -328,6 +475,14 @@ void MainWindow::on_runOneCycleButton_clicked()
 }
 
 
+/**
+ * @brief Clears the memory by setting all cells to "00".
+ *
+ * This function iterates through each cell in the memory and sets its value to "00".
+ * After clearing the memory, it updates the memory display in the UI.
+ *
+ * @return void
+ */
 void MainWindow::on_clearMemoryButton_clicked()
 {
     for (int i = 0; i < 256; i++) {
@@ -337,6 +492,14 @@ void MainWindow::on_clearMemoryButton_clicked()
 }
 
 
+/**
+ * @brief Clears the CPU's register by setting all cells to "00".
+ *
+ * This function iterates through each cell in the CPU's register and sets its value to "00".
+ * After clearing the register, it updates the register display in the UI.
+ *
+ * @return void
+ */
 void MainWindow::on_clearRegButton_clicked()
 {
     for (int i = 0; i < 16; i++) {
@@ -347,6 +510,17 @@ void MainWindow::on_clearRegButton_clicked()
 
 
 
+/**
+ * @brief Executes the CPU until a halt instruction is encountered.
+ *
+ * This function continuously fetches, decodes, and executes instructions until
+ * the program counter reaches the memory limit (254). If a halt instruction is
+ * encountered (indicated by the `memLimitReached` flag being set to false), the
+ * function returns. Otherwise, a message indicating that the memory end has been
+ * reached is displayed.
+ *
+ * @return void
+ */
 void MainWindow::on_runUntilHaltButton_clicked()
 {
     while (cpu::m_programCounter <= 254) {
@@ -360,7 +534,5 @@ void MainWindow::on_runUntilHaltButton_clicked()
         }
     }
 
-
     QMessageBox::information(this, "Memory End", "Memory end is reached");
 }
-

@@ -1,3 +1,9 @@
+/**
+ * @file memory.h
+ *
+ * @brief This file contains the definition of the memory and register classes
+ */
+
 #ifndef VOLE_MACHINE_GUI_MEMORY_H
 #define VOLE_MACHINE_GUI_MEMORY_H
 
@@ -14,9 +20,7 @@ private:
 
 public:
     Memory();
-
     QString getCell(int address);
-
     void setCell(int address, const QString& val);
 };
 
@@ -28,13 +32,8 @@ private:
 
 public:
     Register();
-
     QString getCell(int address);
-
     void setCell(int address, const QString& val);
 };
-
-
-
 
 #endif //VOLE_MACHINE_GUI_MEMORY_H
