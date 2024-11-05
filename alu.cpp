@@ -171,7 +171,6 @@ QString ALU::decToBin(int number) {
         }
         number /= 2;
     }
-    binNumber = reverse(binNumber);
     if (binNumber.size() < 8){
         int counter = binNumber.size();
         while (counter < 8){
@@ -179,6 +178,7 @@ QString ALU::decToBin(int number) {
             counter++;
         }
     }
+    binNumber = ALU::reverse(binNumber);
     return binNumber;
 }
 
