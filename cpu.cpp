@@ -35,6 +35,17 @@ cpu::~cpu(){
 }
 
 
+bool cpu::isValidInstructoin(const QString& instructoin) {
+    static QRegularExpression hex("^[0-9a-fA-F]+$");
+    for (int i = 0; i < 4; i++) {
+        if (!hex.match(m_instructionRegister[i]).hasMatch()) {
+            return false;
+        }
+    }
+    return true;
+}
+
+
 /**
  * @brief Fetches the next instruction from memory.
  *
@@ -69,6 +80,12 @@ QString cpu::decode() {
     QChar y = m_instructionRegister[3];
 
     QString message;
+
+    if (!cpu::isValidInstructoin(m_instructionRegister)) {
+        message = "Invalid instruction";
+        return message;
+    }
+
     if (op == '1') {
         message = QString("LOAD the register %1 with the bit pattern found in the memory cell "
                           "whose address is %2%3").arg(r).arg(x).arg(y);
@@ -136,6 +153,10 @@ void cpu::execute() {
     QChar x = m_instructionRegister[2];
     QChar y = m_instructionRegister[3];
 
+    if (!cpu::isValidInstructoin(m_instructionRegister))  {
+        throw logic_error("Invalid Instruction");
+    }
+
     if (op == '1') {
         QString memoryIndex = x; memoryIndex += y;
         cu::load(r, memoryIndex, *m_memory, *m_register);
@@ -175,6 +196,10 @@ void cpu::execute() {
 
     else if (op.toUpper() == 'C') {
         cu::halt();
+    }
+
+    else if (op == '0') {
+        throw logic_error("Invalid Instruction");
     }
 }
 

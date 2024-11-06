@@ -386,9 +386,12 @@ void MainWindow::on_execute_button_clicked()
         updateMemoryDisplay();
         updateRegisterDisplay();
         ui->pCounter->setText(QString::number(cpu::m_programCounter));
-    } catch (...) {
+    } catch (runtime_error &e) {
         QMessageBox::information(this, "Halt", "Execution Terminated due to a halt");
         memLimitReached = false;
+    }
+    catch (logic_error &e) {
+        QMessageBox::information(this, "Error", "Invalid instruction");
     }
     ui->excuteButton->setEnabled(false);
 }
@@ -440,7 +443,7 @@ void MainWindow::on_pCounter_textChanged(const QString &arg1)
  */
 void MainWindow::on_instructionDecode_textChanged(const QString &arg1) const
 {
-    m_cpu->m_instructionRegister = arg1;
+    m_cpu->m_instructionRegister = arg1.toUpper();
     if (m_cpu->m_instructionRegister.length() != 4) {
         ui->decodeButton->setEnabled(false);
     }

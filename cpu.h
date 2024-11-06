@@ -13,6 +13,7 @@
 #include "memory.h"
 #include "alu.h"
 #include "cu.h"
+#include <QRegularExpression>
 
 
 using namespace std;
@@ -32,6 +33,7 @@ public:
     void fetch();
     QString decode();
     void execute();
+    bool isValidInstructoin(const QString& instruction);
 };
 
 
