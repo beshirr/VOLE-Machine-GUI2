@@ -48,9 +48,7 @@ constexpr auto qt_meta_stringdata_CLASSMainWindowENDCLASS = QtMocHelpers::string
     "on_runOneCycleButton_clicked",
     "on_clearMemoryButton_clicked",
     "on_clearRegButton_clicked",
-    "on_memoryDisplay_cellChanged",
-    "row",
-    "column"
+    "on_runUntilHaltButton_clicked"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -81,7 +79,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
       10,    0,   91,    2, 0x08,   10 /* Private */,
       11,    0,   92,    2, 0x08,   11 /* Private */,
       12,    0,   93,    2, 0x08,   12 /* Private */,
-      13,    2,   94,    2, 0x08,   13 /* Private */,
+      13,    0,   94,    2, 0x08,   13 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -94,7 +92,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSMainWindowENDCLASS[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Int, QMetaType::Int,   14,   15,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -130,10 +128,8 @@ Q_CONSTINIT const QMetaObject MainWindow::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_clearRegButton_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'on_memoryDisplay_cellChanged'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<int, std::false_type>,
-        QtPrivate::TypeAndForceComplete<int, std::false_type>
+        // method 'on_runUntilHaltButton_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
 } };
@@ -154,6 +150,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 7: _t->on_runOneCycleButton_clicked(); break;
         case 8: _t->on_clearMemoryButton_clicked(); break;
         case 9: _t->on_clearRegButton_clicked(); break;
+        case 10: _t->on_runUntilHaltButton_clicked(); break;
         default: ;
         }
     }

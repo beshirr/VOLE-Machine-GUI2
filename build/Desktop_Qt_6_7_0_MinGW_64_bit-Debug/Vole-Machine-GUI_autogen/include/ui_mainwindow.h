@@ -52,7 +52,6 @@ public:
     QPushButton *runOneCycleButton;
     QPushButton *resetCounter;
     QPushButton *runUntilHaltButton;
-    QPushButton *pushButton_4;
     QTableWidget *memoryDisplay;
     QLabel *label_5;
     QTableWidget *registerDisplay;
@@ -71,7 +70,7 @@ public:
         centralwidget->setObjectName("centralwidget");
         openInstructionButton = new QPushButton(centralwidget);
         openInstructionButton->setObjectName("openInstructionButton");
-        openInstructionButton->setGeometry(QRect(620, 550, 131, 27));
+        openInstructionButton->setGeometry(QRect(620, 550, 341, 27));
         clearMemoryButton = new QPushButton(centralwidget);
         clearMemoryButton->setObjectName("clearMemoryButton");
         clearMemoryButton->setGeometry(QRect(20, 550, 291, 27));
@@ -138,9 +137,6 @@ public:
         runUntilHaltButton = new QPushButton(groupBox_4);
         runUntilHaltButton->setObjectName("runUntilHaltButton");
         runUntilHaltButton->setGeometry(QRect(180, 350, 151, 31));
-        pushButton_4 = new QPushButton(centralwidget);
-        pushButton_4->setObjectName("pushButton_4");
-        pushButton_4->setGeometry(QRect(760, 550, 201, 27));
         memoryDisplay = new QTableWidget(centralwidget);
         memoryDisplay->setObjectName("memoryDisplay");
         memoryDisplay->setGeometry(QRect(20, 40, 291, 501));
@@ -192,7 +188,6 @@ public:
         runOneCycleButton->setText(QCoreApplication::translate("MainWindow", "Run one Cycle", nullptr));
         resetCounter->setText(QCoreApplication::translate("MainWindow", "Reset", nullptr));
         runUntilHaltButton->setText(QCoreApplication::translate("MainWindow", "Run until halt", nullptr));
-        pushButton_4->setText(QCoreApplication::translate("MainWindow", "How to use", nullptr));
         label_5->setText(QCoreApplication::translate("MainWindow", "Memory", nullptr));
         label_6->setText(QCoreApplication::translate("MainWindow", "Register", nullptr));
         label_7->setText(QCoreApplication::translate("MainWindow", "Screen", nullptr));

@@ -133,7 +133,7 @@ void MainWindow::memoryDisplay() {
         QString intValue = QString::number(m_cpu->m_memory->getCell(i).toInt(nullptr, 16));
         ui->memoryDisplay->setItem(i, 3, new QTableWidgetItem(intValue));
 
-        ui->memoryDisplay->setItem(i, 4, new QTableWidgetItem('0'));
+        ui->memoryDisplay->setItem(i, 4, new QTableWidgetItem(intValue));
     }
 }
 
@@ -210,8 +210,7 @@ void MainWindow::registerDisplay() {
         QString intValue = QString::number(m_cpu->m_memory->getCell(i).toInt(nullptr, 16));
         ui->registerDisplay->setItem(i, 3, new QTableWidgetItem(intValue));
 
-        float floatValue = ALU::hexToFloat(m_cpu->m_memory->getCell(i));
-        ui->registerDisplay->setItem(i, 4, new QTableWidgetItem(floatValue));
+        ui->registerDisplay->setItem(i, 4, new QTableWidgetItem(intValue));
     }
 }
 

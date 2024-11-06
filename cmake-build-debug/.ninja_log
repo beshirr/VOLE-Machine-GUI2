@@ -70,3 +70,14 @@
 583	4311	7523460470640756	CMakeFiles/Vole-Machine-GUI.dir/Vole-Machine-GUI_autogen/mocs_compilation.cpp.obj	fbe4ab69fb99f5db
 587	4406	7523460471587967	CMakeFiles/Vole-Machine-GUI.dir/mainwindow.cpp.obj	6b1ed8a94faf6c86
 4406	4581	7523460473212772	Vole-Machine-GUI.exe	c1d0848439dca58e
+19	767	7525196687617968	Vole-Machine-GUI_autogen/timestamp	24be3b46ef63c18b
+19	767	7525196687617968	Vole-Machine-GUI_autogen/mocs_compilation.cpp	24be3b46ef63c18b
+19	767	7525196687617968	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/Vole-Machine-GUI_autogen/timestamp	24be3b46ef63c18b
+19	767	7525196687617968	D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug/Vole-Machine-GUI_autogen/mocs_compilation.cpp	24be3b46ef63c18b
+794	3800	7525196718430645	CMakeFiles/Vole-Machine-GUI.dir/cu.cpp.obj	d572c8c9a83aa9d6
+786	3804	7525196718354779	CMakeFiles/Vole-Machine-GUI.dir/memory.cpp.obj	36880339368d9abf
+798	3811	7525196718559113	CMakeFiles/Vole-Machine-GUI.dir/alu.cpp.obj	7be531af0810d679
+790	3818	7525196718624138	CMakeFiles/Vole-Machine-GUI.dir/cpu.cpp.obj	dfde92f3f4f8aff1
+772	5570	7525196736136520	CMakeFiles/Vole-Machine-GUI.dir/main.cpp.obj	85490de05805f860
+767	5673	7525196737192482	CMakeFiles/Vole-Machine-GUI.dir/Vole-Machine-GUI_autogen/mocs_compilation.cpp.obj	fbe4ab69fb99f5db
+782	5920	7525196739631410	CMakeFiles/Vole-Machine-GUI.dir/mainwindow.cpp.obj	6b1ed8a94faf6c86
