@@ -197,9 +197,5 @@ void cpu::execute() {
     else if (op.toUpper() == 'C') {
         cu::halt();
     }
-
-    else if (op == '0') {
-        throw logic_error("Invalid Instruction");
-    }
 }
 
