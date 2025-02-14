@@ -1,5 +1,0 @@
-"C:\Program Files\JetBrains\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2023.2.2/bin/ninja/win/x64/ninja.exe" "-DCMAKE_PREFIX_PATH=C:\Qt\6.7.0\mingw_64\lib\cmake\Qt6D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUID:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/.." -DQt6CoreTools_DIR=C:\Qt\6.7.0\mingw_64\lib\cmake\Qt6CoreTools -DQt6WidgetsTools_DIR=C:\Qt\6.7.0\mingw_64\lib\cmake\Qt6WidgetsTools -DCMAKE_PREFIX_PATH=C:\Qt\6.7.0\mingw_64\lib\cmake -DCMAKE_PREFIX_PATH=C:\Qt\6.7.0\mingw_64\lib\cmake\Qt6 -G Ninja -S "D:\FCAI\Level 2\First semester\OOP\Assignment-1\Task-4\Vole-Machine-GUI" -B "D:\FCAI\Level 2\First semester\OOP\Assignment-1\Task-4\Vole-Machine-GUI\cmake-build-debug"
--- Could NOT find WrapVulkanHeaders (missing: Vulkan_INCLUDE_DIR) 
--- Configuring done (0.6s)
--- Generating done (0.0s)
--- Build files have been written to: D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/cmake-build-debug
