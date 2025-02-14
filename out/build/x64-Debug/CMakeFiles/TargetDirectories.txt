@@ -1,8 +1,0 @@
-D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/out/build/x64-Debug/CMakeFiles/Vole-Machine-GUI.dir
-D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/out/build/x64-Debug/CMakeFiles/edit_cache.dir
-D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
-D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/out/build/x64-Debug/CMakeFiles/list_install_components.dir
-D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/out/build/x64-Debug/CMakeFiles/install.dir
-D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/out/build/x64-Debug/CMakeFiles/install/local.dir
-D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/out/build/x64-Debug/CMakeFiles/Vole-Machine-GUI_autogen_timestamp_deps.dir
-D:/FCAI/Level 2/First semester/OOP/Assignment-1/Task-4/Vole-Machine-GUI/out/build/x64-Debug/CMakeFiles/Vole-Machine-GUI_autogen.dir
