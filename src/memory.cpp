@@ -4,7 +4,7 @@
  * @brief this file contains the declaration of the memory and register classes
  */
 
-#include "memory.h"
+#include "../headers/memory.h"
 
 
 /**

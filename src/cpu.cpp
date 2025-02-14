@@ -3,7 +3,7 @@
  * @brief The declaration of the cpu.h file
  * */
 
-#include "cpu.h"
+#include "../headers/cpu.h"
 
 
 int cpu::m_programCounter = 0;

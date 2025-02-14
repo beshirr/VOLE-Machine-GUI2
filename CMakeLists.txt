@@ -24,21 +24,21 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Widgets)
 
 set(PROJECT_SOURCES
         main.cpp
-        mainwindow.cpp
-        mainwindow.h
-        mainwindow.ui
-        memory.cpp
-        memory.h
-        alu.cpp
-        cu.h
-        cu.cpp
+        src/mainwindow.cpp
+        headers/mainwindow.h
+        headers/mainwindow.ui
+        src/memory.cpp
+        headers/memory.h
+        src/alu.cpp
+        headers/cu.h
+        src/cu.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(Vole-Machine-GUI
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        cpu.h cpu.cpp
+            headers/cpu.h src/cpu.cpp
 
     )
 # Define target properties for Android with Qt 6 as:
